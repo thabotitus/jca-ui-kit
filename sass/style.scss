@@ -1,0 +1,12 @@
+@import './base/variables';
+
+body {
+	@include padding-horizontal(40px);
+	@include padding-vertical(50px);
+
+	background: $white;
+}
+
+footer {
+ 
+}

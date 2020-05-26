@@ -1,0 +1,56 @@
+{
+  "name": "jca-ui-kit",
+  "version": "1.1.1",
+  "description": "JCA UI Kit from components built in Just Connect . Africa app",
+  "main": "dist/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp serve",
+    "build": "gulp"
+  },
+  "keywords": [
+    "SASS",
+    "ES6",
+    "Gulp",
+    "Webpack",
+    "starter",
+    "compiling",
+    "web",
+    "front-end",
+    "gulp-starter",
+    "babel",
+    "browsersync",
+    "imagemin"
+  ],
+  "author": "Thabo Titus",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sternadb/gulp-webpack-starter.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "gulp": "^4.0.2",
+    "gulp-bump": "^3.1.3",
+    "gulp-clean": "^0.4.0",
+    "gulp-htmlmin": "^5.0.1",
+    "uglifyjs-webpack-plugin": "^2.2.0"
+  },
+  "dependencies": {
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.7",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "i": "^0.3.6",
+    "webpack-stream": "^5.2.1"
+  }
+}
