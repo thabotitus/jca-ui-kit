@@ -3,7 +3,6 @@
 * - setting up a modern web development environment 
 */
 var gulp = require('gulp');
-var DISTRIBUTION_FOLDER = 'dist';
 
 /**
 * Import gulp plugins
@@ -39,130 +38,174 @@ const browserSync				= require('browser-sync').create();
 //Webpack config
 const webpack 					= require('webpack-stream');
 const webpackconfig			= require('./webpack.config.js');
+// const { task } = require('gulp');
 
 //Set sass compiler
 sass.compiler 					= require('node-sass');
 
+const TASKS = {
+	CLEAN: 			'clean:dist',
+	BUMP_MAJOR: 'bump:major',
+	BUMP_MINOR: 'bump:minor',
+	BUMP_PATCH: 'bump:patch',
+	SERVE: 			'serve',
+	SCRIPTS: 		'script',
+	STYLES: 		'sass',
+	IMAGES: 		'image',
+	HTML: 			'build:dist:html',
+};
+
+const DIST_FOLDERS = {
+	CSS: 'css',
+	ROOT: 'dist',
+};
+
+const DIST_OUTPUT_FILE_NAMES = {
+	CSS: 'styles.css',
+};
+
 gulp.task(
-  'clean:dist',
+  TASKS.CLEAN,
   function () {
-    return gulp.src([`${DISTRIBUTION_FOLDER}/*`], { read: false }).pipe(clean());
+    return gulp.src([`${DIST_FOLDERS.ROOT}/*`], { read: false }).pipe(clean());
   });
 
-//Task script
-gulp.task('script', function(done){
-	return gulp.src(['./src/**/*.js'], {since: gulp.lastRun('script')})
-		.pipe(plumber({
-			errorHandler: notify.onError("Error: <%= error.message %>")
-		}))
-		.pipe(webpack(webpackconfig), webpack)
-		.pipe(gulp.dest(`./${DISTRIBUTION_FOLDER}/js`))
-		.pipe(browserSync.stream())
-		.pipe(notify({message: "JS task completed!"}))
+//Task script // , {since: gulp.lastRun('script')}
+gulp.task(
+	TASKS.SCRIPTS,
+	function(done){
+		return gulp.src(['./src/**/*.js'])
+			.pipe(plumber({
+				errorHandler: notify.onError("Error: <%= error.message %>")
+			}))
+			.pipe(webpack(webpackconfig), webpack)
+			.pipe(gulp.dest(`./${DIST_FOLDERS.ROOT}/js`))
+			.pipe(browserSync.stream())
+			.pipe(notify({message: "JS task completed!"}))
 });
 
-//Task style
-gulp.task('sass', function(){
-	return gulp.src(['./sass/**/*.scss'], {since: gulp.lastRun('sass')})
-		.pipe(plumber({
-			errorHandler: notify.onError("Error: <%= error.message %>")
-		}))
-		.pipe(sourcemaps.init())
-		.pipe(sassGlob())
-		.pipe(sass({
-			style: 'compressed',
-			errLogToConsole: false,
-			onError: function(error_message) {
-				return notify().write(error_message);
-			}
-		}))
-		.pipe(autoprefixer())
-		.pipe(cleanCSS({
-			compatibility: 'ie9',
-			level: {
-				1: {
-					specialComments: 'all',
+//Task style // , {since: gulp.lastRun('sass')}
+gulp.task(
+	TASKS.STYLES,
+	function(){
+		return gulp.src(['./src/sass/**/*.scss'])
+			.pipe(plumber({
+				errorHandler: notify.onError("Error: <%= error.message %>")
+			}))
+			.pipe(sourcemaps.init())
+			.pipe(sassGlob())
+			.pipe(sass({
+				style: 'compressed',
+				errLogToConsole: false,
+				onError: function(error_message) {
+					return notify().write(error_message);
 				}
-			}
-		}))
-		.pipe(sourcemaps.write())
-		.pipe(concat('style.css'))
-		.pipe(gulp.dest(`./${DISTRIBUTION_FOLDER}/css`))
-		.pipe(browserSync.stream())
-		.pipe(notify({message: "Style task completed!"}))
+			}))
+			.pipe(autoprefixer())
+			.pipe(cleanCSS({
+				compatibility: 'ie9',
+				level: {
+					1: {
+						specialComments: 'all',
+					}
+				}
+			}))
+			.pipe(sourcemaps.write())
+			.pipe(concat(`${DIST_OUTPUT_FILE_NAMES.CSS}`))
+			.pipe(gulp.dest(`./${DIST_FOLDERS.ROOT}/${DIST_FOLDERS.CSS}`))
+			.pipe(browserSync.stream())
+			// .pipe(notify({message: "Style task completed!"}))
 });
 
-//Task image
-gulp.task('image', function(){
-	return gulp.src(['./images/**/*.+(png|jpg|jpeg|gif|svg|ico)'], {since: gulp.lastRun('image')})
-		.pipe(plumber())
-		.pipe(imageMin({
-			progressive: true,
-            interlaced: true,
-            pngquant: true,
-			verbose: true,
-		}))
-		.pipe(gulp.dest(`./${DISTRIBUTION_FOLDER}/images`))
-		.pipe(browserSync.stream())
-		.pipe(notify({message: "Image task completed!"}))
+//Task image // , {since: gulp.lastRun('image')}
+gulp.task(
+	TASKS.IMAGES,
+	function(){
+		return gulp.src(['./images/**/*.+(png|jpg|jpeg|gif|svg|ico)'])
+			.pipe(plumber())
+			.pipe(imageMin({
+				progressive: true,
+							interlaced: true,
+							pngquant: true,
+				verbose: true,
+			}))
+			.pipe(gulp.dest(`./${DIST_FOLDERS.ROOT}/images`))
+			.pipe(browserSync.stream())
+			.pipe(notify({message: "Image task completed!"}))
 });
 
 //Script task
-gulp.task('gulp:script', gulp.series(['script']));
+// gulp.task('gulp:script', gulp.series(['script']));
 
 //SASS task
-gulp.task('gulp:sass', gulp.series(['sass']));
+// gulp.task('gulp:sass', gulp.series(['sass']));
 
 //Image task
-gulp.task('gulp:image', gulp.series(['image']));
+// gulp.task('gulp:image', gulp.series(['image']));
 
 // Version bump
-gulp.task('bump:major', function(done){
-  gulp.src('./*.json')
-  .pipe(bump({type:'major'}))
-	.pipe(gulp.dest('./'));
-	done();
+gulp.task(
+	TASKS.BUMP_MAJOR,
+	function(done){
+		gulp.src('./*.json')
+		.pipe(bump({type:'major'}))
+		.pipe(gulp.dest('./'));
+		done();
 });
 
-gulp.task('bump:minor', function(done){
-  gulp.src('./*.json')
-  .pipe(bump({type:'minor'}))
-	.pipe(gulp.dest('./'));
-	done();
+gulp.task(
+	TASKS.BUMP_MINOR,
+	function(done){
+		gulp.src('./*.json')
+		.pipe(bump({type:'minor'}))
+		.pipe(gulp.dest('./'));
+		done();
 });
 
-gulp.task('bump:patch', function(done){
-  gulp.src('./*.json')
-  .pipe(bump({type:'patch'}))
-	.pipe(gulp.dest('./'));
-	done();
+gulp.task(
+	TASKS.BUMP_PATCH,
+	function(done){
+		gulp.src('./*.json')
+		.pipe(bump({type:'patch'}))
+		.pipe(gulp.dest('./'));
+		done();
 });
 
-gulp.task('build:dist:html',
+gulp.task(
+	TASKS.HTML,
   function(done){
-    gulp.src(['./src/*.html'])
-        .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(gulp.dest(`${DISTRIBUTION_FOLDER}`));
-    // gulp.src(['./src/demos/**/*.html'])
-    //     .pipe(htmlmin({ collapseWhitespace: true }))
-    //     .pipe(gulp.dest(`${DISTRIBUTION_FOLDER}/demos`));
+    gulp.src(['./src/**/*.html'])
+			.pipe(htmlmin({ collapseWhitespace: true }))
+			.pipe(gulp.dest(`${DIST_FOLDERS.ROOT}`));
     done();
-	});
+	}
+);
 	
 //Default task
-gulp.task('default', gulp.series(['clean:dist', 'script', 'sass', 'build:dist:html']));
-
-gulp.task('build:bump', gulp.series(['clean:dist', 'script', 'sass', 'build:dist:html']));
+gulp.task(
+	'default',
+	gulp.series(
+		[
+			TASKS.CLEAN,
+			TASKS.SCRIPTS,
+			TASKS.STYLES,
+			TASKS.HTML,
+		]
+	)
+);
 
 //Build task
-gulp.task('serve', function(){
-	browserSync.init({
-		server: `./${DISTRIBUTION_FOLDER}`,
-		port: 3000,
-		open: false,
-	})
-	gulp.watch('./src/components/**/*.js', gulp.series(['script']));
-	gulp.watch('./sass/**/*.scss', gulp.series(['sass']));
-	gulp.watch('./images/**/*.+(png|jpg|jpeg|gif|svg|ico)', gulp.series(['image']));
+gulp.task(
+	TASKS.SERVE,
+	function(){
+		browserSync.init({
+			server: `./${DIST_FOLDERS.ROOT}`,
+			port: 4000,
+			open: true,
+		})
+		gulp.watch('./src/components/**/*.js', gulp.series([TASKS.SCRIPTS]));
+		gulp.watch('./src/sass/**/*.scss', gulp.series([TASKS.STYLES]));
+		gulp.watch('./images/**/*.+(png|jpg|jpeg|gif|svg|ico)', gulp.series([TASKS.IMAGES]));
+		gulp.watch('./src/**/*.html', gulp.series([TASKS.HTML]));
 })
 

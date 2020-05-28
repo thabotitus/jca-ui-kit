@@ -1,0 +1,25 @@
+// VENDOR
+@import '../../node_modules/normalize.css/normalize.css';
+@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+// BASE
+@import './base/fonts.css';
+@import './base/variables';
+@import './base/layout';
+
+// CARDS
+@import './components/jca-card-timeline';
+@import './components/jca-nav-card';
+@import './components/jca-page-header';
+@import './components/jca-card-group';
+@import './components/jca-card';
+
+body * {
+  font-family: $base_font;
+}
+
+body {
+  font-size: $base_font_size;
+  background-color: $grey;
+  color:  $black;
+}

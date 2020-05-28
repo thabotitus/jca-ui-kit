@@ -1,0 +1,80 @@
+.jca-card-timeline {
+  border-radius: 4px;
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-bottom: 1px solid #F5F5FA;
+
+    &-text {
+      flex: 3;
+      height: inherit;
+      display: flex;
+      align-items: center;
+      color: red;
+    }
+  
+    &-actions {
+      flex: 1;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+
+  &__item {
+    &:nth-child(odd) {
+      background-color: darken(#fff, 3%);
+
+      .jca-card-timeline__meta {}
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center; 
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  &__date {
+    font-weight: 200;
+    font-size: 0.9em;
+    font-style: italic;
+  }
+
+  &__meta {
+    display: flex;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  &__icon {
+    flex: 1;
+    max-width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+  }
+
+  &__details {
+    flex: 1;
+  }
+
+  &__content {
+    padding: 30px;
+    padding-top: 0;
+    line-height: 23px;
+  }
+}

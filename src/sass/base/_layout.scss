@@ -1,0 +1,37 @@
+.jca-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 60px 1fr;
+}
+
+.jca-logo {
+  grid-area: "Logo";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:  $black;
+  color: $white;
+  font-weight: 700;
+
+  ion-icon {
+    font-size: 3em;
+    margin-right: 10px;
+  }
+}
+
+.jca-topbar__menu {
+  grid-area: "Top menu";
+  display: flex;
+  align-items: center;
+  background-color: $black;
+}
+
+.jca-content {
+  grid-area: "Content";
+  padding: 20px;
+}
+
+.jca-sidebar {
+  grid-area: "Sidebar";
+  padding: 20px;
+}

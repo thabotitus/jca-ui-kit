@@ -1,0 +1,44 @@
+.jca-card {
+  border-radius: 4px;
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
+
+  &__header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    &-text {
+      flex: 3;
+      height: inherit;
+      display: flex;
+      align-items: center;
+    }
+  
+    &-actions {
+      flex: 1;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+
+
+  &__content {
+    padding: 30px;
+
+    &--border {
+      border-top: 1px solid #F5F5FA;
+    }
+  }
+
+  &__footer {
+    padding: 30px;
+    background: darken($white, 3%);
+  }
+}
