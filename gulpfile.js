@@ -33,6 +33,7 @@ const autoprefixer			= require('gulp-autoprefixer');
 const htmlmin 					= require('gulp-htmlmin');
 const clean 						= require('gulp-clean');
 const bump							= require('gulp-bump');
+const copy							= require('gulp-copy');
 const browserSync				= require('browser-sync').create();
 
 //Webpack config
@@ -52,12 +53,13 @@ const TASKS = {
 	STYLES: 		'sass',
 	IMAGES: 		'image',
 	HTML: 			'html',
+	COPY: 			'copy',
 };
 
 const DIST_FOLDERS = {
 	CSS: 'css',
 	IMAGES: 'img',
-	ROOT: 'dist',
+	ROOT: 'docs',
 	JS: 'js',
 };
 
@@ -168,6 +170,15 @@ gulp.task(
 		.pipe(bump({type:'patch'}))
 		.pipe(gulp.dest('./'));
 		done();
+});
+
+gulp.task(
+	TASKS.COPY,
+	function(done){
+		return gulp
+			.src(`${DIST_FOLDERS.ROOT}`)
+			.pipe(copy('./docs'))
+			.pipe(gulp.dest('./'));
 });
 
 gulp.task(
