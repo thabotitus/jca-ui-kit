@@ -1,6 +1,7 @@
 // VENDOR
 @import '../../node_modules/normalize.css/normalize.css';
 @import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import './vendor/bootstrap-theme.css';
 
 // BASE
 @import './base/fonts.css';
@@ -19,7 +20,7 @@ body * {
 }
 
 body {
-  font-size: $base_font_size;
+  // font-size: $base_font_size;
   background-color: $grey;
   color:  $black;
 }

@@ -43,7 +43,7 @@ const webpackconfig			= require('./webpack.config.js');
 sass.compiler 					= require('node-sass');
 
 const TASKS = {
-	CLEAN: 			'clean:dist',
+	CLEAN: 			'clean',
 	BUMP_MAJOR: 'bump:major',
 	BUMP_MINOR: 'bump:minor',
 	BUMP_PATCH: 'bump:patch',
@@ -51,7 +51,7 @@ const TASKS = {
 	SCRIPTS: 		'script',
 	STYLES: 		'sass',
 	IMAGES: 		'image',
-	HTML: 			'build:dist:html',
+	HTML: 			'html',
 };
 
 const DIST_FOLDERS = {
