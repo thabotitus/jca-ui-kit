@@ -38,7 +38,6 @@ const browserSync				= require('browser-sync').create();
 //Webpack config
 const webpack 					= require('webpack-stream');
 const webpackconfig			= require('./webpack.config.js');
-// const { task } = require('gulp');
 
 //Set sass compiler
 sass.compiler 					= require('node-sass');
@@ -57,11 +56,20 @@ const TASKS = {
 
 const DIST_FOLDERS = {
 	CSS: 'css',
+	IMAGES: 'img',
 	ROOT: 'dist',
+	JS: 'js',
 };
 
 const DIST_OUTPUT_FILE_NAMES = {
 	CSS: 'styles.css',
+};
+
+const INPUT_FOLDERS = {
+	IMAGES: './src/img',
+	JS: './src/js',
+	CSS: './src/styles',
+	ROOT: './src',
 };
 
 gulp.task(
@@ -74,12 +82,12 @@ gulp.task(
 gulp.task(
 	TASKS.SCRIPTS,
 	function(done){
-		return gulp.src(['./src/**/*.js'])
+		return gulp.src([`${INPUT_FOLDERS.JS}/**/*.js`])
 			.pipe(plumber({
 				errorHandler: notify.onError("Error: <%= error.message %>")
 			}))
 			.pipe(webpack(webpackconfig), webpack)
-			.pipe(gulp.dest(`./${DIST_FOLDERS.ROOT}/js`))
+			.pipe(gulp.dest(`./${DIST_FOLDERS.ROOT}/${DIST_FOLDERS.JS}`))
 			.pipe(browserSync.stream())
 			.pipe(notify({message: "JS task completed!"}))
 });
@@ -88,7 +96,7 @@ gulp.task(
 gulp.task(
 	TASKS.STYLES,
 	function(){
-		return gulp.src(['./src/sass/**/*.scss'])
+		return gulp.src([`${INPUT_FOLDERS.CSS}/**/*.scss`])
 			.pipe(plumber({
 				errorHandler: notify.onError("Error: <%= error.message %>")
 			}))
@@ -121,7 +129,7 @@ gulp.task(
 gulp.task(
 	TASKS.IMAGES,
 	function(){
-		return gulp.src(['./images/**/*.+(png|jpg|jpeg|gif|svg|ico)'])
+		return gulp.src([`${INPUT_FOLDERS.IMAGES}/**/*.+(png|jpg|jpeg|gif|svg|ico)`])
 			.pipe(plumber())
 			.pipe(imageMin({
 				progressive: true,
@@ -129,19 +137,10 @@ gulp.task(
 							pngquant: true,
 				verbose: true,
 			}))
-			.pipe(gulp.dest(`./${DIST_FOLDERS.ROOT}/images`))
+			.pipe(gulp.dest(`./${DIST_FOLDERS.ROOT}/${DIST_FOLDERS.IMAGES}`))
 			.pipe(browserSync.stream())
-			.pipe(notify({message: "Image task completed!"}))
+			// .pipe(notify({message: "Image task completed!"}))
 });
-
-//Script task
-// gulp.task('gulp:script', gulp.series(['script']));
-
-//SASS task
-// gulp.task('gulp:sass', gulp.series(['sass']));
-
-//Image task
-// gulp.task('gulp:image', gulp.series(['image']));
 
 // Version bump
 gulp.task(
@@ -189,6 +188,7 @@ gulp.task(
 			TASKS.CLEAN,
 			TASKS.SCRIPTS,
 			TASKS.STYLES,
+			TASKS.IMAGES,
 			TASKS.HTML,
 		]
 	)
@@ -203,9 +203,9 @@ gulp.task(
 			port: 4000,
 			open: true,
 		})
-		gulp.watch('./src/components/**/*.js', gulp.series([TASKS.SCRIPTS]));
-		gulp.watch('./src/sass/**/*.scss', gulp.series([TASKS.STYLES]));
-		gulp.watch('./images/**/*.+(png|jpg|jpeg|gif|svg|ico)', gulp.series([TASKS.IMAGES]));
-		gulp.watch('./src/**/*.html', gulp.series([TASKS.HTML]));
+		gulp.watch(`${INPUT_FOLDERS.JS}/**/*.js`, gulp.series([TASKS.SCRIPTS]));
+		gulp.watch(`${INPUT_FOLDERS.CSS}/**/*.scss`, gulp.series([TASKS.STYLES]));
+		gulp.watch(`${INPUT_FOLDERS.IMAGES}/**/*.+(png|jpg|jpeg|gif|svg|ico)`, gulp.series([TASKS.IMAGES]));
+		gulp.watch(`${INPUT_FOLDERS.ROOT}/**/*.html`, gulp.series([TASKS.HTML]));
 })
 
