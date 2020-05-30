@@ -3,10 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <title>JCA UI KIT</title>
-    <link href="./css/styles.css" rel="stylesheet">
+    <link href="./css/jca-ui-kit.min.css" rel="stylesheet">
   </head>
   <body>
-    <div class="jca-layout">
+    <div class="jca-loader">
+      <img src="./img/loader.svg" />
+    </div>
+
+    <div class="jca-layout d-none">
       <div class="jca-logo">
         <img src="./img/logo.svg" />
         JCA UI KIT
@@ -48,6 +52,14 @@
               Card Group
             </a>
           </li>
+          <li class="jca-nav-card__item">
+            <div class="jca-nav-card__item-icon">
+              <ion-icon name="pricetags-outline"></ion-icon>
+            </div>
+            <a href="./pages/tags.html" class="jca-nav-card__item-link">
+              Tags
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -67,9 +79,17 @@
         </div>
       </div>
     </div>
-
-
-    
   </body>
   <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var loader = document.querySelector('.jca-loader');
+      var content = document.querySelector('.jca-layout');
+
+      setTimeout(function() {
+        loader.classList.add('d-none');
+        content.classList.remove('d-none');
+      }, 1000);
+    });
+  </script>
 </html>

@@ -64,7 +64,7 @@ const DIST_FOLDERS = {
 };
 
 const DIST_OUTPUT_FILE_NAMES = {
-	CSS: 'styles.css',
+	CSS: 'jca-ui-kit.min.css',
 };
 
 const INPUT_FOLDERS = {

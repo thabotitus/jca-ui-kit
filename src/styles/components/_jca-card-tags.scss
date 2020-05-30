@@ -1,0 +1,75 @@
+.jca-card-tags {
+  border-radius: 4px;
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
+
+  &__header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    &-text {
+      flex: 3;
+      height: inherit;
+      display: flex;
+      align-items: center;
+    }
+  
+    &-actions {
+      flex: 1;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &__item {
+    padding: 15px;
+    box-sizing: border-box;
+    border-right: 1px solid #F8F9FA;
+    border-top: 1px solid #F8F9FA;
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+    text-transform: uppercase;
+
+    &:hover {
+      background: darken(white, 2%);
+      font-weight: 700;
+    }
+  }
+
+  &--2-col {
+    .jca-card-tags__items {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &--3-col {
+    .jca-card-tags__items {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &--4-col {
+    .jca-card-tags__items {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  &--5-col {
+    .jca-card-tags__items {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+}
