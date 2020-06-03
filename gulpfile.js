@@ -80,7 +80,7 @@ gulp.task(
     return gulp.src([`${DIST_FOLDERS.ROOT}/*`], { read: false }).pipe(clean());
   });
 
-//Task script // , {since: gulp.lastRun('script')}
+//Task script // , {since: gulp.lastRun('script')}`${INPUT_FOLDERS.JS}/**/*.js`
 gulp.task(
 	TASKS.SCRIPTS,
 	function(done){
@@ -88,7 +88,7 @@ gulp.task(
 			.pipe(plumber({
 				errorHandler: notify.onError("Error: <%= error.message %>")
 			}))
-			.pipe(webpack(webpackconfig), webpack)
+			// .pipe(webpack(webpackconfig), webpack)
 			.pipe(gulp.dest(`./${DIST_FOLDERS.ROOT}/${DIST_FOLDERS.JS}`))
 			.pipe(browserSync.stream())
 			.pipe(notify({message: "JS task completed!"}))

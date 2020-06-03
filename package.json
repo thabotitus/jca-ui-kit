@@ -39,6 +39,8 @@
     "uglifyjs-webpack-plugin": "^2.2.0"
   },
   "dependencies": {
+    "@popperjs/core": "^2.4.0",
+    "animate.css": "^4.1.0",
     "babel-loader": "^8.1.0",
     "bootstrap": "^4.5.0",
     "browser-sync": "^2.26.7",
