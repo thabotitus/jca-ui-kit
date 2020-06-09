@@ -11,6 +11,10 @@
   box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
   padding: 0 50px;
   height: 80px;
+
+  &--transparent {
+    background: none;
+  }
 }
 
 .jca-main {

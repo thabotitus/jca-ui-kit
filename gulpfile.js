@@ -186,7 +186,8 @@ gulp.task(
   function(done){
     gulp.src(['./src/**/*.html'])
 			.pipe(htmlmin({ collapseWhitespace: true }))
-			.pipe(gulp.dest(`${DIST_FOLDERS.ROOT}`));
+			.pipe(gulp.dest(`${DIST_FOLDERS.ROOT}`))
+			.pipe(browserSync.stream());
     done();
 	}
 );
