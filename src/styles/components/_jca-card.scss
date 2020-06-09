@@ -1,6 +1,6 @@
 .jca-card {
-  border-radius: 4px;
-  background: #ffffff;
+  border-radius: $default_radius;
+  background: $white;
   overflow: hidden;
   box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
 
@@ -8,7 +8,7 @@
     height: 60px;
     display: flex;
     align-items: center;
-    padding: 30px;
+    padding: $default_padding;
     font-weight: 800;
     text-transform: uppercase;
 
@@ -38,7 +38,7 @@
   }
 
   &__footer {
-    padding: 30px;
+    padding: $default_padding;
     background: darken($white, 3%);
   }
 }

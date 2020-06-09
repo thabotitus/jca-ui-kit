@@ -1,0 +1,65 @@
+.jca-card-feed {
+  border-radius: $default_radius;
+  background: $white;
+  overflow: hidden;
+  box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
+  margin-bottom: 20px;
+
+  &__author {
+    padding: $default_padding;
+    font-size: 0.9em;
+    // border-bottom: 1px solid #F5F5FA;
+
+    &-name {
+      font-weight: 700;
+    }
+    &-meta {
+      font-style: italic;
+      color: darken($white, 30%);
+    }
+  }
+
+  &__media {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__tags {
+    padding: $default_padding;
+    font-size: 0.9em;
+    background-color: darken($white, 6%);
+  }
+
+  &__content {
+    padding: $default_padding;
+    padding-top: 0;
+  }
+
+  &__actions {
+    background-color: darken($white, 3%);
+    display: flex;
+    font-size: 0.8em;
+    text-transform: uppercase;
+
+    &-item {
+      padding: $light_padding;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      max-width: 50%;
+      justify-content: center;
+      cursor: pointer;
+
+      &:hover {
+        font-weight: 700 !important;
+        text-decoration: none;
+      }
+    }
+
+    &-icon {
+      font-size: 1.2em;
+      margin-right: 8px;
+    }
+  }
+}
