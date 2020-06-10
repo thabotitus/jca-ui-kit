@@ -1,0 +1,43 @@
+.jca-card-notification {
+  border-radius: $default_radius;
+  background: $white;
+  overflow: hidden;
+  box-shadow: $default_shadow;
+  display: flex;
+  padding: $light-padding;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+
+
+  &__icon {
+    flex: 1;
+    max-width: 40px;
+    min-width: 40px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__time {
+    font-size: 12px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.85em;
+  }
+
+  &__message {
+    font-style: italic;
+    font-size: 0.85em;
+  }
+
+  &__extra {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+}

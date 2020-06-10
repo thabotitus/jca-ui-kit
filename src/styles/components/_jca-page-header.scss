@@ -13,7 +13,7 @@
 
     &:after {
       content: '';
-      height: 4px;
+      height: 2px;
       background: $black;
       width: 100px;
       position: absolute;
@@ -23,10 +23,13 @@
     }
   }
 
-  &__subtitle {
-    // color: lighten($black, 40%);
-    text-transform: uppercase;
+  &__icon {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 24px;
   }
 
-  
+  &__subtitle {
+    text-transform: uppercase;
+  }
 }

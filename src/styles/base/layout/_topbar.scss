@@ -1,0 +1,71 @@
+.jca-topbar {
+  display: flex;
+  width: 100%;
+  background-color:  $white;
+  box-shadow: $default_shadow;
+  padding: 0 50px;
+  height: 80px;
+  max-height: 80px;
+  z-index: 100;
+
+  &--transparent {
+    background: none;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: $black;
+  
+    &-item {
+      height: 100%;
+    
+      .dropdown-menu {
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
+        border: none;
+        margin-top: 10px;
+      }
+    
+      .dropdown-item {
+        padding: 0;
+        font-size: 0.9em;
+        padding: 15px 8px;
+        text-align: center;
+      }
+    
+      &:hover {
+        color: #0074E4;
+    
+        a {
+          color: #0074E4;
+        }
+      }
+    }
+  
+    &-content {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+    
+      a {
+        text-decoration: none;
+        color: $black;
+      }
+    }
+  
+    &-icon {
+      font-size: 1.7em;
+      margin-right: 10px;
+    }
+  }
+}
+

@@ -5,7 +5,7 @@
   box-shadow: $default_shadow;
 
   &--featured {
-    box-shadow: 0 0 65px 0 rgba(154, 161, 171, 0.15);
+    box-shadow: $default_shadow;
     margin-top: -40px;
   }
 
