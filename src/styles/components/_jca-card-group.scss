@@ -1,10 +1,10 @@
 .jca-card-group {
-  border-radius: 4px;
+  border-radius: $default_radius;
   background: $white;
   overflow: hidden;
-  box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
   display: flex;
   width: 100%;
+  box-shadow: $default_shadow;
 
   &__item {
     flex: 1;

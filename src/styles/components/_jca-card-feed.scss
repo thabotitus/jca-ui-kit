@@ -2,13 +2,12 @@
   border-radius: $default_radius;
   background: $white;
   overflow: hidden;
-  box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
   margin-bottom: 20px;
+  box-shadow: $default_shadow;
 
   &__author {
     padding: $default_padding;
     font-size: 0.9em;
-    // border-bottom: 1px solid #F5F5FA;
 
     &-name {
       font-weight: 700;
@@ -28,12 +27,19 @@
   &__tags {
     padding: $default_padding;
     font-size: 0.9em;
-    background-color: darken($white, 6%);
+    background-color: $grey;
+
+    a {
+      display: inline-block;
+      margin-right: 8px;
+    }
   }
 
   &__content {
     padding: $default_padding;
     padding-top: 0;
+    font-size: 0.9em;
+    text-align: justify;
   }
 
   &__actions {

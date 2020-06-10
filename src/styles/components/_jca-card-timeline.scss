@@ -1,10 +1,10 @@
 .jca-card-timeline {
   border-radius: 4px;
-  background: #ffffff;
+  background: $white;
   overflow: hidden;
-  box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
   display: flex;
   flex-direction: column;
+  box-shadow: $default_shadow;
 
   &__header {
     height: 60px;
@@ -13,14 +13,13 @@
     padding: 30px;
     font-weight: 800;
     text-transform: uppercase;
-    border-bottom: 1px solid #F5F5FA;
+    border-bottom: $default_border;
 
     &-text {
       flex: 3;
       height: inherit;
       display: flex;
       align-items: center;
-      color: red;
     }
   
     &-actions {

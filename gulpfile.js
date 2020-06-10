@@ -216,7 +216,7 @@ gulp.task(
 			open: true,
 		})
 		gulp.watch(`${INPUT_FOLDERS.JS}/**/*.js`, gulp.series([TASKS.SCRIPTS]));
-		gulp.watch(`${INPUT_FOLDERS.CSS}/**/*.scss`, gulp.series([TASKS.STYLES]));
+		gulp.watch(`${INPUT_FOLDERS.CSS}/**/*.+(scss|css)`, gulp.series([TASKS.STYLES]));
 		gulp.watch(`${INPUT_FOLDERS.IMAGES}/**/*.+(png|jpg|jpeg|gif|svg|ico)`, gulp.series([TASKS.IMAGES]));
 		gulp.watch(`${INPUT_FOLDERS.ROOT}/**/*.html`, gulp.series([TASKS.HTML]));
 })

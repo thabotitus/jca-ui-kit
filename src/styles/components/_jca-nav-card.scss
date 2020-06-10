@@ -1,16 +1,14 @@
 .jca-nav-card {
-  box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
-  background: #fff;
+  background: $white;
   list-style: none;
-  border-radius: 4px;
+  border-radius: $default_radius;
   overflow: hidden;
-  font-size: 0.9em;
   width: 100%;
   padding: 0;
   margin: 0;
+  box-shadow: $default_shadow;
 
   &__item {
-    // border-top: 1px solid #f5f5f5;
     font-weight: 700;
     color:  $black;
     display: flex;

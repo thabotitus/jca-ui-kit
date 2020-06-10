@@ -3,6 +3,7 @@
   background: #ffffff;
   overflow: hidden;
   box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
+  box-shadow: $default_shadow;
 
   &__header {
     height: 60px;
@@ -36,8 +37,8 @@
   &__item {
     padding: 15px;
     box-sizing: border-box;
-    border-right: 1px solid #F8F9FA;
-    border-top: 1px solid #F8F9FA;
+    border-right: $default_border;
+    border-top: $default_border;
     display: flex;
     align-items: center;
     font-size: 0.8em;
