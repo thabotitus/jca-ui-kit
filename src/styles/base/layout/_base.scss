@@ -41,10 +41,16 @@
       width: 100px;
       margin-left: -20px;
     }
+    span {
+      font-weight: 400;
+      font-size: 0.6em;
+    }
   }
+
   &__text {
     margin-bottom: 20px;
   }
+  
   &__cta {
     display: flex;
     align-items: center;
