@@ -10,12 +10,23 @@
 
   &__item {
     font-weight: 700;
-    color:  $black;
+    color: $black;
     display: flex;
     text-transform: uppercase;
     width: 100%;
     padding: 0;
     margin: 0;
+
+    &--active > &-link
+    &--active > &-icon {
+      background:  $black;
+      color: $white;
+      font-weight: bold;
+
+      &:hover {
+        color: $white !important;
+      }
+    }
   }
 
   &__item-icon {
@@ -33,38 +44,20 @@
     padding-left: 0;
     display: block;
     flex: 1;
-    // border-left: 1px solid #f5f5f5;
 
     &:hover {
-      color:  $black!important;
-    }
-  }
-
-  &__item {
-    &--active > &-link, &--active > &-icon {
-      background:  $black;
-      color: $white;
-      font-weight: bold;
-
-      &:hover {
-        color: $white !important;
-      }
-    }
-
-    &--active > &-link {
-      // border-left: 1px solid darken( $black, 5%);
+      color: $black !important;
     }
   }
 }
 
 .jca-nav-card__item:hover {
-  // border-top: 1px solid #f5f5f5;
   color:  $black;
   display: flex;
   text-transform: uppercase;
 
   .jca-nav-card__item-link {
-    color:  $black !important;
+    color: $black !important;
     text-decoration: none;
   }
 }

@@ -1,4 +1,4 @@
-import * as dropdown from './dropdown';
+import * as dropdown from "./dropdown";
 export default {
   dropdown,
 };

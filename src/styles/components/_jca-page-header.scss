@@ -7,11 +7,11 @@
     text-transform: uppercase;
     font-size: 2em;
     letter-spacing: -1px;
-    color:  $black;
+    color: $black;
     position: relative;
     margin-bottom: 20px;
 
-    &:after {
+    &::after {
       content: '';
       height: 2px;
       background: $black;

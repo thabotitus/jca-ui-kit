@@ -34,15 +34,13 @@
 
   &__item {
     &:nth-child(odd) {
-      background-color: darken(#fff, 3%);
-
-      .jca-card-timeline__meta {}
+      background-color: $grey;
     }
   }
 
   &__title {
     display: flex;
-    align-items: center; 
+    align-items: center;
     text-transform: uppercase;
     font-weight: 700;
   }

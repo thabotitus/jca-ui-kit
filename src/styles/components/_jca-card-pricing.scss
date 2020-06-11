@@ -31,7 +31,7 @@
   &__price {
     text-align: center;
     display: flex;
-    padding:  $default_padding;
+    padding: $default_padding;
     background: $grey;
     flex-direction: column;
 
@@ -56,9 +56,8 @@
 
     &-currency {
       font-weight: bold;
-      
 
-      &:after {
+      &::after {
         content: '///';
         margin-right: 10px;
         margin-left: 10px;
