@@ -29,3 +29,30 @@
     width: 50px;
   }
 }
+
+.jca-landing-intro {
+  display: flex;
+  flex-direction: column;
+
+  &__logo {
+    font-weight: 700;
+    font-size: 1.5em;
+    img {
+      width: 100px;
+      margin-left: -20px;
+    }
+  }
+  &__text {
+    margin-bottom: 20px;
+  }
+  &__cta {
+    display: flex;
+    align-items: center;
+
+    a {
+      display: inline-block;
+      margin-right: 20px;
+      text-transform: uppercase;
+    }
+  }
+}

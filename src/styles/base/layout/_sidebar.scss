@@ -3,4 +3,7 @@
   padding-right: 0;
   height: calc(100vh - 80px);
   max-height: calc(100vh - 80px);
+  flex: 1;
+  min-width: 320px;
+  max-width: 320px;
 }

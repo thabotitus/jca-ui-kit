@@ -1,0 +1,15 @@
+.jca-section {
+  width: 100vw;
+  overflow: hidden;
+
+  &--full-page {
+    min-height: 100vh;
+  }
+
+  &--center {
+    display: flex;
+    align-items: center;
+    
+  }
+}
+
