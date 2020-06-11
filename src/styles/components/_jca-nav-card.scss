@@ -17,7 +17,28 @@
     padding: 0;
     margin: 0;
 
-    &--active > &-link
+    &-icon {
+      flex: 1;
+      max-width: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5em;
+    }
+
+    &-link {
+      color: $black;
+      padding: 20px;
+      padding-left: 0;
+      display: block;
+      flex: 1;
+
+      &:hover {
+        color: $black !important;
+      }
+    }
+
+    &--active > &-link,
     &--active > &-icon {
       background:  $black;
       color: $white;
@@ -26,27 +47,6 @@
       &:hover {
         color: $white !important;
       }
-    }
-  }
-
-  &__item-icon {
-    flex: 1;
-    max-width: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5em;
-  }
-
-  &__item-link {
-    color: $black;
-    padding: 20px;
-    padding-left: 0;
-    display: block;
-    flex: 1;
-
-    &:hover {
-      color: $black !important;
     }
   }
 }

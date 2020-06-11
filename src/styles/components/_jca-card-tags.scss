@@ -1,8 +1,7 @@
 .jca-card-tags {
-  border-radius: 4px;
-  background: #ffffff;
+  border-radius: $default-radius;
+  background: $white;
   overflow: hidden;
-  box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
   box-shadow: $default_shadow;
 
   &__header {

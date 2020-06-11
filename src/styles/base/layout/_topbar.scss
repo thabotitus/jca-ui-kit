@@ -1,7 +1,7 @@
 .jca-topbar {
   display: flex;
   width: 100%;
-  background-color:  $white;
+  background-color: $white;
   box-shadow: $default_shadow;
   padding: 0 50px;
   height: 80px;
@@ -21,34 +21,7 @@
     padding: 0;
     list-style: none;
     color: $black;
-  
-    &-item {
-      height: 100%;
-    
-      .dropdown-menu {
-        padding: 0;
-        margin: 0;
-        box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
-        border: none;
-        margin-top: 10px;
-      }
-    
-      .dropdown-item {
-        padding: 0;
-        font-size: 0.9em;
-        padding: 15px 8px;
-        text-align: center;
-      }
-    
-      &:hover {
-        color: #0074E4;
-    
-        a {
-          color: #0074E4;
-        }
-      }
-    }
-  
+
     &-content {
       height: 100%;
       display: flex;
@@ -62,6 +35,32 @@
       }
     }
   
+    &-item {
+      height: 100%;
+    
+      .dropdown-menu {
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
+        border: none;
+        margin-top: 10px;
+      }
+    
+      .dropdown-item {
+        font-size: 0.9em;
+        padding: 15px 8px;
+        text-align: center;
+      }
+    
+      &:hover {
+        color: #0074e4;
+    
+        a {
+          color: #0074e4;
+        }
+      }
+    }
+
     &-icon {
       font-size: 1.7em;
       margin-right: 10px;
