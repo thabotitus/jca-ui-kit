@@ -1,3 +1,5 @@
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/3e24725e31a84cb0853f4703f6a4895b)](https://www.codacy.com/manual/hello_100/jca-ui-kit?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=thabotitus/jca-ui-kit&amp;utm_campaign=Badge_Grade)
+
 ## JCA UI KIT
 
 A Ui library based of components created in Just Connect application.
