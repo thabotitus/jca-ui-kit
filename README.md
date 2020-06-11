@@ -33,3 +33,6 @@ A Ui library based of components created in Just Connect application.
 
 ## Webpack plugins
 - uglifyjs-webpack-plugin (minify js files)
+
+# License
+All files within this repo are released under the [MIT (OSI) License]( https://en.wikipedia.org/wiki/MIT_License) as per the [LICENSE file](https://github.com/thabotitus/jca-ui-kit/blob/master/LICENSE.md) stored in the root of this repo.
