@@ -9,18 +9,6 @@
     letter-spacing: -1px;
     color: $black;
     position: relative;
-    margin-bottom: 20px;
-
-    &::after {
-      content: '';
-      height: 2px;
-      background: $black;
-      width: 100px;
-      position: absolute;
-      bottom: -10px;
-      border-radius: 4px;
-      left: 0;
-    }
   }
 
   &__icon {
