@@ -3,6 +3,11 @@
   background: $white;
   overflow: hidden;
   box-shadow: $default_shadow;
+  margin-bottom: 20px;
+
+  img {
+    width: 100%;
+  }
 
   &__header {
     height: 60px;
@@ -11,6 +16,7 @@
     padding: $default_padding;
     font-weight: 800;
     text-transform: uppercase;
+    white-space: pre;
 
     &-text {
       flex: 3;
@@ -29,7 +35,7 @@
   }
 
   &__content {
-    padding: 30px;
+    padding: $default_padding;
 
     &--border {
       border-top: $default_border;
@@ -39,5 +45,20 @@
   &__footer {
     padding: $default_padding;
     background: darken($white, 3%);
+  }
+}
+
+.jca-card--dark {
+  background: $black;
+  color: $white;
+
+  .jca-card__footer {
+    background: darken($black, 1%);
+  }
+
+  .jca-card__content {
+    &--border {
+      border-top: 1px solid transparentize($white, 0.96);
+    }
   }
 }
