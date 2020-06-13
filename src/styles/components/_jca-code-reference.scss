@@ -1,0 +1,35 @@
+.jca-code-reference {
+  border-radius: $default_radius;
+  background: $white;
+  overflow: hidden;
+  display: flex;
+  box-shadow: $default-shadow;
+  margin-bottom: 20px;
+
+  &__example {
+    flex: 1;
+    min-width: 50%;
+  }
+
+  &__description {
+    padding: $default_padding;
+    background-color: #083358;
+    color: $white;
+  }
+
+  &__visual {
+    padding: $default_padding;
+  }
+
+  &__code {
+    background-color: $black;
+    flex: 1;
+    min-width: 50%;
+    padding: $default_padding;
+
+    :not(pre) > code[class*="language-"], pre[class*="language-"] {
+      background: none;
+      font-size: 1.1em;
+    }
+  }
+}

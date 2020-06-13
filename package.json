@@ -25,7 +25,7 @@
   "author": "Thabo Titus",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sternadb/gulp-webpack-starter.git"
+    "url": "https://github.com/thabotitus/jca-ui-kit.git"
   },
   "license": "MIT",
   "devDependencies": {
