@@ -18,7 +18,7 @@
   <div class="jca-layout d-none">
     <div class="jca-topbar">
       <div class="jca-logo">
-        <a href="/">
+        <a href="../index.html">
           <img src="../img/logo.svg" />
           JCA UI KIT
         </a>
@@ -142,101 +142,117 @@
         </div>
 
         <div class="row">
-          <div class="col-md-4">
-            <div class="jca-card-notification">
-              <span class="jca-card-notification__extra">
-                <ion-icon name="close-circle-outline"></ion-icon>
-              </span>
-              <div class="jca-card-notification__icon">
-                <ion-icon name="heart-outline"></ion-icon>
-                <span class="jca-card-notification__time">15h</span>
-              </div>
-              <div class="jca-card-notification__content">
-                <div class="jca-card-notification__title">New Like</div>
-                <div class="jca-card-notification__message">
-                  Tocarra liked your post
+          <div class="col-md-12">
+            <div class="jca-code-reference">
+              <div class="jca-code-reference__example">
+                <div class="jca-code-reference__description">
+                  Notifications can be used to show users short meaningful meassages about anything. Combine these
+                   with the various backgrounds to display general intentions
+                </div>
+                <div class="jca-code-reference__visual">
+                  <div class="jca-card-notification">
+                    <span class="jca-card-notification__extra">
+                      <ion-icon name="close-circle-outline"></ion-icon>
+                    </span>
+                    <div class="jca-card-notification__icon">
+                      <ion-icon name="heart-outline"></ion-icon>
+                      <span class="jca-card-notification__time">15h</span>
+                    </div>
+                    <div class="jca-card-notification__content">
+                      <div class="jca-card-notification__title">New Like</div>
+                      <div class="jca-card-notification__message">
+                        Tocarra liked your post
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="jca-card-notification bg-danger text-light">
+                    <div class="jca-card-notification__icon">
+                      <ion-icon name="heart-outline"></ion-icon>
+                      <span class="jca-card-notification__time">20d</span>
+                    </div>
+                    <div class="jca-card-notification__content">
+                      <div class="jca-card-notification__title">New Like</div>
+                      <div class="jca-card-notification__message">
+                        Tocarra liked your post
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="jca-card-notification">
+                    <div class="jca-card-notification__content">
+                      <div class="jca-card-notification__title">Generic</div>
+                      <div class="jca-card-notification__message">
+                        Generic message
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="jca-card-notification text-danger">
+                    <div class="jca-card-notification__icon">
+                      <ion-icon name="today-outline"></ion-icon>
+                    </div>
+                    <div class="jca-card-notification__content">
+                      <div class="jca-card-notification__message">
+                        You have a new consultation request from Tocarra with coloured text
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+              <div class="jca-code-reference__code">
+                <pre>
+                  <code class="language-html">
+&lt;div class="jca-card-notification"&gt;
+  &lt;span class="jca-card-notification__extra"&gt;
+    &lt;ion-icon name="close-circle-outline"&gt;&lt;/ion-icon&gt;
+  &lt;/span&gt;
+  &lt;div class="jca-card-notification__icon"&gt;
+    &lt;ion-icon name="heart-outline"&gt;&lt;/ion-icon&gt;
+    &lt;span class="jca-card-notification__time"&gt;15h&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="jca-card-notification__content"&gt;
+    &lt;div class="jca-card-notification__title"&gt;New Like&lt;/div&gt;
+    &lt;div class="jca-card-notification__message"&gt;
+      Tocarra liked your post
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
-            <div class="jca-card-notification bg-danger text-light">
-              <div class="jca-card-notification__icon">
-                <ion-icon name="heart-outline"></ion-icon>
-                <span class="jca-card-notification__time">20d</span>
-              </div>
-              <div class="jca-card-notification__content">
-                <div class="jca-card-notification__title">New Like</div>
-                <div class="jca-card-notification__message">
-                  Tocarra liked your post
-                </div>
-              </div>
-            </div>
-          </div>
+&lt;div class="jca-card-notification bg-danger text-light"&gt;
+  &lt;div class="jca-card-notification__icon"&gt;
+    &lt;ion-icon name="heart-outline"&gt;&lt;/ion-icon&gt;
+    &lt;span class="jca-card-notification__time"&gt;20d&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="jca-card-notification__content"&gt;
+    &lt;div class="jca-card-notification__title"&gt;New Like&lt;/div&gt;
+    &lt;div class="jca-card-notification__message"&gt;
+      Tocarra liked your post
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
-          <div class="col-md-4">
-            <div class="jca-card-notification bg-primary text-light">
-              <div class="jca-card-notification__icon">
-                <ion-icon name="server-outline"></ion-icon>
-                <span class="jca-card-notification__time">20m</span>
-              </div>
-              <div class="jca-card-notification__content">
-                <div class="jca-card-notification__title">Status</div>
-                <div class="jca-card-notification__message">
-                  Server is fully operational
-                </div>
-              </div>
-            </div>
+&lt;div class="jca-card-notification"&gt;
+  &lt;div class="jca-card-notification__content"&gt;
+    &lt;div class="jca-card-notification__title"&gt;Generic&lt;/div&gt;
+    &lt;div class="jca-card-notification__message"&gt;
+      Generic message
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
-            <div class="jca-card-notification bg-success text-light">
-              <span class="jca-card-notification__extra">
-                <ion-icon name="close-circle-outline"></ion-icon>
-              </span>
-
-              <div class="jca-card-notification__icon">
-                <ion-icon name="today-outline"></ion-icon>
-              </div>
-              <div class="jca-card-notification__content">
-                <div class="jca-card-notification__message">
-                  You have a new consultation request from Tocarra.
-                </div>
-              </div>
-            </div>
-
-            <div class="jca-card-notification">
-              <span class="jca-card-notification__extra">
-                <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-              </span>
-
-              <div class="jca-card-notification__icon">
-                <ion-icon name="today-outline"></ion-icon>
-                <span class="jca-card-notification__time">20m</span>
-              </div>
-              <div class="jca-card-notification__content">
-                <div class="jca-card-notification__message">
-                  You have a new consultation request from Tocarra.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="jca-card-notification">
-              <div class="jca-card-notification__content">
-                <div class="jca-card-notification__title">Generic</div>
-                <div class="jca-card-notification__message">
-                  Generic message
-                </div>
-              </div>
-            </div>
-
-            <div class="jca-card-notification text-danger">
-              <div class="jca-card-notification__icon">
-                <ion-icon name="today-outline"></ion-icon>
-              </div>
-              <div class="jca-card-notification__content">
-                <div class="jca-card-notification__message">
-                  You have a new consultation request from Tocarra with coloured text
-                </div>
+&lt;div class="jca-card-notification text-danger"&gt;
+  &lt;div class="jca-card-notification__icon"&gt;
+    &lt;ion-icon name="today-outline"&gt;&lt;/ion-icon&gt;
+  &lt;/div&gt;
+  &lt;div class="jca-card-notification__content"&gt;
+    &lt;div class="jca-card-notification__message"&gt;
+      You have a new consultation request from Tocarra with coloured text
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                  </code>
+                </pre>
               </div>
             </div>
           </div>
@@ -245,26 +261,10 @@
     </div>
   </div>
 </body>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-  </script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-  </script>
 
-<script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function (event) {
-    var loader = document.querySelector('.jca-loader');
-    var content = document.querySelector('.jca-layout');
-
-    setTimeout(function () {
-      loader.classList.add('d-none');
-      content.classList.remove('d-none');
-    }, 100);
-  });
-</script>
-
+<script type="text/javascript" src="../js/jquery-3.5.1.slim.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/prism.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
 </html>

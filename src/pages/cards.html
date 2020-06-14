@@ -18,7 +18,7 @@
   <div class="jca-layout d-none">
     <div class="jca-topbar">
       <div class="jca-logo">
-        <a href="/">
+        <a href="../index.html">
           <img src="../img/logo.svg" />
           JCA UI KIT
         </a>
@@ -146,9 +146,7 @@
             <div class="jca-code-reference">
               <div class="jca-code-reference__example">
                 <div class="jca-code-reference__description">
-                  A card can have a <span class="jca-keyword">header</span>, 
-                  <span class="jca-keyword">content</span> and a <span class="jca-keyword">footer</span>. 
-                  You can modify the backgrounds of each section or text using Bootstrap helpers.
+                  A card can be used to represent anything on a page in a neat component.
                 </div>
                 <div class="jca-code-reference__visual">
                   <div class="jca-card">
@@ -206,6 +204,9 @@
           <div class="col-md-12">
             <div class="jca-code-reference">
               <div class="jca-code-reference__example">
+                <div class="jca-code-reference__description">
+                  It can have rows an columns too.
+                </div>
                 <div class="jca-code-reference__visual">
                   <div class="jca-card">
                     <div class="jca-card__content">
@@ -262,6 +263,9 @@
           <div class="col-md-12">
             <div class="jca-code-reference">
               <div class="jca-code-reference__example">
+                <div class="jca-code-reference__description">
+                  It can be dark and include media.
+                </div>
                 <div class="jca-code-reference__visual">
                   <div class="jca-card jca-card--dark">
                     <div class="jca-card__content">
@@ -283,9 +287,7 @@
                     <code class="language-html">
 &lt;div class="jca-card jca-card--dark"&gt;
   &lt;div class="jca-card__content"&gt;
-    &lt;img
-    src="https://..."
-    alt="media" /&gt;
+    &lt;img src="https://..." alt="media" /&gt;
   &lt;/div&gt;
   &lt;div class="jca-card__footer"&gt;
     Anything
@@ -297,82 +299,14 @@
             </div>
           </div>
         </div>
-
-        <div class="row">
-          <div class="col-md-12">
-            <div class="jca-card">
-              <div class="jca-card__header">
-                Usage
-              </div>
-              <div class="jca-card__footer">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">Class name</th>
-                      <th scope="col">What it does</th>
-                      <th scope="col">More</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <span class="jca-keyword">jca-card</span>
-                      </td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="jca-keyword">jca-card__header</span>
-                      </td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="jca-keyword">jca-card__content</span>
-                      </td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="jca-keyword">jca-card__footer</span>
-                      </td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 </body>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-  </script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-  </script>
+
+<script type="text/javascript" src="../js/jquery-3.5.1.slim.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/prism.js"></script>
-
-<script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function (event) {
-    var loader = document.querySelector('.jca-loader');
-    var content = document.querySelector('.jca-layout');
-
-    setTimeout(function () {
-      loader.classList.add('d-none');
-      content.classList.remove('d-none');
-    }, 100);
-  });
-</script>
-
+<script type="text/javascript" src="../js/main.js"></script>
 </html>

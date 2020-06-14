@@ -16,7 +16,7 @@
     <div class="jca-layout d-none">
       <div class="jca-topbar">
         <div class="jca-logo">
-          <a href="/">
+          <a href="../index.html">
             <img src="../img/logo.svg" />
             JCA UI KIT
           </a>
@@ -136,150 +136,121 @@
                 <div class="jca-page-header__subtitle">Pricing cards</div>
               </div>
             </div>
-          </div> 
+          </div>
 
           <div class="row">
-            <div class="col-md-4">
-              <div class="jca-card-pricing">
-                <div class="jca-card-pricing__header">
-                  <div class="jca-card-pricing__header-main">Small Firm</div>
-                  <div class="jca-card-pricing__header-sub">1-20 Members</div>
-                </div>
+            <div class="col-md-12">
+              <div class="jca-code-reference">
+                <div class="jca-code-reference__example">
+                  <div class="jca-code-reference__description">
+                    A simple way to present pricing for services offered
+                  </div>
+                  <div class="jca-code-reference__visual">
+                    <div class="jca-card-pricing">
+                      <div class="jca-card-pricing__header">
+                        <div class="jca-card-pricing__header-main">Small Firm</div>
+                        <div class="jca-card-pricing__header-sub">1-20 Members</div>
+                      </div>
+      
+                      <div class="jca-card-pricing__price">
+                        <span class="jca-card-pricing__price-value">1000</span>
+                        <div class="jca-card-pricing__price-meta">
+                          <div class="jca-card-pricing__price-currency">ZAR</div>
+                          <div class="jca-card-pricing__price-period">monthly</div> 
+                        </div>
+                      </div>
+      
+                      <div class="jca-card-pricing__features">
+                        <ul>
+                          <li>
+                            <ion-icon class="jca-card-pricing__icon" name="finger-print-outline"></ion-icon>
+                            Secure data
+                          </li>
+                          <li>
+                            <ion-icon class="jca-card-pricing__icon" name="albums-outline"></ion-icon>
+                            Unlimited Consultations
+                          </li>
+                          <li>
+                            <ion-icon class="jca-card-pricing__icon" name="cash-outline"></ion-icon>
+                            Automated Payments
+                          </li>
+                          <li>
+                            <ion-icon class="jca-card-pricing__icon" name="calendar-outline"></ion-icon>
+                            Schedule Management
+                          </li>
+                        </ul>
+                      </div>
+       
+                      <div class="jca-card-pricing__actions">
+                        <a href="#" class="jca-card-pricing__actions-item">
+                          Sign up
+                        </a>
+        
+                        <a href="#" class="jca-card-pricing__actions-item">
+                          Contact Us
+                        </a>
 
-                <div class="jca-card-pricing__price">
-                  <span class="jca-card-pricing__price-value">1000</span>
-                  <div class="jca-card-pricing__price-meta">
-                    <div class="jca-card-pricing__price-currency">ZAR</div>
-                    <div class="jca-card-pricing__price-period">monthly</div> 
+                        <a href="#" class="jca-card-pricing__actions-item">
+                          <ion-icon name="logo-whatsapp" size="large"></ion-icon>
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
+                <div class="jca-code-reference__code">
+                  <pre>
+                      <code class="language-html">
+&lt;div class="jca-card-pricing"&gt;
+  &lt;div class="jca-card-pricing__header"&gt;
+    &lt;div class="jca-card-pricing__header-main"&gt;Small Firm&lt;/div&gt;
+    &lt;div class="jca-card-pricing__header-sub"&gt;1-20 Members&lt;/div&gt;
+  &lt;/div&gt;
 
-                <div class="jca-card-pricing__features">
-                  <ul>
-                    <li>
-                      <ion-icon class="jca-card-pricing__icon" name="finger-print-outline"></ion-icon>
-                      Secure data
-                    </li>
-                    <li>
-                      <ion-icon class="jca-card-pricing__icon" name="albums-outline"></ion-icon>
-                      Unlimited Consultations
-                    </li>
-                    <li>
-                      <ion-icon class="jca-card-pricing__icon" name="cash-outline"></ion-icon>
-                      Automated Payments
-                    </li>
-                    <li>
-                      <ion-icon class="jca-card-pricing__icon" name="calendar-outline"></ion-icon>
-                      Schedule Management
-                    </li>
-                  </ul>
-                </div>
- 
+  &lt;div class="jca-card-pricing__price"&gt;
+    &lt;span class="jca-card-pricing__price-value"&gt;1000&lt;/span&gt;
+    &lt;div class="jca-card-pricing__price-meta"&gt;
+      &lt;div class="jca-card-pricing__price-currency"&gt;ZAR&lt;/div&gt;
+      &lt;div class="jca-card-pricing__price-period"&gt;monthly&lt;/div&gt; 
+    &lt;/div&gt;
+  &lt;/div&gt;
 
-                <div class="jca-card-pricing__actions">
-                  <a href="#" class="jca-card-pricing__actions-item bg-success text-light">
-                    Sign up
-                  </a>
-  
-                  <a href="#" class="jca-card-pricing__actions-item bg-info">
-                    Contact Us
-                  </a>
-                </div>
-              </div>
-            </div>
+  &lt;div class="jca-card-pricing__features"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;ion-icon class="jca-card-pricing__icon" name="finger-print-outline"&gt;&lt;/ion-icon&gt;
+        Secure data
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;ion-icon class="jca-card-pricing__icon" name="albums-outline"&gt;&lt;/ion-icon&gt;
+        Unlimited Consultations
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;ion-icon class="jca-card-pricing__icon" name="cash-outline"&gt;&lt;/ion-icon&gt;
+        Automated Payments
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;ion-icon class="jca-card-pricing__icon" name="calendar-outline"&gt;&lt;/ion-icon&gt;
+        Schedule Management
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
 
-            <div class="col-md-4">
-              <div class="jca-card-pricing jca-card-pricing--featured">
-                <div class="jca-card-pricing__header">
-                  <div class="jca-card-pricing__header-main">Medium Firm</div>
-                  <div class="jca-card-pricing__header-sub">1-20 Members</div>
-                </div>
+  &lt;div class="jca-card-pricing__actions"&gt;
+    &lt;a href="#" class="jca-card-pricing__actions-item"&gt;
+      Sign up
+    &lt;/a&gt;
 
-                <div class="jca-card-pricing__price">
-                  <span class="jca-card-pricing__price-value">500</span>
-                  <div class="jca-card-pricing__price-meta">
-                    <div class="jca-card-pricing__price-currency">ZAR</div>
-                    <div class="jca-card-pricing__price-period">monthly</div> 
-                  </div>
-                </div>
+    &lt;a href="#" class="jca-card-pricing__actions-item"&gt;
+      Contact Us
+    &lt;/a&gt;
 
-                <div class="jca-card-pricing__features">
-                  <ul>
-                    <li>
-                      <ion-icon class="jca-card-pricing__icon" name="finger-print-outline"></ion-icon>
-                      Secure data
-                    </li>
-                    <li>
-                      <ion-icon class="jca-card-pricing__icon" name="albums-outline"></ion-icon>
-                      Unlimited Consultations
-                    </li>
-                    <li>
-                      <ion-icon class="jca-card-pricing__icon" name="cash-outline"></ion-icon>
-                      Automated Payments
-                    </li>
-                    <li>
-                      <ion-icon class="jca-card-pricing__icon" name="calendar-outline"></ion-icon>
-                      Schedule Management
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="jca-card-pricing__actions">
-                  <a href="#" class="jca-card-pricing__actions-item bg-success text-light">
-                    Sign up
-                  </a>
-  
-                  <a href="#" class="jca-card-pricing__actions-item bg-info">
-                    Contact Us
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="jca-card-pricing">
-                <div class="jca-card-pricing__header">
-                  <div class="jca-card-pricing__header-main">Large Firm</div>
-                  <div class="jca-card-pricing__header-sub">1-20 Members</div>
-                </div>
-
-                <div class="jca-card-pricing__price">
-                  <span class="jca-card-pricing__price-value">10,000</span>
-                  <div class="jca-card-pricing__price-meta">
-                    <div class="jca-card-pricing__price-currency">ZAR</div>
-                    <div class="jca-card-pricing__price-period">monthly</div> 
-                  </div>
-                </div>
-
-                <div class="jca-card-pricing__features">
-                  <ul>
-                    <li>
-                      <ion-icon class="jca-card-pricing__icon" name="finger-print-outline"></ion-icon>
-                      Secure data
-                    </li>
-                    <li>
-                      <ion-icon class="jca-card-pricing__icon" name="albums-outline"></ion-icon>
-                      Unlimited Consultations
-                    </li>
-                    <li>
-                      <ion-icon class="jca-card-pricing__icon" name="cash-outline"></ion-icon>
-                      Automated Payments
-                    </li>
-                    <li>
-                      <ion-icon class="jca-card-pricing__icon" name="calendar-outline"></ion-icon>
-                      Schedule Management
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="jca-card-pricing__actions">
-                  <a href="#" class="jca-card-pricing__actions-item bg-success text-light">
-                    Sign up
-                  </a>
-  
-                  <a href="#" class="jca-card-pricing__actions-item bg-info">
-                    Contact Us
-                  </a>
+    &lt;a href="#" class="jca-card-pricing__actions-item"&gt;
+      &lt;ion-icon name="logo-whatsapp" size="large"&gt;&lt;/ion-icon&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                      </code>
+                    </pre>
                 </div>
               </div>
             </div>
@@ -288,31 +259,10 @@
       </div>
     </div>
   </body>
-  <script
-    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous">
-  </script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous">
-  </script>
-  <script
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous">
-  </script>
-  
-  <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function(event) {
-      var loader = document.querySelector('.jca-loader');
-      var content = document.querySelector('.jca-layout');
 
-      setTimeout(function() {
-        loader.classList.add('d-none');
-        content.classList.remove('d-none');
-      }, 100);
-    });
-  </script>
+  <script type="text/javascript" src="../js/jquery-3.5.1.slim.min.js"></script>
+  <script type="text/javascript" src="../js/popper.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/prism.js"></script>
+  <script type="text/javascript" src="../js/main.js"></script>
 </html>
