@@ -27,7 +27,8 @@
     min-width: 50%;
     padding: $default_padding;
 
-    :not(pre) > code[class*="language-"], pre[class*="language-"] {
+    :not(pre) > code[class*="language-"],
+    pre[class*="language-"] {
       background: none;
       font-size: 1.1em;
     }
