@@ -1,8 +1,9 @@
 {
-  "name": "jca-ui-kit",
+  "name": "@ttsftwr/jca-ui-kit",
   "version": "0.0.4",
   "description": "JCA UI Kit from components built in Just Connect . Africa app",
   "main": "dist/index.html",
+  "homepage": "https://thabotitus.github.io/jca-ui-kit/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp serve",
@@ -13,7 +14,7 @@
     "ES6",
     "Gulp",
     "Webpack",
-    "starter",
+    "ui-kit",
     "compiling",
     "web",
     "front-end",
@@ -36,10 +37,7 @@
     "gulp-clean": "0.4.0",
     "gulp-copy": "4.0.1",
     "gulp-htmlmin": "5.0.1",
-    "uglifyjs-webpack-plugin": "2.2.0"
-  },
-  "dependencies": {
-    "@popperjs/core": "^2.4.0",
+    "uglifyjs-webpack-plugin": "2.2.0",
     "animate.css": "^4.1.0",
     "babel-loader": "^8.1.0",
     "bootstrap": "^4.5.0",
@@ -57,5 +55,6 @@
     "i": "^0.3.6",
     "normalize.css": "^8.0.1",
     "webpack-stream": "^5.2.1"
-  }
+  },
+  "dependencies": {}
 }
