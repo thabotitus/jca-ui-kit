@@ -1,6 +1,6 @@
 {
   "name": "jca-ui-kit",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "JCA UI Kit from components built in Just Connect . Africa app",
   "main": "dist/index.html",
   "scripts": {
