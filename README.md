@@ -9,11 +9,17 @@ A Ui library based of components created in Just Connect application.
 - **NODE version** - 12.16.1
 - **Gulp version** - CLI - 2.2.1, Local 4.0.2
 
-### Installation and usage
+### Installation
 
 1. `cd your-project-directory`
 2. `git clone https://github.com/thabotitus/jca-ui-kit.git`
 3. `npm install`
+
+OR
+
+```
+npm i @ttsftwr/jca-ui-kit
+```
 
 ### Useful commands
 
