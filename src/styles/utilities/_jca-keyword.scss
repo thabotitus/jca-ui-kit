@@ -1,0 +1,8 @@
+.jca-keyword {
+  display: inline-flex;
+  padding: 3px 10px;
+  border-radius: $default-radius;
+  background: var(--info);
+  color: var(--primary);
+  font-family: 'Oxygen Mono', monospace;
+}
