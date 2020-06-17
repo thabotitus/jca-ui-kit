@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>JCA UI KIT | Tags</title>
+    <title>JCA UI KIT | One Time Pin</title>
     <link href="../css/jca-ui-kit.min.css" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
@@ -90,7 +90,7 @@
                 Card Group
               </a>
             </li>
-            <li class="jca-nav-card__item jca-nav-card__item--active">
+            <li class="jca-nav-card__item">
               <div class="jca-nav-card__item-icon">
                 <ion-icon name="pricetags-outline"></ion-icon>
               </div>
@@ -122,7 +122,7 @@
                 Notifications
               </a>
             </li>
-            <li class="jca-nav-card__item">
+            <li class="jca-nav-card__item jca-nav-card__item--active">
               <div class="jca-nav-card__item-icon">
                 <ion-icon name="calculator-outline"></ion-icon>
               </div>
@@ -138,10 +138,12 @@
             <div class="col-md-12">
               <div class="jca-page-header">
                 <div class="jca-page-header__title">
-                  <ion-icon class="jca-page-header__icon" name="pricetags-outline"></ion-icon>
-                  Tags
+                  <ion-icon class="jca-page-header__icon" name="calculator-outline"></ion-icon>
+                  One Time Pin
                 </div>
-                <div class="jca-page-header__subtitle">A card full of tags</div>
+                <div class="jca-page-header__subtitle">
+                  One time pin inputs from online transactions
+                </div>
               </div>
             </div>
           </div>
@@ -151,146 +153,44 @@
               <div class="jca-code-reference">
                 <div class="jca-code-reference__example">
                   <div class="jca-code-reference__description">
-                    A tag card is a grid of tags within a card. It can have 2 - 5 columns, by
-                    modifying the <span class="jca-keyword">jca-card-tags--[n]-col</span> class
+                    A simple way to present one time pin
                   </div>
                   <div class="jca-code-reference__visual">
-                    <h5>3 COL</h5>
-                    <div class="jca-card-tags jca-card-tags--3-col">
-                      <div class="jca-card-tags__items">
-                        <div class="jca-card-tags__item">
-                          # marketing
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # digital
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # marketing
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # marketing 101
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # marketing digital
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # ngành marketing
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # marketing online
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # marketing strategy
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # social media marketing
-                        </div>   
+                    <div class="jca-card-otp">
+                      <div class="jca-card-otp__icon">
+                        <ion-icon name="finger-print-outline"></ion-icon>
                       </div>
-                    </div>
-
-                    <h5>4 COL</h5>
-                    <div class="jca-card-tags jca-card-tags--4-col">
-                      <div class="jca-card-tags__items">
-                        <div class="jca-card-tags__item">
-                          # marketing
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # digital
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # marketing
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # marketing 101
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # marketing digital
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # ngành marketing
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # marketing online
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # marketing strategy
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # social media marketing
-                        </div>   
+                      <div class="jca-card-otp__text">
+                        Please enter the one time pin sent to *******789
                       </div>
-                    </div>
-
-                    <h5>5 COL</h5>
-                    <div class="jca-card-tags jca-card-tags--5-col">
-                      <div class="jca-card-tags__items">
-                        <div class="jca-card-tags__item">
-                          # marketing
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # digital
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # marketing
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # marketing 101
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # marketing digital
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # ngành marketing
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # marketing online
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # marketing strategy
-                        </div>
-                        <div class="jca-card-tags__item">
-                          # social media marketing
-                        </div>   
+                      <div class="jca-card-otp__input">
+                        <input type="text" value="12345" />
+                      </div>
+                      <div class="jca-card-otp__action">
+                        <div class="btn btn-success">Submit</div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="jca-code-reference__code">
                   <pre>
-                      <code class="language-html">
-&lt;div class="jca-card-tags jca-card-tags--3-col"&gt;
-  &lt;div class="jca-card-tags__items"&gt;
-    &lt;div class="jca-card-tags__item"&gt;
-      # marketing
-    &lt;/div&gt;
-    &lt;div class="jca-card-tags__item"&gt;
-      # digital
-    &lt;/div&gt;
-    &lt;div class="jca-card-tags__item"&gt;
-      # marketing
-    &lt;/div&gt;
-    &lt;div class="jca-card-tags__item"&gt;
-      # marketing 101
-    &lt;/div&gt;
-    &lt;div class="jca-card-tags__item"&gt;
-      # marketing digital
-    &lt;/div&gt;
-    &lt;div class="jca-card-tags__item"&gt;
-      # ngành marketing
-    &lt;/div&gt;
-    &lt;div class="jca-card-tags__item"&gt;
-      # marketing online
-    &lt;/div&gt;
-    &lt;div class="jca-card-tags__item"&gt;
-      # marketing strategy
-    &lt;/div&gt;
-    &lt;div class="jca-card-tags__item"&gt;
-      # social media marketing
-    &lt;/div&gt;
+                    <code class="language-html">
+&lt;div class="jca-card-otp"&gt;
+  &lt;div class="jca-card-otp__icon"&gt;
+    &lt;ion-icon name="finger-print-outline"&gt;&lt;/ion-icon&gt;
+  &lt;/div&gt;
+  &lt;div class="jca-card-otp__text"&gt;
+    Please enter the one time pin sent to *******789
+  &lt;/div&gt;
+  &lt;div class="jca-card-otp__input"&gt;
+    &lt;input type="text" /&gt;
+  &lt;/div&gt;
+  &lt;div class="jca-card-otp__action"&gt;
+    &lt;div class="btn btn-success"&gt;Submit&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-                      </code>
-                    </pre>
+                    </code>
+                  </pre>
                 </div>
               </div>
             </div>
