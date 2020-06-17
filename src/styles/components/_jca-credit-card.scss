@@ -1,0 +1,192 @@
+.jca-credit-card {
+  border-radius: $default_radius;
+  border-radius: 8px;
+  background: $black;
+  overflow: hidden;
+  box-shadow: $default_shadow;
+  margin-bottom: 20px;
+  max-width: 550px;
+
+  &__logo {
+    padding: $light_padding;
+    text-align: right;
+    max-height: 80px;
+    height: 80px;
+
+    img {
+      height: 90%;
+    }
+  }
+
+  &__card-number {
+    padding: $default_padding;
+    color: $white;
+    font-size: 2em;
+    letter-spacing: 2px;
+    text-align: center;
+
+    input {
+      width: 100%;
+      background: none;
+      border: none;
+      color: $white;
+      text-align: center;
+      letter-spacing: 2px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    color: $white;
+    padding: $default_padding;
+    padding-top: 0;
+  }
+
+  &__owner {
+    flex: 3;
+
+    input {
+      width: 100%;
+      background: none;
+      border: none;
+      color: $white;
+      text-transform: uppercase;
+      padding: 0;
+      margin: 0;
+      font-weight: 700;
+    }
+  }
+  
+  &__expiry {
+    flex: 1;
+    text-align: right;
+  }
+
+  &__month {
+    display: inline-block;
+    border: none;
+    width: 30px;
+    text-align: right;
+    background: none;
+    color: $white;
+    font-weight: 300;
+  }
+
+  &__year {
+    display: inline-block;
+    border: none;
+    width: 40px;
+    text-align: left;
+    background: none;
+    color: $white;
+    font-weight: 700;
+  }
+
+  &__cvv {
+    flex: 1;
+    display: inline-block;
+    text-align: right;
+  }
+
+  &__cvv-digits {
+    display: inline-block;
+    border: none;
+    width: 30px;
+    text-align: right;
+    background: none;
+    color: $white;
+    font-weight: 700;
+  }
+
+  &__label {
+    text-transform: uppercase;
+    font-size: 0.8em;
+  }
+
+  &__text {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__type {
+    font-weight: 300;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+  }
+}
+
+// GRADIENTS
+.jca-credit-card {
+  &--gradient-1 {
+    background: linear-gradient(123deg, #FFFFFF 0%, #00B2FF 100%),
+                linear-gradient(236deg, #BAFF99 0%, #005E64 100%),
+                linear-gradient(180deg, #FFFFFF 0%, #002A5A 100%),
+                linear-gradient(225deg, #0094FF 20%, #BFF4ED 45%, #280F34 45%, #280F34 70%, #FF004E 70%, #E41655 85%, #B30753 85%, #B30753 100%),
+                linear-gradient(135deg, #0E0220 15%, #0E0220 35%, #E40475 35%, #E40475 60%, #48E0E4 60%, #48E0E4 68%, #D7FBF6 68%, #D7FBF6 100%);
+    background-blend-mode: overlay, overlay, overlay, darken, normal;
+  }
+
+  &--gradient-2 {
+    background: linear-gradient(60deg, #2B2E4A 0%, #2B2E4A 30%, #E84545 calc(30% + 1px), #E84545 60%, #903749 calc(60% + 1px), #903749 70%, #53354A calc(70% + 1px), #53354A 100%);
+  }
+
+  &--gradient-3 {
+    background: radial-gradient(100% 225% at 100% 0%, #FF0000 0%, #000000 100%),
+                linear-gradient(236deg, #00C2FF 0%, #000000 100%),
+                linear-gradient(135deg, #CDFFEB 0%, #CDFFEB 36%, #009F9D 36%, #009F9D 60%, #07456F 60%, #07456F 67%, #0F0A3C 67%, #0F0A3C 100%);
+    background-blend-mode: overlay, hard-light, normal;
+  }
+
+  &--gradient-4 {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%),
+                radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; 
+    background-blend-mode: multiply,multiply;
+  }
+
+  &--gradient-5 {
+    background: #0F2027;
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  }
+
+  &--gradient-6 {
+    background: radial-gradient(100% 225% at 100% 0%, #120037 0%, #000000 100%),
+                linear-gradient(35deg, #C0FFC7 0%, #17001F 75%),
+                linear-gradient(55deg, #2400FF 0%, #000000 100%),
+                linear-gradient(90deg, #FFE037 0%, #FFE037 40%, #1DCD9F 40%, #1DCD9F 50%, #088C6F 50%, #088C6F 70%, #23033C 70%, #23033C 100%),
+                linear-gradient(180deg, #FF8FE5 0%, #FF8FE5 45%, #FBFF64 45%, #FBFF64 60%, #76E3FF 60%, #76E3FF 80%, #6EB6E7 80%, #6EB6E7 100%);
+    background-blend-mode: screen, overlay, overlay, darken, normal;
+  }
+
+  &--gradient-7 {
+    background: linear-gradient(180deg, #FF0055 0%, #000066 100%);
+  }
+
+  &--gradient-8 {
+    background: radial-gradient(100% 135% at 90% 0%, #00FF66 0%, #00FF66 33%, #00FFFF calc(33% + 1px), #00FFFF 75%, #EB00FF calc(75% + 1px), #EB00FF 100%),
+                radial-gradient(circle at 60% 110%, #00FF66 0%, #00FF66 33%, #00FFFF calc(33% + 1px), #00FFFF 66%, #EB00FF calc(66% + 1px), #EB00FF 100%),
+                radial-gradient(100% 225% at 0% 0%, #00FF66 0%, #00FF66 33%, #00FFFF calc(33% + 1px), #00FFFF 66%, #EB00FF calc(66% + 1px), #EB00FF 100%);
+    background-blend-mode: multiply, multiply, normal;
+  }
+
+  &--gradient-9 {
+    background: radial-gradient(100% 225% at 0% 0%, #DE3E3E 0%, #17115C 100%),
+                radial-gradient(100% 225% at 100% 0%, #FF9040 0%, #FF0000 100%),
+                linear-gradient(180deg, #CE63B7 0%, #ED6283 100%),
+                radial-gradient(100% 120% at 75% 0%, #A74600 0%, #000000 100%),
+                linear-gradient(310deg, #0063D8 0%, #16009A 50%);
+    background-blend-mode: overlay, color-dodge, color-burn, color-dodge, normal;
+  }
+
+  &--gradient-10 {
+    background: linear-gradient(180deg, #000346 0%, #FF0000 100%),
+                linear-gradient(58.72deg, #0029FF 0%, #AA0014 100%),
+                radial-gradient(100% 164.72% at 100% 100%, #FF00A8 0%, #00FF47 100%),
+                radial-gradient(100% 148.07% at 0% 0%, #FFF500 0%, #51D500 100%);
+    background-blend-mode: overlay, overlay, difference, normal;
+  }
+}
