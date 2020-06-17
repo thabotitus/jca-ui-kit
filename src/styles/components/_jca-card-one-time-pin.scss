@@ -1,0 +1,44 @@
+.jca-card-otp {
+  border-radius: $default_radius;
+  background: $white;
+  overflow: hidden;
+  box-shadow: $default_shadow;
+  margin-bottom: 20px;
+
+  &__icon {
+    padding: $default_padding;
+    text-align: center;
+    font-size: 3em;
+    padding-bottom: 0;
+  }
+
+  &__text {
+    text-align: center;
+    padding: $default_padding;
+  }
+
+  &__input {
+    background: $grey;
+    padding: $default_padding;
+
+    input[type="text"] {
+      display: block;
+      border: none;
+      width: 100%;
+      border-bottom: 1px dashed lighten($black, 60%);
+      height: 80px;
+      background: none;
+      text-align: center;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 4em;
+      letter-spacing: 10px;
+    }
+  }
+
+  &__action {
+    padding: $default_padding;
+    .btn {
+      width: 100%;
+    }
+  }
+}

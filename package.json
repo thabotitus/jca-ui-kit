@@ -3,7 +3,8 @@
   "version": "0.0.5",
   "description": "JCA UI Kit from components built in Just Connect . Africa app",
   "main": "dist/index.html",
-  "homepage": "",
+  "homepage": "https://thabotitus.github.io/jca-ui-kit/",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp serve",
