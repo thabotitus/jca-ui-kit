@@ -16,7 +16,7 @@
       }
 
       if (footer) {
-        footer.classList.remove("d-none")
+        footer.classList.remove("d-none");
       }
     });
   };
