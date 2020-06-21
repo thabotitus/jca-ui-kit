@@ -3,21 +3,20 @@
    
   window.JCA.loader = () => {
     document.addEventListener("DOMContentLoaded", function() {
-      var loader =  document.querySelectorAll('[data-body="loader"]')[0];
-      var content = document.querySelectorAll('[data-body="content"]')[0];
-      var footer = document.querySelectorAll('[data-body="footer"]')[0];
-
+      var loader =  document.querySelectorAll("[data-body='loader']")[0];
+      var content = document.querySelectorAll("[data-body='content']")[0];
+      var footer = document.querySelectorAll("[data-body='footer']")[0];
 
       if (loader) {
-        loader.classList.add('d-none');
+        loader.classList.add("d-none");
       }
 
       if (content) {
-        content.classList.remove('d-none');
+        content.classList.remove("d-none");
       }
 
       if (footer) {
-        footer.classList.remove('d-none')
+        footer.classList.remove("d-none")
       }
     });
   };
