@@ -88,7 +88,7 @@ gulp.task(
 			.pipe(plumber({
 				errorHandler: notify.onError("Error: <%= error.message %>")
 			}))
-			// .pipe(webpack(webpackconfig), webpack)
+			.pipe(webpack(webpackconfig), webpack)
 			.pipe(gulp.dest(`./${DIST_FOLDERS.ROOT}/${DIST_FOLDERS.JS}`))
 			.pipe(browserSync.stream())
 			.pipe(notify({message: "JS task completed!"}))

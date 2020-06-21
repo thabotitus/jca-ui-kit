@@ -3,12 +3,13 @@
 * - default webpack.config.js
 */
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   mode: 'development',
   entry: {
-    "main": "./src/js/main.js",
-    "main.min": "./src/js/main.js",
+    "jca-ui-kit.min": "./src/js/app.js",
+    "jquery.min": "./src/js/jquery.js"
   },
   output: {
     filename: '[name].js',
@@ -38,4 +39,11 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    alias: {
+      jquery: path.resolve(__dirname, './src/js/jquery.js'),
+      jQuery: path.resolve(__dirname, './src/js/jquery.js'),
+      $: path.resolve(__dirname, './src/js/jquery.js')
+    }
+  }
 };
