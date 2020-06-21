@@ -8,9 +8,18 @@
   height: 70px;
   max-height: 70px;
   z-index: 100;
+  margin-bottom: 20px;
 
   &--transparent {
     background: none;
+    color: $black;
+    box-shadow: none;
+  }
+
+  &--fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
 
   &__nav {
@@ -38,6 +47,7 @@
   
     &-item {
       height: 100%;
+      font-weight: 700;
     
       .dropdown-menu {
         padding: 0;
@@ -63,7 +73,7 @@
     }
 
     &-icon {
-      font-size: 1.7em;
+      font-size: 1.5em;
       margin-right: 10px;
     }
   }
