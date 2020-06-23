@@ -1,7 +1,7 @@
 .jca-layout {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 70px 1fr;
+  grid-template-rows: $topbar_height 1fr;
   height: 100vh;
   max-height: 100vh;
   overflow: hidden;
@@ -32,6 +32,19 @@
   a {
     text-decoration: none;
     color: $black;
+  }
+
+  &__version {
+    font-weight: 300;
+    font-size: 8pt;
+  }
+
+  &--light {
+    color: $white;
+
+    a {
+      color: $white;
+    }
   }
 }
 
