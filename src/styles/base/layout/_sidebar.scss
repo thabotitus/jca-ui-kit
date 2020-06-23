@@ -1,8 +1,8 @@
 .jca-sidebar {
   padding: $light_padding;
   padding-right: 0;
-  height: calc(100vh - 70px);
-  max-height: calc(100vh - 70px);
+  height: calc(100vh - $topbar_height);
+  max-height: calc(100vh - $topbar_height);
   flex: 1;
   min-width: 320px;
   max-width: 320px;

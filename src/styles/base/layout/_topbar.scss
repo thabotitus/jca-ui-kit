@@ -5,8 +5,8 @@
   background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(248,249,250,1) 100%); 
   box-shadow: $default_shadow;
   padding: 0 50px;
-  height: 70px;
-  max-height: 70px;
+  height: $topbar_height;
+  max-height: $topbar_height;
   z-index: 100;
   margin-bottom: 20px;
 

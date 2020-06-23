@@ -1,0 +1,26 @@
+.jca-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__header {
+    display: block;
+    height: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.2em;
+  }
+
+  &__item {
+    padding: 8px 0;
+  }
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: $grey;
+      text-decoration: none;
+    }
+  }
+}
