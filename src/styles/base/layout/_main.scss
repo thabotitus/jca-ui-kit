@@ -1,9 +1,10 @@
 .jca-main {
   display: flex;
-  height: calc(100vh - 70px);
-  max-height: calc(100vh - 70px);
+  flex-direction: column;
+  min-height: calc(100vh - $topbar_height);
   width: 100%;
   min-width: 100vw;
+  overflow-y: scroll;
 
   &--columns {
     flex-direction: column;
@@ -11,5 +12,10 @@
 
   &--scrollable {
     overflow-y: scroll;
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
   }
 }

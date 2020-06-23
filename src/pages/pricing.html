@@ -19,6 +19,7 @@
           <a href="../index.html">
             <img src="../img/logo.svg" />
             JCA UI KIT
+            <span class="jca-logo__version">v0.1.0</span>
           </a>
         </div>
         <ul class="jca-topbar__nav">
@@ -56,219 +57,296 @@
       </div>
 
       <div class="jca-main">
-        <div class="jca-sidebar">
-          <ul class="jca-nav-card">
-            <li class="jca-nav-card__item">
-              <div class="jca-nav-card__item-icon">
-                <ion-icon name="home-outline"></ion-icon>
-              </div>
-              <a href="../pages/home.html" class="jca-nav-card__item-link">
-                Home
-              </a>
-            </li>
-            <li class="jca-nav-card__item">
-              <div class="jca-nav-card__item-icon">
-                <ion-icon name="hourglass-outline"></ion-icon>
-              </div>
-              <a href="../pages/vertical-timeline.html" class="jca-nav-card__item-link">
-                Timeline
-              </a>
-            </li>
-            <li class="jca-nav-card__item">
-              <div class="jca-nav-card__item-icon">
-                <ion-icon name="layers-outline"></ion-icon>
-              </div>
-              <a href="../pages/cards.html" class="jca-nav-card__item-link">
-                Cards
-              </a>
-            </li>
-            <li class="jca-nav-card__item">
-              <div class="jca-nav-card__item-icon">
-                <ion-icon name="grid-outline"></ion-icon>
-              </div>
-              <a href="../pages/card-group.html" class="jca-nav-card__item-link">
-                Card Group
-              </a>
-            </li>
-            <li class="jca-nav-card__item">
-              <div class="jca-nav-card__item-icon">
-                <ion-icon name="pricetags-outline"></ion-icon>
-              </div>
-              <a href="../pages/tags.html" class="jca-nav-card__item-link">
-                Tags
-              </a>
-            </li>
-            <li class="jca-nav-card__item jca-nav-card__item--active">
-              <div class="jca-nav-card__item-icon">
-                <ion-icon name="card-outline"></ion-icon>
-              </div>
-              <a href="../pages/pricing.html" class="jca-nav-card__item-link">
-                Pricing
-              </a>
-            </li>
-            <li class="jca-nav-card__item">
-              <div class="jca-nav-card__item-icon">
-                <ion-icon name="reader-outline"></ion-icon>
-              </div>
-              <a href="../pages/feed.html" class="jca-nav-card__item-link">
-                Feed
-              </a>
-            </li>
-            <li class="jca-nav-card__item">
-              <div class="jca-nav-card__item-icon">
-                <ion-icon name="flash-outline"></ion-icon>
-              </div>
-              <a href="../pages/notifications.html" class="jca-nav-card__item-link">
-                Notifications
-              </a>
-            </li>
-            <li class="jca-nav-card__item">
-              <div class="jca-nav-card__item-icon">
-                <ion-icon name="calculator-outline"></ion-icon>
-              </div>
-              <a href="../pages/one-time-pin.html" class="jca-nav-card__item-link">
-                One Time Pin
-              </a>
-            </li>
-            <li class="jca-nav-card__item">
-              <div class="jca-nav-card__item-icon">
-                <ion-icon name="card-outline"></ion-icon>
-              </div>
-              <a href="../pages/credit-card.html" class="jca-nav-card__item-link">
-                Credit Card
-              </a>
-            </li>
-          </ul>
-        </div>
-  
-        <div class="jca-content">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="jca-page-header">
-                <div class="jca-page-header__title">
-                  <ion-icon class="jca-page-header__icon" name="card-outline"></ion-icon>
-                  Pricing
+        <div class="jca-main__content">
+          <div class="jca-sidebar">
+            <ul class="jca-nav-card">
+              <li class="jca-nav-card__item">
+                <div class="jca-nav-card__item-icon">
+                  <ion-icon name="home-outline"></ion-icon>
                 </div>
-                <div class="jca-page-header__subtitle">Pricing cards</div>
+                <a href="../pages/home.html" class="jca-nav-card__item-link">
+                  Home
+                </a>
+              </li>
+              <li class="jca-nav-card__item">
+                <div class="jca-nav-card__item-icon">
+                  <ion-icon name="hourglass-outline"></ion-icon>
+                </div>
+                <a href="../pages/vertical-timeline.html" class="jca-nav-card__item-link">
+                  Timeline
+                </a>
+              </li>
+              <li class="jca-nav-card__item">
+                <div class="jca-nav-card__item-icon">
+                  <ion-icon name="layers-outline"></ion-icon>
+                </div>
+                <a href="../pages/cards.html" class="jca-nav-card__item-link">
+                  Cards
+                </a>
+              </li>
+              <li class="jca-nav-card__item">
+                <div class="jca-nav-card__item-icon">
+                  <ion-icon name="grid-outline"></ion-icon>
+                </div>
+                <a href="../pages/card-group.html" class="jca-nav-card__item-link">
+                  Card Group
+                </a>
+              </li>
+              <li class="jca-nav-card__item">
+                <div class="jca-nav-card__item-icon">
+                  <ion-icon name="pricetags-outline"></ion-icon>
+                </div>
+                <a href="../pages/tags.html" class="jca-nav-card__item-link">
+                  Tags
+                </a>
+              </li>
+              <li class="jca-nav-card__item jca-nav-card__item--active">
+                <div class="jca-nav-card__item-icon">
+                  <ion-icon name="card-outline"></ion-icon>
+                </div>
+                <a href="../pages/pricing.html" class="jca-nav-card__item-link">
+                  Pricing
+                </a>
+              </li>
+              <li class="jca-nav-card__item">
+                <div class="jca-nav-card__item-icon">
+                  <ion-icon name="reader-outline"></ion-icon>
+                </div>
+                <a href="../pages/feed.html" class="jca-nav-card__item-link">
+                  Feed
+                </a>
+              </li>
+              <li class="jca-nav-card__item">
+                <div class="jca-nav-card__item-icon">
+                  <ion-icon name="flash-outline"></ion-icon>
+                </div>
+                <a href="../pages/notifications.html" class="jca-nav-card__item-link">
+                  Notifications
+                </a>
+              </li>
+              <li class="jca-nav-card__item">
+                <div class="jca-nav-card__item-icon">
+                  <ion-icon name="calculator-outline"></ion-icon>
+                </div>
+                <a href="../pages/one-time-pin.html" class="jca-nav-card__item-link">
+                  One Time Pin
+                </a>
+              </li>
+              <li class="jca-nav-card__item">
+                <div class="jca-nav-card__item-icon">
+                  <ion-icon name="card-outline"></ion-icon>
+                </div>
+                <a href="../pages/credit-card.html" class="jca-nav-card__item-link">
+                  Credit Card
+                </a>
+              </li>
+            </ul>
+          </div>
+    
+          <div class="jca-content">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="jca-page-header">
+                  <div class="jca-page-header__title">
+                    <ion-icon class="jca-page-header__icon" name="card-outline"></ion-icon>
+                    Pricing
+                  </div>
+                  <div class="jca-page-header__subtitle">Pricing cards</div>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12">
-              <div class="jca-code-reference">
-                <div class="jca-code-reference__example">
-                  <div class="jca-code-reference__description">
-                    A simple way to present pricing for services offered
-                  </div>
-                  <div class="jca-code-reference__visual">
-                    <div class="jca-card-pricing">
-                      <div class="jca-card-pricing__header">
-                        <div class="jca-card-pricing__header-main">Small Firm</div>
-                        <div class="jca-card-pricing__header-sub">1-20 Members</div>
-                      </div>
-      
-                      <div class="jca-card-pricing__price">
-                        <span class="jca-card-pricing__price-value">1000</span>
-                        <div class="jca-card-pricing__price-meta">
-                          <div class="jca-card-pricing__price-currency">ZAR</div>
-                          <div class="jca-card-pricing__price-period">monthly</div> 
+  
+            <div class="row">
+              <div class="col-md-12">
+                <div class="jca-code-reference">
+                  <div class="jca-code-reference__example">
+                    <div class="jca-code-reference__description">
+                      A simple way to present pricing for services offered
+                    </div>
+                    <div class="jca-code-reference__visual">
+                      <div class="jca-card-pricing">
+                        <div class="jca-card-pricing__header">
+                          <div class="jca-card-pricing__header-main">Small Firm</div>
+                          <div class="jca-card-pricing__header-sub">1-20 Members</div>
                         </div>
-                      </div>
-      
-                      <div class="jca-card-pricing__features">
-                        <ul>
-                          <li>
-                            <ion-icon class="jca-card-pricing__icon" name="finger-print-outline"></ion-icon>
-                            Secure data
-                          </li>
-                          <li>
-                            <ion-icon class="jca-card-pricing__icon" name="albums-outline"></ion-icon>
-                            Unlimited Consultations
-                          </li>
-                          <li>
-                            <ion-icon class="jca-card-pricing__icon" name="cash-outline"></ion-icon>
-                            Automated Payments
-                          </li>
-                          <li>
-                            <ion-icon class="jca-card-pricing__icon" name="calendar-outline"></ion-icon>
-                            Schedule Management
-                          </li>
-                        </ul>
-                      </div>
-       
-                      <div class="jca-card-pricing__actions">
-                        <a href="#" class="jca-card-pricing__actions-item">
-                          Sign up
-                        </a>
         
-                        <a href="#" class="jca-card-pricing__actions-item">
-                          Contact Us
-                        </a>
-
-                        <a href="#" class="jca-card-pricing__actions-item">
-                          <ion-icon name="logo-whatsapp" size="large"></ion-icon>
-                        </a>
+                        <div class="jca-card-pricing__price">
+                          <span class="jca-card-pricing__price-value">1000</span>
+                          <div class="jca-card-pricing__price-meta">
+                            <div class="jca-card-pricing__price-currency">ZAR</div>
+                            <div class="jca-card-pricing__price-period">monthly</div> 
+                          </div>
+                        </div>
+        
+                        <div class="jca-card-pricing__features">
+                          <ul>
+                            <li>
+                              <ion-icon class="jca-card-pricing__icon" name="finger-print-outline"></ion-icon>
+                              Secure data
+                            </li>
+                            <li>
+                              <ion-icon class="jca-card-pricing__icon" name="albums-outline"></ion-icon>
+                              Unlimited Consultations
+                            </li>
+                            <li>
+                              <ion-icon class="jca-card-pricing__icon" name="cash-outline"></ion-icon>
+                              Automated Payments
+                            </li>
+                            <li>
+                              <ion-icon class="jca-card-pricing__icon" name="calendar-outline"></ion-icon>
+                              Schedule Management
+                            </li>
+                          </ul>
+                        </div>
+         
+                        <div class="jca-card-pricing__actions">
+                          <a href="#" class="jca-card-pricing__actions-item">
+                            Sign up
+                          </a>
+          
+                          <a href="#" class="jca-card-pricing__actions-item">
+                            Contact Us
+                          </a>
+  
+                          <a href="#" class="jca-card-pricing__actions-item">
+                            <ion-icon name="logo-whatsapp" size="large"></ion-icon>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="jca-code-reference__code">
-                  <pre>
-                      <code class="language-html">
-&lt;div class="jca-card-pricing"&gt;
-  &lt;div class="jca-card-pricing__header"&gt;
-    &lt;div class="jca-card-pricing__header-main"&gt;Small Firm&lt;/div&gt;
-    &lt;div class="jca-card-pricing__header-sub"&gt;1-20 Members&lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class="jca-card-pricing__price"&gt;
-    &lt;span class="jca-card-pricing__price-value"&gt;1000&lt;/span&gt;
-    &lt;div class="jca-card-pricing__price-meta"&gt;
-      &lt;div class="jca-card-pricing__price-currency"&gt;ZAR&lt;/div&gt;
-      &lt;div class="jca-card-pricing__price-period"&gt;monthly&lt;/div&gt; 
+                  <div class="jca-code-reference__code">
+                    <pre>
+                        <code class="language-html">
+  &lt;div class="jca-card-pricing"&gt;
+    &lt;div class="jca-card-pricing__header"&gt;
+      &lt;div class="jca-card-pricing__header-main"&gt;Small Firm&lt;/div&gt;
+      &lt;div class="jca-card-pricing__header-sub"&gt;1-20 Members&lt;/div&gt;
+    &lt;/div&gt;
+  
+    &lt;div class="jca-card-pricing__price"&gt;
+      &lt;span class="jca-card-pricing__price-value"&gt;1000&lt;/span&gt;
+      &lt;div class="jca-card-pricing__price-meta"&gt;
+        &lt;div class="jca-card-pricing__price-currency"&gt;ZAR&lt;/div&gt;
+        &lt;div class="jca-card-pricing__price-period"&gt;monthly&lt;/div&gt; 
+      &lt;/div&gt;
+    &lt;/div&gt;
+  
+    &lt;div class="jca-card-pricing__features"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;ion-icon class="jca-card-pricing__icon" name="finger-print-outline"&gt;&lt;/ion-icon&gt;
+          Secure data
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;ion-icon class="jca-card-pricing__icon" name="albums-outline"&gt;&lt;/ion-icon&gt;
+          Unlimited Consultations
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;ion-icon class="jca-card-pricing__icon" name="cash-outline"&gt;&lt;/ion-icon&gt;
+          Automated Payments
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;ion-icon class="jca-card-pricing__icon" name="calendar-outline"&gt;&lt;/ion-icon&gt;
+          Schedule Management
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  
+    &lt;div class="jca-card-pricing__actions"&gt;
+      &lt;a href="#" class="jca-card-pricing__actions-item"&gt;
+        Sign up
+      &lt;/a&gt;
+  
+      &lt;a href="#" class="jca-card-pricing__actions-item"&gt;
+        Contact Us
+      &lt;/a&gt;
+  
+      &lt;a href="#" class="jca-card-pricing__actions-item"&gt;
+        &lt;ion-icon name="logo-whatsapp" size="large"&gt;&lt;/ion-icon&gt;
+      &lt;/a&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-
-  &lt;div class="jca-card-pricing__features"&gt;
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;ion-icon class="jca-card-pricing__icon" name="finger-print-outline"&gt;&lt;/ion-icon&gt;
-        Secure data
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;ion-icon class="jca-card-pricing__icon" name="albums-outline"&gt;&lt;/ion-icon&gt;
-        Unlimited Consultations
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;ion-icon class="jca-card-pricing__icon" name="cash-outline"&gt;&lt;/ion-icon&gt;
-        Automated Payments
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;ion-icon class="jca-card-pricing__icon" name="calendar-outline"&gt;&lt;/ion-icon&gt;
-        Schedule Management
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-
-  &lt;div class="jca-card-pricing__actions"&gt;
-    &lt;a href="#" class="jca-card-pricing__actions-item"&gt;
-      Sign up
-    &lt;/a&gt;
-
-    &lt;a href="#" class="jca-card-pricing__actions-item"&gt;
-      Contact Us
-    &lt;/a&gt;
-
-    &lt;a href="#" class="jca-card-pricing__actions-item"&gt;
-      &lt;ion-icon name="logo-whatsapp" size="large"&gt;&lt;/ion-icon&gt;
-    &lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-                      </code>
-                    </pre>
+                        </code>
+                      </pre>
+                  </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="jca-footer jca-footer--gradient-1">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 d-flex align-items-center">
+                <div class="jca-logo jca-logo--light">
+                  <a href="../index.html">
+                    <img src="../img/logo-light.svg" />
+                    JCA UI KIT
+                    <span class="jca-logo__version">v0.1.0</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <ul class="jca-list">
+                  <li class="jca-list__header">
+                    Social
+                  </li>
+                  <li class="jca-list__item">
+                    <a href="#">Link 1</a>
+                  </li>
+                  <li class="jca-list__item">
+                    <a href="#">Link 2</a>
+                  </li>
+                  <li class="jca-list__item">
+                    <a href="#">Link 3</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <ul class="jca-list">
+                  <li class="jca-list__header">
+                    Contact
+                  </li>
+                  <li class="jca-list__item">
+                    <a href="#">Link 1</a>
+                  </li>
+                  <li class="jca-list__item">
+                    <a href="#">Link 2</a>
+                  </li>
+                  <li class="jca-list__item">
+                    <a href="#">Link 3</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+  
+            <div class="row mt-5">
+              <div class="col-md-12 text-center">
+                <p>
+                  The information contained in this website is for general information purposes only. 
+                  The information is provided by <b>TT | Sftwr</b> and while we endeavour to keep the 
+                  information up to date and correct, we make no representations or warranties of any 
+                  kind, express or implied, about the completeness, accuracy, reliability, suitability 
+                  or availability with respect to the website or the information, products, services, 
+                  or related graphics contained on the website for any purpose. Any reliance you place 
+                  on such information is therefore strictly at your own risk.
+                </p>
+  
+                <p>
+                  In no event will we be liable for any loss or damage including without limitation, 
+                  indirect or consequential loss or damage, or any loss or damage whatsoever arising 
+                  from loss of data or profits arising out of, or in connection with, the use of this 
+                  website.
+                </p>
+              </div>
+            </div>
+  
+            <div class="row mt-5 d-flex justify-content-center">
+              <a href="https://www.thabotitus.co.za" target="_blank">
+                <img src="../img/TTS-Logo-light.png" width="250px" />
+              </a>
             </div>
           </div>
         </div>
