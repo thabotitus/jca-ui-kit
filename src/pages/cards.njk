@@ -1,0 +1,178 @@
+{% extends "dashboard.njk" %}
+
+{% block jca_sidebar %}
+  {{nav.active('cards')}}
+{% endblock %}
+
+{% block jca_content %}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jca-page-header">
+        <div class="jca-page-header__title">
+          <ion-icon class="jca-page-header__icon" name="layers-outline"></ion-icon>
+          Cards
+        </div>
+        <div class="jca-page-header__subtitle">The building blocks of all elements</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jca-code-reference">
+        <div class="jca-code-reference__example">
+          <div class="jca-code-reference__description">
+            A card can be used to represent anything on a page in a neat component.
+          </div>
+          <div class="jca-code-reference__visual">
+            <div class="jca-card">
+              <div class="jca-card__header">
+                improve produce
+              </div>
+              <div class="jca-card__content">
+                An an valley indeed so no wonder future nature vanity. Debating all she mistaken indulged believed
+                provided declared. He many kept on draw lain song as same. Whether at dearest certain spirits is
+                entered in to. Rich fine bred real use too many good. She compliment unaffected expression favourable
+                any. Unknown chiefly showing to conduct no. Hung as love evil able to post at as.
+              </div>
+              <div class="jca-card__footer">
+                Paid was hill sir high. For him precaution any advantages dissimilar comparison few terminated
+                projecting. Prevailed discovery immediate objection of ye at. Repair summer one winter living feebly
+                pretty his. In so sense am known these since. Shortly respect ask cousins brought add tedious nay.
+                Expect relied do we genius is. On as around spirit of hearts genius. Is raptures daughter branched
+                laughter peculiar in settling.
+              </div>
+
+              <div class="jca-card__content bg-warning text-light">
+                Unknown chiefly showing to conduct no. Hung as love evil able to post at as.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="jca-code-reference__code">
+          <pre>
+              <code class="language-html">
+&lt;div class="jca-card"&gt;
+&lt;div class="jca-card__header"&gt;
+Title ...
+&lt;/div&gt;
+
+&lt;div class="jca-card__content"&gt;
+Content text ...
+&lt;/div&gt;
+
+&lt;div class="jca-card__footer"&gt;
+Footer text ...
+&lt;/div&gt;
+
+&lt;div class="jca-card__content bg-warning text-light"&gt;
+Content with different background ...
+&lt;/div&gt;
+&lt;/div&gt;
+              </code>
+            </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jca-code-reference">
+        <div class="jca-code-reference__example">
+          <div class="jca-code-reference__description">
+            It can have rows an columns too.
+          </div>
+          <div class="jca-code-reference__visual">
+            <div class="jca-card">
+              <div class="jca-card__content">
+                <div class="row">
+                  <div class="col-6">
+                    Paid was hill sir high. For him precaution any advantages dissimilar comparison few terminated
+                    projecting. Prevailed discovery immediate objection of ye at. Repair summer one winter living feebly
+                    pretty his. 
+                  </div>
+
+                  <div class="col-6">
+                    In so sense am known these since. Shortly respect ask cousins brought add tedious nay.
+                    Expect relied do we genius is. On as around spirit of hearts genius. Is raptures daughter branched
+                    laughter peculiar in settling.
+                  </div>
+                </div>
+              </div>
+
+              <div class="jca-card__footer">
+                In friendship diminution instrument so. Son sure paid door with say them. 
+                Two among sir sorry men court. Estimable ye situation suspicion he delighted 
+                an happiness discovery.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="jca-code-reference__code">
+          <pre>
+              <code class="language-html">
+&lt;div class="jca-card"&gt;
+&lt;div class="jca-card__content"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-6"&gt;
+  A column ...
+&lt;/div&gt;
+
+&lt;div class="col-6"&gt;
+  Another column ...
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="jca-card__footer"&gt;
+And a footer ...
+&lt;/div&gt;
+&lt;/div&gt;
+              </code>
+            </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jca-code-reference">
+        <div class="jca-code-reference__example">
+          <div class="jca-code-reference__description">
+            It can be dark and include media.
+          </div>
+          <div class="jca-code-reference__visual">
+            <div class="jca-card jca-card--dark">
+              <div class="jca-card__content">
+                <img
+                src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1591953027/pexels-photo-4508668_kqnutg.jpg"
+                alt="media" />
+              </div>
+              <div class="jca-card__footer">
+                Speedily say has suitable disposal add boy. On forth doubt miles of child. Exercise joy man children
+                rejoiced. Yet uncommonly his ten who diminution astonished. Demesne new manners savings staying had.
+                Under folly balls death own point now men. Match way these she avoid see death. She whose drift their
+                fat off
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="jca-code-reference__code">
+          <pre>
+              <code class="language-html">
+&lt;div class="jca-card jca-card--dark"&gt;
+&lt;div class="jca-card__content"&gt;
+&lt;img src="https://..." alt="media" /&gt;
+&lt;/div&gt;
+&lt;div class="jca-card__footer"&gt;
+Anything
+&lt;/div&gt;
+&lt;/div&gt;
+              </code>
+            </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

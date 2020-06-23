@@ -1,0 +1,95 @@
+{% macro active(activePage = 'home') %}
+  <div class="jca-sidebar">
+    <ul class="jca-nav-card">
+      <li class="jca-nav-card__item {%if activePage == 'home' %} jca-nav-card__item--active {% endif %}">
+        <div class="jca-nav-card__item-icon">
+          <ion-icon name="home-outline"></ion-icon>
+        </div>
+        <a href="../pages/home.html" class="jca-nav-card__item-link">
+          Home
+        </a>
+      </li>
+
+      <li class="jca-nav-card__item {%if activePage == 'vertical-timeline' %} jca-nav-card__item--active {% endif %}">
+        <div class="jca-nav-card__item-icon">
+          <ion-icon name="hourglass-outline"></ion-icon>
+        </div>
+        <a href="../pages/vertical-timeline.html" class="jca-nav-card__item-link">
+          Timeline
+        </a>
+      </li>
+
+      <li class="jca-nav-card__item jca-nav-card__item {%if activePage == 'cards' %} jca-nav-card__item--active {% endif %}">
+        <div class="jca-nav-card__item-icon">
+          <ion-icon name="layers-outline"></ion-icon>
+        </div>
+        <a href="../pages/cards.html" class="jca-nav-card__item-link">
+          Cards
+        </a>
+      </li>
+
+      <li class="jca-nav-card__item {%if activePage == 'card-group' %} jca-nav-card__item--active {% endif %}">
+        <div class="jca-nav-card__item-icon">
+          <ion-icon name="grid-outline"></ion-icon>
+        </div>
+        <a href="../pages/card-group.html" class="jca-nav-card__item-link">
+          Card Group
+        </a>
+      </li>
+
+      <li class="jca-nav-card__item {%if activePage == 'tags' %} jca-nav-card__item--active {% endif %}">
+        <div class="jca-nav-card__item-icon">
+          <ion-icon name="pricetags-outline"></ion-icon>
+        </div>
+        <a href="../pages/tags.html" class="jca-nav-card__item-link">
+          Tags
+        </a>
+      </li>
+
+      <li class="jca-nav-card__item {%if activePage == 'pricing' %} jca-nav-card__item--active {% endif %}">
+        <div class="jca-nav-card__item-icon">
+          <ion-icon name="card-outline"></ion-icon>
+        </div>
+        <a href="../pages/pricing.html" class="jca-nav-card__item-link">
+          Pricing
+        </a>
+      </li>
+
+      <li class="jca-nav-card__item {%if activePage == 'feed' %} jca-nav-card__item--active {% endif %}">
+        <div class="jca-nav-card__item-icon">
+          <ion-icon name="reader-outline"></ion-icon>
+        </div>
+        <a href="../pages/feed.html" class="jca-nav-card__item-link">
+          Feed
+        </a>
+      </li>
+
+      <li class="jca-nav-card__item {%if activePage == 'notifications' %} jca-nav-card__item--active {% endif %}">
+        <div class="jca-nav-card__item-icon">
+          <ion-icon name="flash-outline"></ion-icon>
+        </div>
+        <a href="../pages/notifications.html" class="jca-nav-card__item-link">
+          Notifications
+        </a>
+      </li>
+
+      <li class="jca-nav-card__item {%if activePage == 'one-time-pin' %} jca-nav-card__item--active {% endif %}">
+        <div class="jca-nav-card__item-icon">
+          <ion-icon name="calculator-outline"></ion-icon>
+        </div>
+        <a href="../pages/one-time-pin.html" class="jca-nav-card__item-link">
+          One Time Pin
+        </a>
+      </li>
+
+      <li class="jca-nav-card__item {%if activePage == 'credit-card' %} jca-nav-card__item--active {% endif %}">
+        <div class="jca-nav-card__item-icon">
+          <ion-icon name="card-outline"></ion-icon>
+        </div>
+        <a href="../pages/credit-card.html" class="jca-nav-card__item-link">
+          Credit Card
+        </a>
+      </li>
+    </ul>
+  </div>
+{% endmacro %}

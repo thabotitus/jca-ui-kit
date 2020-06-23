@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JCA UI KIT | Landing</title>
+    <link href="./css/jca-ui-kit.min.css" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+
+    <script type="text/javascript" src="https://unpkg.com/jparticles@2.0.1/production/jparticles.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/jparticles@2.0.1/production/particle.js"></script>
+  </head>
+  <body>
+    <div class="jca-loader" data-body="loader">
+      <img src="./img/loader.svg" />
+      <p>... LOADING ...</p>
+    </div>
+
+    <div class="jca-layout d-none" data-body="content">
+      {% block content %} {% endblock %}
+    </div>
+
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/jca-ui-kit.min.js"></script>
+  </body>
+</html>
