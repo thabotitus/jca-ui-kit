@@ -45,6 +45,16 @@
     });
   };
 
+  window.JCA.setVersion = () =>  {
+    const version = require('../../package.json').version;
+    elements = document.querySelectorAll('[data-version]');
+    elements.forEach((el) => {
+      el.innerHTML = `v${version}`;
+    });
+    
+  };
+
   window.JCA.loader();
   window.JCA.inputMasks();
+  window.JCA.setVersion();
 }());

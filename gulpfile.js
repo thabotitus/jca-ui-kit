@@ -18,6 +18,7 @@ const browserSync				= require('browser-sync').create();
 const webpack 					= require('webpack-stream');
 const webpackconfig			= require('./webpack.config.js');
 sass.compiler 					= require('node-sass');
+const version  					= require('./package.json').version;
 
 const TASKS = {
 	CLEAN: 			'clean',
@@ -30,8 +31,10 @@ const TASKS = {
 	IMAGES: 		'image',
 	HTML_PAGES: 'nunjucks:pages',
 	HTML_INDEX: 'nunjucks:index',
-	HTML: 'html',
+	HTML: 			'html',
 	COPY: 			'copy',
+	CSS_DIST: 	'css:dist',
+	JS_DIST: 		'js:dist',
 };
 
 const DIST_FOLDERS = {
@@ -42,7 +45,7 @@ const DIST_FOLDERS = {
 };
 
 const DIST_OUTPUT_FILE_NAMES = {
-	CSS: 'jca-ui-kit.min.css',
+	CSS: `jca-ui-kit.min.css`,
 };
 
 const INPUT_FOLDERS = {
@@ -55,7 +58,7 @@ const INPUT_FOLDERS = {
 gulp.task(
   TASKS.CLEAN,
   function () {
-    return gulp.src([`${DIST_FOLDERS.ROOT}/*`], { read: false }).pipe(clean());
+    return gulp.src([`${DIST_FOLDERS.ROOT}/*`, './dist'], { read: false, allowEmpty: true }).pipe(clean());
   });
 
 gulp.task(
@@ -68,7 +71,17 @@ gulp.task(
 			.pipe(webpack(webpackconfig), webpack)
 			.pipe(gulp.dest(`./${DIST_FOLDERS.ROOT}/${DIST_FOLDERS.JS}`))
 			.pipe(browserSync.stream())
-			.pipe(notify({message: "JS task completed!"}))
+});
+
+gulp.task(
+	TASKS.JS_DIST,
+	function(done){
+		return gulp.src([`${INPUT_FOLDERS.JS}/**/*.js`])
+			.pipe(plumber({
+				errorHandler: notify.onError("Error: <%= error.message %>")
+			}))
+			.pipe(webpack(webpackconfig), webpack)
+			.pipe(gulp.dest('./dist'))
 });
 
 gulp.task(
@@ -100,7 +113,37 @@ gulp.task(
 			.pipe(concat(`${DIST_OUTPUT_FILE_NAMES.CSS}`))
 			.pipe(gulp.dest(`./${DIST_FOLDERS.ROOT}/${DIST_FOLDERS.CSS}`))
 			.pipe(browserSync.stream())
-			// .pipe(notify({message: "Style task completed!"}))
+});
+
+gulp.task(
+	TASKS.CSS_DIST,
+	function(){
+		return gulp.src([`${INPUT_FOLDERS.CSS}/**/*.scss`])
+			.pipe(plumber({
+				errorHandler: notify.onError("Error: <%= error.message %>")
+			}))
+			.pipe(sourcemaps.init())
+			.pipe(sassGlob())
+			.pipe(sass({
+				style: 'compressed',
+				errLogToConsole: false,
+				onError: function(error_message) {
+					return notify().write(error_message);
+				}
+			}))
+			.pipe(autoprefixer())
+			.pipe(cleanCSS({
+				compatibility: 'ie9',
+				level: {
+					1: {
+						specialComments: 'all',
+					}
+				}
+			}))
+			.pipe(sourcemaps.write())
+			.pipe(concat(`jca-ui-kit-${version}.min.css`))
+			.pipe(gulp.dest(`./dist`))
+			.pipe(browserSync.stream())
 });
 
 gulp.task(TASKS.HTML_PAGES, function() {
@@ -184,7 +227,6 @@ gulp.task(
 	}
 );
 	
-//Default task
 gulp.task(
 	'default',
 	gulp.series(
@@ -195,6 +237,8 @@ gulp.task(
 			TASKS.IMAGES,
 			TASKS.HTML_INDEX,
 			TASKS.HTML_PAGES,
+			TASKS.CSS_DIST,
+			TASKS.JS_DIST,
 		]
 	)
 );
