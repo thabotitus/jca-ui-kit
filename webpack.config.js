@@ -1,14 +1,11 @@
-/**
-* WEBPACK.CONFIG.JS
-* - default webpack.config.js
-*/
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const path = require('path');
+const UglifyJsPlugin    = require('uglifyjs-webpack-plugin');
+const path              = require('path');
+const version  					= require('./package.json').version;
 
 module.exports = {
   mode: 'development',
   entry: {
-    "jca-ui-kit.min": "./src/js/app.js",
+    'jca-ui-kit.min': "./src/js/app.js",
     "jquery.min": "./src/js/jquery.js"
   },
   output: {
