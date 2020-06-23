@@ -34,6 +34,7 @@ const htmlmin 					= require('gulp-htmlmin');
 const clean 						= require('gulp-clean');
 const bump							= require('gulp-bump');
 const copy							= require('gulp-copy');
+const nunjucksRender 		= require('gulp-nunjucks-render');
 const browserSync				= require('browser-sync').create();
 
 //Webpack config
@@ -127,6 +128,24 @@ gulp.task(
 			// .pipe(notify({message: "Style task completed!"}))
 });
 
+gulp.task('nunjucks:pages', function() {
+  return gulp.src(['src/pages/**/*.njk'])
+  .pipe(nunjucksRender({
+      path: ['src/templates']
+    }))
+	.pipe(gulp.dest(`${DIST_FOLDERS.ROOT}/pages`))
+	.pipe(browserSync.stream());
+});
+
+gulp.task('nunjucks:index', function() {
+  return gulp.src(['src/index.njk'])
+  .pipe(nunjucksRender({
+      path: ['src/templates']
+    }))
+	.pipe(gulp.dest(`${DIST_FOLDERS.ROOT}`))
+	.pipe(browserSync.stream());
+});
+
 //Task image // , {since: gulp.lastRun('image')}
 gulp.task(
 	TASKS.IMAGES,
@@ -201,7 +220,8 @@ gulp.task(
 			TASKS.SCRIPTS,
 			TASKS.STYLES,
 			TASKS.IMAGES,
-			TASKS.HTML,
+			'nunjucks:index',
+			'nunjucks:pages',
 		]
 	)
 );
@@ -218,6 +238,6 @@ gulp.task(
 		gulp.watch(`${INPUT_FOLDERS.JS}/**/*.js`, gulp.series([TASKS.SCRIPTS]));
 		gulp.watch(`${INPUT_FOLDERS.CSS}/**/*.+(scss|css)`, gulp.series([TASKS.STYLES]));
 		gulp.watch(`${INPUT_FOLDERS.IMAGES}/**/*.+(png|jpg|jpeg|gif|svg|ico)`, gulp.series([TASKS.IMAGES]));
-		gulp.watch(`${INPUT_FOLDERS.ROOT}/**/*.html`, gulp.series([TASKS.HTML]));
+		gulp.watch(`${INPUT_FOLDERS.ROOT}/**/*.njk`, gulp.series(['nunjucks:index', 'nunjucks:pages']));
 })
 

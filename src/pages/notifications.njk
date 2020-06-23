@@ -1,0 +1,136 @@
+{% extends "dashboard.njk" %}
+
+{% block jca_sidebar %}
+  {{nav.active('notifications')}}
+{% endblock %}
+
+{% block jca_content %}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jca-page-header">
+        <div class="jca-page-header__title">
+          <ion-icon class="jca-page-header__icon" name="flash-outline"></ion-icon>
+          Notifications
+        </div>
+        <div class="jca-page-header__subtitle">Static Notifications</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jca-code-reference">
+        <div class="jca-code-reference__example">
+          <div class="jca-code-reference__description">
+            Notifications can be used to show users short meaningful meassages about anything. Combine these
+              with the various backgrounds to display general intentions
+          </div>
+          <div class="jca-code-reference__visual">
+            <div class="jca-card-notification">
+              <span class="jca-card-notification__extra">
+                <ion-icon name="close-circle-outline"></ion-icon>
+              </span>
+              <div class="jca-card-notification__icon">
+                <ion-icon name="heart-outline"></ion-icon>
+                <span class="jca-card-notification__time">15h</span>
+              </div>
+              <div class="jca-card-notification__content">
+                <div class="jca-card-notification__title">New Like</div>
+                <div class="jca-card-notification__message">
+                  Tocarra liked your post
+                </div>
+              </div>
+            </div>
+
+            <div class="jca-card-notification bg-danger text-light">
+              <div class="jca-card-notification__icon">
+                <ion-icon name="heart-outline"></ion-icon>
+                <span class="jca-card-notification__time">20d</span>
+              </div>
+              <div class="jca-card-notification__content">
+                <div class="jca-card-notification__title">New Like</div>
+                <div class="jca-card-notification__message">
+                  Tocarra liked your post
+                </div>
+              </div>
+            </div>
+
+            <div class="jca-card-notification">
+              <div class="jca-card-notification__content">
+                <div class="jca-card-notification__title">Generic</div>
+                <div class="jca-card-notification__message">
+                  Generic message
+                </div>
+              </div>
+            </div>
+
+            <div class="jca-card-notification text-danger">
+              <div class="jca-card-notification__icon">
+                <ion-icon name="today-outline"></ion-icon>
+              </div>
+              <div class="jca-card-notification__content">
+                <div class="jca-card-notification__message">
+                  You have a new consultation request from Tocarra with coloured text
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="jca-code-reference__code">
+          <pre>
+            <code class="language-html">
+&lt;div class="jca-card-notification"&gt;
+&lt;span class="jca-card-notification__extra"&gt;
+&lt;ion-icon name="close-circle-outline"&gt;&lt;/ion-icon&gt;
+&lt;/span&gt;
+&lt;div class="jca-card-notification__icon"&gt;
+&lt;ion-icon name="heart-outline"&gt;&lt;/ion-icon&gt;
+&lt;span class="jca-card-notification__time"&gt;15h&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="jca-card-notification__content"&gt;
+&lt;div class="jca-card-notification__title"&gt;New Like&lt;/div&gt;
+&lt;div class="jca-card-notification__message"&gt;
+Tocarra liked your post
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="jca-card-notification bg-danger text-light"&gt;
+&lt;div class="jca-card-notification__icon"&gt;
+&lt;ion-icon name="heart-outline"&gt;&lt;/ion-icon&gt;
+&lt;span class="jca-card-notification__time"&gt;20d&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="jca-card-notification__content"&gt;
+&lt;div class="jca-card-notification__title"&gt;New Like&lt;/div&gt;
+&lt;div class="jca-card-notification__message"&gt;
+Tocarra liked your post
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="jca-card-notification"&gt;
+&lt;div class="jca-card-notification__content"&gt;
+&lt;div class="jca-card-notification__title"&gt;Generic&lt;/div&gt;
+&lt;div class="jca-card-notification__message"&gt;
+Generic message
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="jca-card-notification text-danger"&gt;
+&lt;div class="jca-card-notification__icon"&gt;
+&lt;ion-icon name="today-outline"&gt;&lt;/ion-icon&gt;
+&lt;/div&gt;
+&lt;div class="jca-card-notification__content"&gt;
+&lt;div class="jca-card-notification__message"&gt;
+You have a new consultation request from Tocarra with coloured text
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

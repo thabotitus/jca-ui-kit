@@ -1,0 +1,67 @@
+{% extends "dashboard.njk" %}
+
+{% block jca_sidebar %}
+  {{nav.active('card-group')}}
+{% endblock %}
+
+{% block jca_content %}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jca-page-header">
+        <div class="jca-page-header__title">
+          <ion-icon class="jca-page-header__icon" name="grid-outline"></ion-icon>
+          Card Group
+        </div>
+        <div class="jca-page-header__subtitle">Cards linked without spaces</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jca-code-reference">
+        <div class="jca-code-reference__example">
+          <div class="jca-code-reference__description">
+            A card group can be used to show various bits of information neatly across a page
+          </div>
+          <div class="jca-code-reference__visual">
+            <div class="jca-card-group">
+              <div class="jca-card-group__item">
+                <div class="jca-card-group__title">Title</div>
+                <div class="jca-card-group__content">
+                  Some value
+                </div>
+              </div>
+              <div class="jca-card-group__item">
+                <div class="jca-card-group__title">Title</div>
+                <div class="jca-card-group__content">
+                  Some value
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="jca-code-reference__code">
+          <pre>
+            <code class="language-html">
+  &lt;div class="jca-card-group"&gt;
+    &lt;div class="jca-card-group__item"&gt;
+      &lt;div class="jca-card-group__title"&gt;title&lt;/div&gt;
+      &lt;div class="jca-card-group__content"&gt;
+        some value
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="jca-card-group__item"&gt;
+      &lt;div class="jca-card-group__title"&gt;title&lt;/div&gt;
+      &lt;div class="jca-card-group__content"&gt;
+        some value
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
