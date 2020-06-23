@@ -1,25 +1,4 @@
-/**
-* GULPFILE.JS
-* - setting up a modern web development environment 
-*/
-var gulp = require('gulp');
-
-/**
-* Import gulp plugins
-* - gulp-babel (JS compiler)
-* - gulp-plumber (prevent pipe breaking coused by errors from gulp plugins)
-* - gulp-concat (concatenate js files)
-* - gulp-sass (SASS compiler)
-* - gulp-notify (messages)
-* - sourcemaps (maps CSS back to SASS files)
-* - sassGlob (allow to use glob imports in scss files)
-* - imageMin (minify image format - png, jpeg, gif and svn)
-* - cleanCSS (css optimizer)
-* - gulp-autoprefixer (add vendor prefixes to CSS rules)
-* - gulp-browser-sync (create external link for browsing)
-* - webpack-stream (adding webpack tehnology)
-* - webpackconfig (webpack file with configuration)
-*/
+const gulp 							= require('gulp');
 const babel							= require('gulp-babel');
 const plumber						= require('gulp-plumber');
 const concat						= require('gulp-concat');
@@ -36,12 +15,8 @@ const bump							= require('gulp-bump');
 const copy							= require('gulp-copy');
 const nunjucksRender 		= require('gulp-nunjucks-render');
 const browserSync				= require('browser-sync').create();
-
-//Webpack config
 const webpack 					= require('webpack-stream');
 const webpackconfig			= require('./webpack.config.js');
-
-//Set sass compiler
 sass.compiler 					= require('node-sass');
 
 const TASKS = {
@@ -53,7 +28,9 @@ const TASKS = {
 	SCRIPTS: 		'script',
 	STYLES: 		'sass',
 	IMAGES: 		'image',
-	HTML: 			'html',
+	HTML_PAGES: 'nunjucks:pages',
+	HTML_INDEX: 'nunjucks:index',
+	HTML: 'html',
 	COPY: 			'copy',
 };
 
@@ -81,7 +58,6 @@ gulp.task(
     return gulp.src([`${DIST_FOLDERS.ROOT}/*`], { read: false }).pipe(clean());
   });
 
-//Task script // , {since: gulp.lastRun('script')}`${INPUT_FOLDERS.JS}/**/*.js`
 gulp.task(
 	TASKS.SCRIPTS,
 	function(done){
@@ -95,7 +71,6 @@ gulp.task(
 			.pipe(notify({message: "JS task completed!"}))
 });
 
-//Task style // , {since: gulp.lastRun('sass')}
 gulp.task(
 	TASKS.STYLES,
 	function(){
@@ -128,7 +103,7 @@ gulp.task(
 			// .pipe(notify({message: "Style task completed!"}))
 });
 
-gulp.task('nunjucks:pages', function() {
+gulp.task(TASKS.HTML_PAGES, function() {
   return gulp.src(['src/pages/**/*.njk'])
   .pipe(nunjucksRender({
       path: ['src/templates']
@@ -137,7 +112,7 @@ gulp.task('nunjucks:pages', function() {
 	.pipe(browserSync.stream());
 });
 
-gulp.task('nunjucks:index', function() {
+gulp.task(TASKS.HTML_INDEX, function() {
   return gulp.src(['src/index.njk'])
   .pipe(nunjucksRender({
       path: ['src/templates']
@@ -146,7 +121,6 @@ gulp.task('nunjucks:index', function() {
 	.pipe(browserSync.stream());
 });
 
-//Task image // , {since: gulp.lastRun('image')}
 gulp.task(
 	TASKS.IMAGES,
 	function(){
@@ -160,7 +134,6 @@ gulp.task(
 			}))
 			.pipe(gulp.dest(`./${DIST_FOLDERS.ROOT}/${DIST_FOLDERS.IMAGES}`))
 			.pipe(browserSync.stream())
-			// .pipe(notify({message: "Image task completed!"}))
 });
 
 // Version bump
@@ -220,13 +193,12 @@ gulp.task(
 			TASKS.SCRIPTS,
 			TASKS.STYLES,
 			TASKS.IMAGES,
-			'nunjucks:index',
-			'nunjucks:pages',
+			TASKS.HTML_INDEX,
+			TASKS.HTML_PAGES,
 		]
 	)
 );
 
-//Build task
 gulp.task(
 	TASKS.SERVE,
 	function(){
@@ -238,6 +210,5 @@ gulp.task(
 		gulp.watch(`${INPUT_FOLDERS.JS}/**/*.js`, gulp.series([TASKS.SCRIPTS]));
 		gulp.watch(`${INPUT_FOLDERS.CSS}/**/*.+(scss|css)`, gulp.series([TASKS.STYLES]));
 		gulp.watch(`${INPUT_FOLDERS.IMAGES}/**/*.+(png|jpg|jpeg|gif|svg|ico)`, gulp.series([TASKS.IMAGES]));
-		gulp.watch(`${INPUT_FOLDERS.ROOT}/**/*.njk`, gulp.series(['nunjucks:index', 'nunjucks:pages']));
+		gulp.watch(`${INPUT_FOLDERS.ROOT}/**/*.njk`, gulp.series([TASKS.HTML_INDEX, TASKS.HTML_PAGES]));
 })
-
