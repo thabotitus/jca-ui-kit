@@ -6,7 +6,6 @@ module.exports = {
   mode: 'development',
   entry: {
     'jca-ui-kit.min': "./src/js/app.js",
-    "jquery.min": "./src/js/jquery.js"
   },
   output: {
     filename: '[name].js',
@@ -36,11 +35,9 @@ module.exports = {
       },
     ],
   },
-  resolve: {
-    alias: {
-      jquery: path.resolve(__dirname, './src/js/jquery.js'),
-      jQuery: path.resolve(__dirname, './src/js/jquery.js'),
-      $: path.resolve(__dirname, './src/js/jquery.js')
-    }
-  }
+  // resolve: {
+  //   alias: {
+  //     jquery: path.resolve(__dirname, './src/js/jquery.js')
+  //   }
+  // }
 };
