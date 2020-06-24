@@ -54,7 +54,15 @@
     
   };
 
+  window.JCA.initializeScrollbar = () => {
+    const mainContentArea = document.querySelectorAll("[data-scrollbar]")[0];
+    new GeminiScrollbar({
+      element: mainContentArea
+    }).create();
+  };
+
   window.JCA.loader();
   window.JCA.inputMasks();
   window.JCA.setVersion();
+  window.JCA.initializeScrollbar();
 }());
