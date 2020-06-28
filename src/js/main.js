@@ -61,8 +61,16 @@
     }).create();
   };
 
+  window.JCA.intializeDatatable = () => {
+    $('[data-datatable="myDataTable"]').DataTable({
+      "ajax": '../data/datatable.json',
+      "columns": require('../data/datatable.json').columns
+    });
+  };
+
   window.JCA.loader();
   window.JCA.inputMasks();
   window.JCA.setVersion();
   window.JCA.initializeScrollbar();
+  window.JCA.intializeDatatable();
 }());
