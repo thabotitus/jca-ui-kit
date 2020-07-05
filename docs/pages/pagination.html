@@ -139,7 +139,7 @@
         </a>
       </li>
 
-      <li class="jca-nav-card__item  jca-nav-card__item--active ">
+      <li class="jca-nav-card__item ">
         <div class="jca-nav-card__item-icon">
           <ion-icon name="calculator-outline"></ion-icon>
         </div>
@@ -157,7 +157,7 @@
         </a>
       </li>
 
-      <li class="jca-nav-card__item ">
+      <li class="jca-nav-card__item  jca-nav-card__item--active ">
         <div class="jca-nav-card__item-icon">
           <ion-icon name="git-commit-outline"></ion-icon>
         </div>
@@ -194,12 +194,10 @@
     <div class="col-md-12">
       <div class="jca-page-header">
         <div class="jca-page-header__title">
-          <ion-icon class="jca-page-header__icon" name="calculator-outline"></ion-icon>
-          One Time Pin
+          <ion-icon class="jca-page-header__icon" name="git-commit-outline"></ion-icon>
+          Pagination
         </div>
-        <div class="jca-page-header__subtitle">
-          One time pin inputs from online transactions
-        </div>
+        <div class="jca-page-header__subtitle">Pagination is just pagination</div>
       </div>
     </div>
   </div>
@@ -209,42 +207,32 @@
       <div class="jca-code-reference">
         <div class="jca-code-reference__example">
           <div class="jca-code-reference__description">
-            A simple way to present one time pin
+            Pagination takes the structure of a normal list
           </div>
           <div class="jca-code-reference__visual">
-            <div class="jca-card-otp">
-              <div class="jca-card-otp__icon">
-                <ion-icon name="finger-print-outline"></ion-icon>
-              </div>
-              <div class="jca-card-otp__text">
-                Please enter the one time pin sent to *******789
-              </div>
-              <div class="jca-card-otp__input">
-                <input type="text" value="12345" />
-              </div>
-              <div class="jca-card-otp__action">
-                <div class="btn btn-success">Submit</div>
-              </div>
-            </div>
+            <ul class="jca-pagination">
+              <li class="jca-pagination__item"><ion-icon name="arrow-back-outline"></ion-icon></li>
+              <li class="jca-pagination__item jca-pagination--current">1</li>
+              <li class="jca-pagination__item">2</li>
+              <li class="jca-pagination__item">3</li>
+              <li class="jca-pagination__item">4</li>
+              <li class="jca-pagination__item jca-pagination--disabled">5</li>
+              <li class="jca-pagination__item"><ion-icon name="arrow-forward-outline"></ion-icon></li>
+            </ul>
           </div>
         </div>
         <div class="jca-code-reference__code">
           <pre>
             <code class="language-html">
-&lt;div class="jca-card-otp"&gt;
-  &lt;div class="jca-card-otp__icon"&gt;
-    &lt;ion-icon name="finger-print-outline"&gt;&lt;/ion-icon&gt;
-  &lt;/div&gt;
-  &lt;div class="jca-card-otp__text"&gt;
-    Please enter the one time pin sent to *******789
-  &lt;/div&gt;
-  &lt;div class="jca-card-otp__input"&gt;
-    &lt;input type="text" /&gt;
-  &lt;/div&gt;
-  &lt;div class="jca-card-otp__action"&gt;
-    &lt;div class="btn btn-success"&gt;Submit&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+&lt;ul class="jca-pagination"&gt;
+  &lt;li class="jca-pagination__item"&gt;&lt;ion-icon name="arrow-back-outline"&gt;&lt;/ion-icon&gt;&lt;/li&gt;
+  &lt;li class="jca-pagination__item jca-pagination--current"&gt;1&lt;/li&gt;
+  &lt;li class="jca-pagination__item"&gt;2&lt;/li&gt;
+  &lt;li class="jca-pagination__item"&gt;3&lt;/li&gt;
+  &lt;li class="jca-pagination__item"&gt;4&lt;/li&gt;
+  &lt;li class="jca-pagination__item jca-pagination--disabled"&gt;5&lt;/li&gt;
+  &lt;li class="jca-pagination__item"&gt;&lt;ion-icon name="arrow-forward-outline"&gt;&lt;/ion-icon&gt;&lt;/li&gt;
+&lt;/ul&gt;
             </code>
           </pre>
         </div>

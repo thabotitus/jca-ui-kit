@@ -1,3 +1,8 @@
+// BASE
+@import './base/fonts';
+@import './base/variables';
+@import './base/layout';
+
 // VENDOR
 @import '../../node_modules/normalize.css/normalize.css';
 @import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -5,11 +10,6 @@
 @import '../../node_modules/animate.css/animate.min.css';
 @import './vendor/bootstrap-theme.css';
 @import './vendor/prism.css';
-
-// BASE
-@import './base/fonts';
-@import './base/variables';
-@import './base/layout';
 
 // CARDS
 @import './components/jca-card-timeline';
@@ -27,9 +27,13 @@
 // MISC
 @import './components/jca-code-reference';
 @import './components/jca-list';
+@import './components/jca-pagination';
+@import './components/jca-datatable';
+@import './components/jca-info-card';
 
 // UTILITIES
 @import './utilities/jca-keyword';
+@import './utilities/jca-helpers';
 
 // OVERRIDES
 @import './overrides/btn';

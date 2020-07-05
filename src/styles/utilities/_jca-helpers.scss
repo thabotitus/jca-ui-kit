@@ -1,0 +1,56 @@
+
+@for $i from 10 through 100 {
+  // MARGIN
+  .m-#{$i} { margin: #{$i}px; }
+  .mt-#{$i} { margin-top: #{$i}px; }
+  .mb-#{$i} { margin-bottom: #{$i}px; }
+  .ml-#{$i} { margin-left: #{$i}px; }
+  .mr-#{$i} { margin-right: #{$i}px; }
+  .mx-#{$i} { margin-right: #{$i}px; margin-left: #{$i}px; }
+  .my-#{$i} { margin-top: #{$i}px; margin-bottom: #{$i}px; }
+
+  // PADDING 
+  .p-#{$i} { padding: #{$i}px; }
+  .pt-#{$i} { padding-top: #{$i}px; }
+  .pb-#{$i} { padding-bottom: #{$i}px; }
+  .pl-#{$i} { padding-left: #{$i}px; }
+  .pr-#{$i} { padding-right: #{$i}px; }
+  .px-#{$i} { padding-right: #{$i}px; padding-left: #{$i}px; }
+  .py-#{$i} { padding-top: #{$i}px; padding-bottom: #{$i}px; }
+}
+
+.jca-light-shadow {
+  box-shadow: $default_shadow;
+}
+
+.jca-dark-shadow {
+  box-shadow: $dark_shadow;
+}
+
+.jca-no-shadow {
+  box-shadow: none;
+}
+
+$AppColours: (
+  black:             #262626,
+  white:             #ffffff,
+  grey:              #f8f9fa,
+  blue:              #007bff,
+  indigo:            #6610f2,
+  purple:            #6f42c1,
+  pink:              #e83e8c,
+  red:               #dc3545,
+  orange:            #fd7e14,
+  yellow:            #ffc107,
+  green:             #28a745,
+  teal:              #20c997,
+  cyan:              #17a2b8,
+  gray-mid:              #6c757d,
+  gray-dark:         #343a40
+);
+
+@each $name, $colour in $AppColours {
+  .bg-#{$name} {
+    background: $colour;
+  }
+}

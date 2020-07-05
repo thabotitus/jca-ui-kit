@@ -139,7 +139,7 @@
         </a>
       </li>
 
-      <li class="jca-nav-card__item  jca-nav-card__item--active ">
+      <li class="jca-nav-card__item ">
         <div class="jca-nav-card__item-icon">
           <ion-icon name="calculator-outline"></ion-icon>
         </div>
@@ -166,7 +166,7 @@
         </a>
       </li>
 
-      <li class="jca-nav-card__item ">
+      <li class="jca-nav-card__item  jca-nav-card__item--active ">
         <div class="jca-nav-card__item-icon">
           <ion-icon name="hardware-chip-outline"></ion-icon>
         </div>
@@ -194,11 +194,30 @@
     <div class="col-md-12">
       <div class="jca-page-header">
         <div class="jca-page-header__title">
-          <ion-icon class="jca-page-header__icon" name="calculator-outline"></ion-icon>
-          One Time Pin
+          <ion-icon class="jca-page-header__icon" name="hardware-chip-outline"></ion-icon>
+          Datatable
         </div>
-        <div class="jca-page-header__subtitle">
-          One time pin inputs from online transactions
+        <div class="jca-page-header__subtitle">Tables with a little aromat</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jca-card">
+        <div class="jca-card__content">
+          <table class="jca-datatable stripe" class="display" style="width:100%" data-datatable="myDataTable">
+            <thead>
+              <tr>
+                <th class="dt-left">Name</th>
+                <th class="dt-left">Position</th>
+                <th class="dt-left">Office</th>
+                <th class="dt-left">Extn.</th>
+                <th class="dt-left">Start date</th>
+                <th class="dt-left">Salary</th>
+              </tr>
+            </thead>
+          </table>
         </div>
       </div>
     </div>
@@ -207,44 +226,39 @@
   <div class="row">
     <div class="col-md-12">
       <div class="jca-code-reference">
-        <div class="jca-code-reference__example">
-          <div class="jca-code-reference__description">
-            A simple way to present one time pin
-          </div>
-          <div class="jca-code-reference__visual">
-            <div class="jca-card-otp">
-              <div class="jca-card-otp__icon">
-                <ion-icon name="finger-print-outline"></ion-icon>
-              </div>
-              <div class="jca-card-otp__text">
-                Please enter the one time pin sent to *******789
-              </div>
-              <div class="jca-card-otp__input">
-                <input type="text" value="12345" />
-              </div>
-              <div class="jca-card-otp__action">
-                <div class="btn btn-success">Submit</div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="jca-code-reference__code">
           <pre>
-            <code class="language-html">
-&lt;div class="jca-card-otp"&gt;
-  &lt;div class="jca-card-otp__icon"&gt;
-    &lt;ion-icon name="finger-print-outline"&gt;&lt;/ion-icon&gt;
-  &lt;/div&gt;
-  &lt;div class="jca-card-otp__text"&gt;
-    Please enter the one time pin sent to *******789
-  &lt;/div&gt;
-  &lt;div class="jca-card-otp__input"&gt;
-    &lt;input type="text" /&gt;
-  &lt;/div&gt;
-  &lt;div class="jca-card-otp__action"&gt;
-    &lt;div class="btn btn-success"&gt;Submit&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+            <code class="language-javascript">
+// Source
+"https://datatables.net/"
+
+// data/datatable.json
+{
+  "data": [
+    {
+      "name": "Garrett Winters",
+      "position": "Accountant",
+      "office": "Tokyo",
+      "extn": "8422",
+      "start_date": "2011/07/25",
+      "salary": "$170,750"
+    }
+  ],
+  "columns": [
+    { "data": "name" },
+    { "data": "position" },
+    { "data": "office" },
+    { "data": "extn" },
+    { "data": "start_date" },
+    { "data": "salary" }
+  ]
+}
+
+// Javascript
+$('[data-datatable="myDataTable"]').DataTable({
+  "ajax": '../data/datatable.json',
+  "columns": require('../data/datatable.json').columns
+});
             </code>
           </pre>
         </div>

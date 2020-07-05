@@ -1,0 +1,67 @@
+.jca-pagination {
+  border-radius: $default_radius;
+  background: $white;
+  overflow: hidden;
+  box-shadow: $default_shadow;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 20px;
+  display: inline-flex;
+
+  &__item {
+    // flex: 1;
+    padding: 0 15px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: $default_border;
+    cursor: pointer;
+
+    &:hover {
+      background: $grey;
+      font-weight: 700;
+    }
+
+    &:last-of-type {
+      border-right: none;
+    }
+  }
+
+  &--current {
+    background: $primary;
+    color: $white;
+    font-weight: 700;
+
+    a {
+      color: $white;
+    }
+
+    &:hover {
+      background: $primary;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &--gap {
+    cursor: default;
+    &:hover {
+      background: initial;
+      font-weight: 400;
+    }
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+    background-color: $grey;
+
+    &:hover {
+      background-color: $grey;
+      font-weight: 400;
+    }
+  }
+}

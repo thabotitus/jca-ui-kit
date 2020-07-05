@@ -36,7 +36,8 @@ const TASKS = {
 	COPY: 							'copy',
 	CSS_DIST: 					'css:dist',
 	JS_DIST: 						'js:dist',
-	BUILD_DEPENDENCIES: 'build:dependencies'
+	BUILD_DEPENDENCIES: 'build:dependencies',
+	COPY_DATA:          'copy:data'
 };
 
 const DIST_FOLDERS = {
@@ -236,6 +237,8 @@ gulp.task(TASKS.BUILD_DEPENDENCIES, () => {
 		'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
 		'node_modules/imask/dist/imask.min.js',
 		'node_modules/gemini-scrollbar/index.js',
+		'./src/js/jquery.datatable.min.js',
+		'./src/js/datatable.min.js',
 		'./src/js/prism.js'
 	])
     .pipe(babel({
@@ -244,6 +247,11 @@ gulp.task(TASKS.BUILD_DEPENDENCIES, () => {
 		.pipe(concat('jca_dependencies.min.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest(`./${DIST_FOLDERS.ROOT}/${DIST_FOLDERS.JS}`))
+});
+
+gulp.task(TASKS.COPY_DATA, () => {
+	return gulp.src('./src/data/**/*')
+		.pipe(gulp.dest(`./${DIST_FOLDERS.ROOT}/data`));
 });
 	
 gulp.task(
@@ -258,7 +266,8 @@ gulp.task(
 			TASKS.HTML_PAGES,
 			TASKS.CSS_DIST,
 			TASKS.JS_DIST,
-			TASKS.BUILD_DEPENDENCIES
+			TASKS.BUILD_DEPENDENCIES,
+			TASKS.COPY_DATA
 		]
 	)
 );
