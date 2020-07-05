@@ -1,3 +1,5 @@
+import { version } from '../../package.json';
+
 (function(){
   window.JCA = window.JCA || {};
    
@@ -46,7 +48,8 @@
   };
 
   window.JCA.setVersion = () =>  {
-    const version = require("../../package.json").version;
+    
+
     const elements = document.querySelectorAll("[data-version]");
     elements.forEach((el) => {
       el.innerHTML = `v${version}`;
