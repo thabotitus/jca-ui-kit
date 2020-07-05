@@ -41,17 +41,39 @@
   <div class="row">
     <div class="col-md-12">
       <div class="jca-code-reference">
-        <div class="jca-code-reference__example">
-          <div class="jca-code-reference__description">
-            Pagination takes the structure of a normal list
-          </div>
-          <div class="jca-code-reference__visual">
-          </div>
-        </div>
         <div class="jca-code-reference__code">
           <pre>
-            <code class="language-html">
+            <code class="language-javascript">
+// Source
+"https://datatables.net/"
 
+// data/datatable.json
+{
+  "data": [
+    {
+      "name": "Garrett Winters",
+      "position": "Accountant",
+      "office": "Tokyo",
+      "extn": "8422",
+      "start_date": "2011/07/25",
+      "salary": "$170,750"
+    }
+  ],
+  "columns": [
+    { "data": "name" },
+    { "data": "position" },
+    { "data": "office" },
+    { "data": "extn" },
+    { "data": "start_date" },
+    { "data": "salary" }
+  ]
+}
+
+// Javascript
+$('[data-datatable="myDataTable"]').DataTable({
+  "ajax": '../data/datatable.json',
+  "columns": require('../data/datatable.json').columns
+});
             </code>
           </pre>
         </div>

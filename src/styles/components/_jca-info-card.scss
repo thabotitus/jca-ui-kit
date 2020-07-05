@@ -1,0 +1,80 @@
+.jca-info-card {
+  border-radius: $default_radius;
+  background: $white;
+  overflow: hidden;
+  box-shadow: $default_shadow;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__main {
+    display: flex;
+  }
+
+  &__icon {
+    flex: 1;
+    min-width: 80px;
+    max-width: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+  }
+
+  &__content {
+    flex: 1;
+    padding: $light_padding;
+    padding-left: 0;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 700;
+
+    a {
+      color: unset;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+  }
+
+  &__description {
+    font-style: italic;
+    width: 100px;
+    min-width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__footer {
+    background: $grey;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid transparentize($black, 0.9);
+    font-size: 0.85em;
+
+    &-icon {
+      font-size: 2em;
+    }
+
+    &-item {
+      flex: 1;
+      max-width: 50%;
+      font-size: 0.9em;
+      text-align: center;
+      border-right: 1px solid transparentize($black, 0.9);
+      padding: $light_padding;
+
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+  }
+}

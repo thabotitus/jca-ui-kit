@@ -71,6 +71,6 @@
   window.JCA.loader();
   window.JCA.inputMasks();
   window.JCA.setVersion();
-  window.JCA.initializeScrollbar();
+  // window.JCA.initializeScrollbar();
   window.JCA.intializeDatatable();
 }());

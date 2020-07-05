@@ -29,9 +29,11 @@
 @import './components/jca-list';
 @import './components/jca-pagination';
 @import './components/jca-datatable';
+@import './components/jca-info-card';
 
 // UTILITIES
 @import './utilities/jca-keyword';
+@import './utilities/jca-helpers';
 
 // OVERRIDES
 @import './overrides/btn';
