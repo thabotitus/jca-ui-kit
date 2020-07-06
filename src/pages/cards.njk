@@ -4,19 +4,17 @@
   {{nav.active('cards')}}
 {% endblock %}
 
-{% block jca_content %}
-  <div class="row">
-    <div class="col-md-12">
-      <div class="jca-page-header">
-        <div class="jca-page-header__title">
-          <ion-icon class="jca-page-header__icon" name="layers-outline"></ion-icon>
-          Cards
-        </div>
-        <div class="jca-page-header__subtitle">The building blocks of all elements</div>
-      </div>
-    </div>
-  </div>
+{% block jca_page_header %}
+  {{
+    pageHeader.details(
+      'Cards',
+      'The building blocks of all elements',
+      'layers'
+    )
+  }}
+{% endblock %}
 
+{% block jca_content %}
   <div class="row">
     <div class="col-md-12">
       <div class="jca-code-reference">

@@ -60,7 +60,15 @@
       </ul>
     </div>
 
+    {% import 'macros/pageHeader.njk' as pageHeader %}
     <div class="jca-main" data-scrollbar>
+      <div class="py-30" style="background-color: #F1F1F1;">
+        <div class="container-fluid">
+          {% block jca_page_header %} {% endblock %}
+        </div>
+      </div>
+      
+
       <div class="jca-main__content">
         {% import 'macros/sidebar.njk' as nav %}
         {% block jca_sidebar %} {% endblock %}

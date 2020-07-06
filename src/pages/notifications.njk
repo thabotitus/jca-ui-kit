@@ -4,19 +4,17 @@
   {{nav.active('notifications')}}
 {% endblock %}
 
-{% block jca_content %}
-  <div class="row">
-    <div class="col-md-12">
-      <div class="jca-page-header">
-        <div class="jca-page-header__title">
-          <ion-icon class="jca-page-header__icon" name="flash-outline"></ion-icon>
-          Notifications
-        </div>
-        <div class="jca-page-header__subtitle">Static Notifications</div>
-      </div>
-    </div>
-  </div>
+{% block jca_page_header %}
+  {{
+    pageHeader.details(
+      'Notifications',
+      'Static Notifications',
+      'flash'
+    )
+  }}
+{% endblock %}
 
+{% block jca_content %}
   <div class="row">
     <div class="col-md-12">
       <div class="jca-code-reference">

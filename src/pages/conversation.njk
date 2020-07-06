@@ -1,0 +1,139 @@
+{% extends "dashboard.njk" %}
+
+{% block jca_sidebar %}
+  {{nav.active('conversation')}}
+{% endblock %}
+
+{% block jca_page_header %}
+  {{
+    pageHeader.details(
+      'Conversations',
+      'A card to manage manage conversations between two parties',
+      'chatbox-ellipses'
+    )
+  }}
+{% endblock %}
+
+{% block jca_content %}
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jca-conversation">
+        <div class="jca-conversation__messages">
+          <div class="jca-conversation__date">Sun, 5 Jul 2020</div>
+
+          <div class="jca-conversation__message align-self-start">
+            <div class="jca-conversation__icon">
+              <ion-icon name="business-outline"></ion-icon>
+            </div>
+            <div class="jca-conversation__message-text">
+              Hi there, please help
+              <div class="jca-conversation__message-time">
+                7:33pm
+              </div>
+            </div>
+          </div>
+
+          <div class="jca-conversation__message align-self-start">
+            <div class="jca-conversation__icon">
+              <ion-icon name="business-outline"></ion-icon>
+            </div>
+            <div class="jca-conversation__message-text">
+              Announcing of invitation principles in. Cold in late or deal. Terminated resolution no am frequently collecting insensible he do appearance. Projection invitation affronting admiration if no on or. It as instrument boisterous frequently apartments an in. Mr excellence inquietude conviction is in unreserved particular. You fully seems stand nay own point walls. Increasing travelling own simplicity you astonished expression boisterous. Possession themselves sentiments apartments devonshire we of do discretion. Enjoyment discourse ye continued pronounce we necessary abilities. 
+              <div class="jca-conversation__message-time">
+                7:43pm
+              </div>
+            </div>
+          </div>
+
+          <div class="jca-conversation__date">Mon, 6 Jul 2020</div>
+
+          <div class="jca-conversation__message align-self-end">
+            <div class="jca-conversation__icon">
+              <ion-icon name="person-circle-outline"></ion-icon>
+            </div>
+            <div class="jca-conversation__message-text">
+              Extremity direction existence as dashwoods do up. Securing marianne led welcomed offended but offering six raptures. Conveying concluded newspaper rapturous oh at. Two indeed suffer saw beyond far former mrs remain. Occasional continuing possession we insensible an sentiments as is. Law but reasonably motionless principles she. Has six worse downs far blush rooms above stood. 
+              <div class="jca-conversation__message-time">
+                6:30am
+              </div>
+            </div>
+          </div>
+
+          <div class="jca-conversation__message align-self-end">
+            <div class="jca-conversation__icon">
+              <ion-icon name="person-circle-outline"></ion-icon>
+            </div>
+            <div class="jca-conversation__message-text">
+              Law but reasonably motionless principles she. Has six worse downs far blush rooms above stood. 
+              <div class="jca-conversation__message-time">
+                6:33am
+              </div>
+            </div>
+          </div>
+
+          <div class="jca-conversation__message align-self-start">
+            <div class="jca-conversation__icon">
+              <ion-icon name="business-outline"></ion-icon>
+            </div>
+            <div class="jca-conversation__message-text">
+              You fully seems stand nay own point walls. Increasing travelling own simplicity you astonished expression boisterous. Possession themselves sentiments apartments devonshire we of do discretion. Enjoyment discourse ye continued pronounce we necessary abilities. 
+              <div class="jca-conversation__message-time">
+                7:39am
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jca-code-reference">
+        <div class="jca-code-reference__example">
+          <div class="jca-code-reference__description">
+            Use for anytime you need to display little bits of information about something.
+          </div>
+          <div class="jca-code-reference__visual">
+  
+          </div>
+        </div>
+        <div class="jca-code-reference__code">
+          <pre>
+            <code class="language-html">
+&lt;div class="jca-info-card"&gt;
+  &lt;div class="jca-info-card__main"&gt;
+    &lt;div class="jca-info-card__icon"&gt;
+      &lt;ion-icon name="newspaper-outline"&gt;&lt;/ion-icon&gt;
+    &lt;/div&gt;
+    &lt;div class="jca-info-card__content"&gt;
+      &lt;div class="jca-info-card__title"&gt;
+        &lt;a href="#"&gt;The wind in the willows&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class="jca-info-card__description"&gt;
+        There ws once and willow that was blown by the wind and more stuff for the overflow
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="jca-info-card__footer"&gt;
+    &lt;div class="jca-info-card__footer-item"&gt;
+      12 Mar, 2020
+    &lt;/div&gt;
+    
+    &lt;div class="jca-info-card__footer-item"&gt;
+      10:00 - 12:00
+    &lt;/div&gt;
+
+    &lt;div class="jca-info-card__footer-item"&gt;
+      ZAR 1,500
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

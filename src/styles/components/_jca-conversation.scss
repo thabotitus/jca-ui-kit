@@ -1,0 +1,89 @@
+.jca-conversation {
+  border-radius: $default_radius;
+  background: $white;
+  background: none;
+  overflow: hidden;
+  // box-shadow: $default_shadow;
+  margin-bottom: 20px;
+
+  &__date {
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 40px;
+    margin-top: 40px;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &::before {
+      content: '';
+      height: 1px;
+      background: none;
+      border-bottom: 1px solid transparentize($black, 0.9);
+      width: 35%;
+      position: absolute;
+      left: 0;
+      top: 10px;
+    }
+
+    &::after {
+      content: '';
+      height: 1px;
+      background: none;
+      border-bottom: 1px solid transparentize($black, 0.9);
+      width: 35%;
+      position: absolute;
+      right: 0;
+      top: 10px;
+    }
+  }
+
+  &__messages {
+    // padding: $default_padding 80px;
+    // max-height: 600px;
+    // min-height: 600px;
+    // overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__message {
+    max-width: 70%;
+    min-width: 30%;
+    box-shadow: $default_shadow;
+    margin-bottom: 20px;
+    background: $white;
+    border-radius: 8px;
+    // padding: $light_padding $default_padding;
+    display: flex;
+  }
+
+  &__icon {
+    flex: 1;
+    max-width: 60px;
+    padding: $light_padding;
+    font-size: 2em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &__message-text {
+    flex: 3;
+    padding: $light_padding;
+    padding-left: 0;
+  }
+
+  &__message-time {
+    font-size: 0.8em;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  &__input {
+    padding: $default_padding;
+    background: $grey;
+  }
+}

@@ -4,21 +4,17 @@
   {{nav.active('credit-card')}}
 {% endblock %}
 
-{% block jca_content %}
-  <div class="row">
-    <div class="col-md-12">
-      <div class="jca-page-header">
-        <div class="jca-page-header__title">
-          <ion-icon class="jca-page-header__icon" name="card-outline"></ion-icon>
-          Credit Card
-        </div>
-        <div class="jca-page-header__subtitle">
-          Card stylised as a bank card
-        </div>
-      </div>
-    </div>
-  </div>
+{% block jca_page_header %}
+  {{
+    pageHeader.details(
+      'Credit Card',
+      'Card stylised as a bank card',
+      'card'
+    )
+  }}
+{% endblock %}
 
+{% block jca_content %}
   <div class="row">
     <div class="col-md-12">
       <div class="jca-code-reference">

@@ -4,19 +4,17 @@
   {{nav.active('pagination')}}
 {% endblock %}
 
-{% block jca_content %}
-  <div class="row">
-    <div class="col-md-12">
-      <div class="jca-page-header">
-        <div class="jca-page-header__title">
-          <ion-icon class="jca-page-header__icon" name="git-commit-outline"></ion-icon>
-          Pagination
-        </div>
-        <div class="jca-page-header__subtitle">Pagination is just pagination</div>
-      </div>
-    </div>
-  </div>
+{% block jca_page_header %}
+  {{
+    pageHeader.details(
+      'Pagination',
+      'Pagination is just pagination',
+      'git-commit'
+    )
+  }}
+{% endblock %}
 
+{% block jca_content %}
   <div class="row">
     <div class="col-md-12">
       <div class="jca-code-reference">
