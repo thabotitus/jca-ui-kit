@@ -18,63 +18,62 @@
 
   <div class="jca-layout d-none" data-body="content">
     <div class="jca-topbar">
-      <div class="jca-logo">
-        <a href="../index.html">
-          <img src="../img/logo.svg" />
-          JCA UI KIT
-          <span class="jca-logo__version" data-version></span>
-        </a>
+      <div class="container-fluid d-flex">
+        <div class="jca-logo">
+          <a href="../index.html">
+            <img src="../img/logo.svg" />
+            JCA UI KIT
+            <span class="jca-logo__version" data-version></span>
+          </a>
+        </div>
+        <ul class="jca-topbar__nav">
+          <li class="jca-topbar__nav-item">
+            <div class="jca-topbar__nav-content">
+              <ion-icon class="jca-topbar__nav-icon" name="home-outline"></ion-icon>
+              <a href="#">Link 1</a>
+            </div>
+          </li>
+
+          <li class="jca-topbar__nav-item">
+            <div class="jca-topbar__nav-content">
+              <ion-icon class="jca-topbar__nav-icon" name="mail-outline"></ion-icon>
+              <a href="#">Link 2</a>
+            </div>
+          </li>
+
+          <li class="jca-topbar__nav-item">
+            <div class="jca-topbar__nav-content">
+              <ion-icon class="jca-topbar__nav-icon" name="today-outline"></ion-icon>
+              <a href="#">Link 3</a>
+            </div>
+          </li>
+
+          <li class="jca-topbar__nav-item dropdown">
+            <div class="jca-topbar__nav-content dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <ion-icon class="jca-topbar__nav-icon" name="person-circle-outline"></ion-icon>
+              <a href="#">Link 4</a>
+            </div>
+            <div class="dropdown-menu animated fadeInUp" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Logout</a>
+            </div>
+          </li>
+        </ul>
       </div>
-      <ul class="jca-topbar__nav">
-        <li class="jca-topbar__nav-item">
-          <div class="jca-topbar__nav-content">
-            <ion-icon class="jca-topbar__nav-icon" name="home-outline"></ion-icon>
-            <a href="#">Link 1</a>
-          </div>
-        </li>
-
-        <li class="jca-topbar__nav-item">
-          <div class="jca-topbar__nav-content">
-            <ion-icon class="jca-topbar__nav-icon" name="mail-outline"></ion-icon>
-            <a href="#">Link 2</a>
-          </div>
-        </li>
-
-        <li class="jca-topbar__nav-item">
-          <div class="jca-topbar__nav-content">
-            <ion-icon class="jca-topbar__nav-icon" name="today-outline"></ion-icon>
-            <a href="#">Link 3</a>
-          </div>
-        </li>
-
-        <li class="jca-topbar__nav-item dropdown">
-          <div class="jca-topbar__nav-content dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            <ion-icon class="jca-topbar__nav-icon" name="person-circle-outline"></ion-icon>
-            <a href="#">Link 4</a>
-          </div>
-          <div class="dropdown-menu animated fadeInUp" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Logout</a>
-          </div>
-        </li>
-      </ul>
     </div>
 
     {% import 'macros/pageHeader.njk' as pageHeader %}
     <div class="jca-main" data-scrollbar>
-      <div class="py-30" style="background-color: #F1F1F1;">
-        <div class="container-fluid">
-          {% block jca_page_header %} {% endblock %}
-        </div>
-      </div>
-      
-
-      <div class="jca-main__content">
-        {% import 'macros/sidebar.njk' as nav %}
-        {% block jca_sidebar %} {% endblock %}
+      {% block jca_page_header %} {% endblock %}
         
-        <div class="jca-content">
-          {% block jca_content %} {% endblock %}
+      <div class="jca-main__content">
+        <div class="container-fluid d-flex">
+          {% import 'macros/sidebar.njk' as nav %}
+          {% block jca_sidebar %} {% endblock %}
+          
+          <div class="jca-content">
+            {% block jca_content %} {% endblock %}
+          </div>
         </div>
       </div>
 

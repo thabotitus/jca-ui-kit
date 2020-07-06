@@ -1,5 +1,6 @@
 .jca-sidebar {
-  padding: $default_padding;
+  padding-top: $default_padding;
+  padding-bottom: $default_padding;
   padding-right: 15px;
   height: calc(100vh - $topbar_height);
   max-height: calc(100vh - $topbar_height);
