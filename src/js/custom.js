@@ -11,7 +11,7 @@ import "gemini-scrollbar";
     if (document.getElementById("weather")) {
       new Vue({
         el: "#weather",
-        delimiters: ["${', '}"],
+        delimiters: ["${", "}"],
         data: {
           weatherHigh: "-",
           weatherLow: "-",
