@@ -5,8 +5,6 @@
   <meta charset="UTF-8">
   <title>JCA UI KIT</title>
   <link href="../css/jca-ui-kit.min.css" rel="stylesheet">
-  <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css"></i>
 </head>
 
@@ -18,52 +16,78 @@
 
   <div class="jca-layout d-none" data-body="content">
     <div class="jca-topbar">
-      <div class="jca-logo">
-        <a href="../index.html">
-          <img src="../img/logo.svg" />
-          JCA UI KIT
-          <span class="jca-logo__version" data-version></span>
-        </a>
+      <div class="container-fluid d-flex">
+        <div class="jca-logo">
+          <a href="../index.html">
+            <img src="../img/logo.svg" />
+            JCA UI KIT
+            <span class="jca-logo__version" data-version></span>
+          </a>
+        </div>
+        <ul class="jca-topbar__nav">
+          <li class="jca-topbar__nav-item">
+            <div class="jca-topbar__nav-content">
+              <ion-icon class="jca-topbar__nav-icon" name="home-outline"></ion-icon>
+              <a href="./home.html">Home</a>
+            </div>
+          </li>
+
+          <li class="jca-topbar__nav-item">
+            <div class="jca-topbar__nav-content">
+              <ion-icon class="jca-topbar__nav-icon" name="star-outline"></ion-icon>
+              <a href="#">Getting Started</a>
+            </div>
+          </li>
+
+          <li class="jca-topbar__nav-item">
+            <div class="jca-topbar__nav-content">
+              <ion-icon class="jca-topbar__nav-icon" name="code-download-outline"></ion-icon>
+              <a href="#">Download</a>
+            </div>
+          </li>
+
+          <li class="jca-topbar__nav-item dropdown">
+            <div class="jca-topbar__nav-content dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <ion-icon class="jca-topbar__nav-icon" name="bonfire-outline"></ion-icon>
+              <a href="#">Showcase</a>
+            </div>
+            <div class="dropdown-menu animated fadeInUp" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Logout</a>
+            </div>
+          </li>
+        </ul>
       </div>
-      <ul class="jca-topbar__nav">
-        <li class="jca-topbar__nav-item">
-          <div class="jca-topbar__nav-content">
-            <ion-icon class="jca-topbar__nav-icon" name="home-outline"></ion-icon>
-            <a href="#">Link 1</a>
-          </div>
-        </li>
-
-        <li class="jca-topbar__nav-item">
-          <div class="jca-topbar__nav-content">
-            <ion-icon class="jca-topbar__nav-icon" name="mail-outline"></ion-icon>
-            <a href="#">Link 2</a>
-          </div>
-        </li>
-
-        <li class="jca-topbar__nav-item">
-          <div class="jca-topbar__nav-content">
-            <ion-icon class="jca-topbar__nav-icon" name="today-outline"></ion-icon>
-            <a href="#">Link 3</a>
-          </div>
-        </li>
-
-        <li class="jca-topbar__nav-item dropdown">
-          <div class="jca-topbar__nav-content dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            <ion-icon class="jca-topbar__nav-icon" name="person-circle-outline"></ion-icon>
-            <a href="#">Link 4</a>
-          </div>
-          <div class="dropdown-menu animated fadeInUp" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Logout</a>
-          </div>
-        </li>
-      </ul>
     </div>
 
+    
     <div class="jca-main" data-scrollbar>
+      
+  
+  <div class="jca-page-header-wrapper">
+    <div class="container-fluid">
+      <div class="jca-page-header">
+        <div class="jca-page-header__text">
+          <div class="jca-page-header__title">
+            <ion-icon class="jca-page-header__icon" name="hourglass"></ion-icon>
+            Timeline
+          </div>
+          <div class="jca-page-header__subtitle">Visual sequence of events</div>
+        </div>
+
+        <div class="jca-page-header__meta">
+          <div class="btn btn-success" data-date> - </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        
       <div class="jca-main__content">
-        
-        
+        <div class="container-fluid d-flex">
+          
+          
   
   <div class="jca-sidebar">
     <ul class="jca-nav-card">
@@ -183,25 +207,22 @@
           Info Card
         </a>
       </li>
+
+      <li class="jca-nav-card__item ">
+        <div class="jca-nav-card__item-icon">
+          <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+        </div>
+        <a href="../pages/conversation.html" class="jca-nav-card__item-link">
+          Conversation
+        </a>
+      </li>
     </ul>
   </div>
 
 
-        
-        <div class="jca-content">
           
-  <div class="row">
-    <div class="col-md-12">
-      <div class="jca-page-header">
-        <div class="jca-page-header__title">
-          <ion-icon class="jca-page-header__icon" name="hourglass-outline"></ion-icon>
-          Timeline
-        </div>
-        <div class="jca-page-header__subtitle">Visual sequence of events</div>
-      </div>
-    </div>
-  </div>
-
+          <div class="jca-content">
+            
   <div class="row">
     <div class="col-md-12">
       <div class="jca-code-reference">
@@ -602,6 +623,7 @@
     </div>
   </div>
 
+          </div>
         </div>
       </div>
 
@@ -623,29 +645,21 @@
             Social
           </li>
           <li class="jca-list__item">
-            <a href="#">Link 1</a>
+            <a href="https://www.instagram.com/thabo.titus/" target="_blank">Instagram</a>
           </li>
+
           <li class="jca-list__item">
-            <a href="#">Link 2</a>
-          </li>
-          <li class="jca-list__item">
-            <a href="#">Link 3</a>
+            <a href="https://www.linkedin.com/in/thabotitus/" target="_blank">LinkedIn</a>
           </li>
         </ul>
       </div>
       <div class="col-md-4">
         <ul class="jca-list">
           <li class="jca-list__header">
-            Contact
+            Open Source 
           </li>
           <li class="jca-list__item">
-            <a href="#">Link 1</a>
-          </li>
-          <li class="jca-list__item">
-            <a href="#">Link 2</a>
-          </li>
-          <li class="jca-list__item">
-            <a href="#">Link 3</a>
+            <a href="https://thabotitus.gitlab.io/mimi-ui/" target="_blank">Mimi UI</a>
           </li>
         </ul>
       </div>
@@ -675,8 +689,15 @@
     </div>
 
   </div>
-</body>
 
-<script type="text/javascript" src="../js/jca_dependencies.min.js"></script>
-<script type="text/javascript" src="../js/jca-ui-kit.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript" src="../js/core.min.js"></script>
+  <script type="text/javascript" src="../js/jca-ui-kit.min.js"></script>
+  <script type="text/javascript" src="../js/custom.min.js"></script>
+</body>
 </html>

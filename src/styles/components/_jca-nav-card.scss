@@ -53,13 +53,13 @@
 }
 
 .jca-nav-card__item:hover {
-  color:  $black;
+  // color:  $black;
   display: flex;
   text-transform: uppercase;
   background: $grey;
 
   .jca-nav-card__item-link {
-    color: $black !important;
+    // color: $black !important;
     text-decoration: none;
   }
 }

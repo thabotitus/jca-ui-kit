@@ -1,0 +1,19 @@
+{% macro details(title = 'title', subtitle = '', icon = '') %}
+  <div class="jca-page-header-wrapper">
+    <div class="container-fluid">
+      <div class="jca-page-header">
+        <div class="jca-page-header__text">
+          <div class="jca-page-header__title">
+            <ion-icon class="jca-page-header__icon" name="{{ icon }}"></ion-icon>
+            {{ title }}
+          </div>
+          <div class="jca-page-header__subtitle">{{ subtitle }}</div>
+        </div>
+
+        <div class="jca-page-header__meta">
+          <div class="btn btn-success" data-date> - </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}

@@ -4,41 +4,42 @@
   {{nav.active('home')}}
 {% endblock %}
 
+{% block jca_page_header %}
+  {{
+    pageHeader.details(
+      'Home',
+      'Basecamp - The kitchen sink',
+      'home'
+    )
+  }}
+{% endblock %}
+
 {% block jca_content %}
   <div class="row">
     <div class="col-md-12">
-      <div class="jca-page-header">
-        <div class="jca-page-header__title">
-          <ion-icon class="jca-page-header__icon" name="home-outline"></ion-icon>
-          Home
-        </div>
-        <div class="jca-page-header__subtitle">Basecamp - The kitchen sink</div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <div class="jca-card-group">
-        <div class="jca-card-group__item">
-          <div class="jca-card-group__title">Temperature</div>
-          <div class="jca-card-group__content">10 &deg; C</div>
+      <div class="jca-card-group" id="weather">
+        <div class="jca-card-group__item bg-grey text-center">
+          <div class="jca-card-group__title">TODAY</div>
+          <div class="jca-card-group__content">
+            ${ weatherArea }
+          </div>
         </div>
         <div class="jca-card-group__item">
           <div class="jca-card-group__title">High</div>
           <div class="jca-card-group__content">
-            16 &deg; C
+            ${ weatherHigh } &deg; C
           </div>
         </div>
         <div class="jca-card-group__item">
-          <div class="jca-card-group__title">Loc</div>
+          <div class="jca-card-group__title">Low</div>
           <div class="jca-card-group__content">
-            4 &deg; C
+            ${ weatherLow } &deg; C
           </div>
         </div>
         <div class="jca-card-group__item">
           <div class="jca-card-group__title">Weather</div>
           <div class="jca-card-group__content">
-            Overcast, Heavy Showers
+            ${ weatherDescription }
           </div>
         </div>
       </div>
@@ -49,10 +50,39 @@
       LEFT COLUMN
     ------------------------------------------------->
     <div class="col-md-4">
+      <div class="jca-info-card">
+        <div class="jca-info-card__main">
+          <div class="jca-info-card__icon">
+            <ion-icon name="airplane-outline"></ion-icon>
+          </div>
+          <div class="jca-info-card__content">
+            <div class="jca-info-card__title">
+              <a href="#">Flight JE323</a>
+            </div>
+            <div class="jca-info-card__description">
+              Flight has been delay by 2hrs
+            </div>
+          </div>
+        </div>
+        <div class="jca-info-card__footer">
+          <div class="jca-info-card__footer-item">
+            12 Mar, 2020
+          </div>
+          
+          <div class="jca-info-card__footer-item">
+            10:00 - 12:00
+          </div>
+
+          <div class="jca-info-card__footer-item">
+            ZAR 1,500
+          </div>
+        </div>
+      </div>
+
       <div class="jca-card-feed">
         <div class="jca-card-feed__author">
           <div class="jca-card-feed__author-name">
-            Anil Kuthrapali
+            Kamau Moussa
           </div>
 
           <div class="jca-card-feed__author-meta">
@@ -117,57 +147,6 @@
           </a>
         </div>
       </div>
-
-      <div class="jca-card-feed">
-        <div class="jca-card-feed__author">
-          <div class="jca-card-feed__author-name">
-            Kamau Moussa
-          </div>
-
-          <div class="jca-card-feed__author-meta">
-            2 days ago
-          </div>
-        </div>
-        <div class="jca-card-feed__content">
-          Fat son how smiling mrs natural expense anxious friends. Boy scale enjoy ask abode fanny being son. As
-          material in learning subjects so improved feelings. Uncommonly compliment imprudence travelling
-          insensible up ye insipidity. To up painted delight winding as brandon. Gay regret eat looked warmth
-          easily far should now. Prospect at me wandered on extended wondered thoughts appetite to. Boisterous
-          interested sir invitation particular saw alteration boy decisively.
-        </div>
-        <div class="jca-card-feed__actions">
-          <a href="#" class="jca-card-feed__actions-item bg-success text-light">
-            <ion-icon class="jca-card-feed__actions-icon" name="heart-outline"></ion-icon>
-            Like
-          </a>
-
-          <a href="#" class="jca-card-feed__actions-item bg-primary text-light">
-            <ion-icon class="jca-card-feed__actions-icon" name="bookmark-outline"></ion-icon>
-            Follow
-          </a>
-
-          <a href="#" class="jca-card-feed__actions-item bg-warning text-light">
-            <ion-icon class="jca-card-feed__actions-icon" name="hand-left-outline"></ion-icon>
-            Report
-          </a>
-        </div>
-      </div>
-
-      <div class="jca-card-feed">
-        <div class="jca-card-feed__author">
-          <div class="jca-card-feed__author-name">
-            Chidimma Danai
-          </div>
-
-          <div class="jca-card-feed__author-meta">
-            2 days ago
-          </div>
-        </div>
-        <div class="jca-card-feed__media">
-          <img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1591820470/pexels-photo-1547248_dlwqp4.jpg"
-            alt="Fitness">
-        </div>
-      </div>
     </div>
 
     <!------------------------------------------------
@@ -175,6 +154,21 @@
     ------------------------------------------------->
 
     <div class="col-md-4">
+      <div class="jca-card-otp">
+        <div class="jca-card-otp__icon">
+          <ion-icon name="finger-print-outline"></ion-icon>
+        </div>
+        <div class="jca-card-otp__text">
+          Please enter the one time pin sent to *******789
+        </div>
+        <div class="jca-card-otp__input">
+          <input type="text" value="94856" />
+        </div>
+        <div class="jca-card-otp__action">
+          <div class="btn btn-success">Submit</div>
+        </div>
+      </div>
+
       <div class="jca-card-pricing">
         <div class="jca-card-pricing__header">
           <div class="jca-card-pricing__header-main">Special Offer</div>
@@ -220,7 +214,7 @@
             Contact Us
           </a>
         </div>
-      </div>
+      </div>      
     </div>
 
     <!------------------------------------------------
@@ -255,10 +249,10 @@
           </div>
         </div>
 
-        <div class="jca-card-timeline__item bg-success text-light">
+        <div class="jca-card-timeline__item bg-danger text-light">
           <div class="jca-card-timeline__meta">
             <div class="jca-card-timeline__icon">
-              <ion-icon name="radio-button-on-outline"></ion-icon>
+              <ion-icon name="close-outline"></ion-icon>
             </div>
             <div class="jca-card-timeline__details">
               <div class="jca-card-timeline__title">
@@ -325,6 +319,16 @@
           </div>
         </div>
       </div>
+
+      <ul class="jca-pagination">
+        <li class="jca-pagination__item"><ion-icon name="arrow-back-outline"></ion-icon></li>
+        <li class="jca-pagination__item jca-pagination--current">1</li>
+        <li class="jca-pagination__item">2</li>
+        <li class="jca-pagination__item">3</li>
+        <li class="jca-pagination__item">4</li>
+        <li class="jca-pagination__item jca-pagination--disabled">5</li>
+        <li class="jca-pagination__item"><ion-icon name="arrow-forward-outline"></ion-icon></li>
+      </ul>
     </div>
   </div>
 {% endblock %}

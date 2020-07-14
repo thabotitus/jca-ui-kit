@@ -4,19 +4,17 @@
   {{nav.active('tags')}}
 {% endblock %}
 
-{% block jca_content %}
-  <div class="row">
-    <div class="col-md-12">
-      <div class="jca-page-header">
-        <div class="jca-page-header__title">
-          <ion-icon class="jca-page-header__icon" name="pricetags-outline"></ion-icon>
-          Tags
-        </div>
-        <div class="jca-page-header__subtitle">A card full of tags</div>
-      </div>
-    </div>
-  </div>
+{% block jca_page_header %}
+  {{
+    pageHeader.details(
+      'Tags',
+      'A card full of tags',
+      'pricetags'
+    )
+  }}
+{% endblock %}
 
+{% block jca_content %}
   <div class="row">
     <div class="col-md-12">
       <div class="jca-code-reference">

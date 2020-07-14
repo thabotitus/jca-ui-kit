@@ -4,21 +4,17 @@
   {{nav.active('one-time-pin')}}
 {% endblock %}
 
-{% block jca_content %}
-  <div class="row">
-    <div class="col-md-12">
-      <div class="jca-page-header">
-        <div class="jca-page-header__title">
-          <ion-icon class="jca-page-header__icon" name="calculator-outline"></ion-icon>
-          One Time Pin
-        </div>
-        <div class="jca-page-header__subtitle">
-          One time pin inputs from online transactions
-        </div>
-      </div>
-    </div>
-  </div>
+{% block jca_page_header %}
+  {{
+    pageHeader.details(
+      'One Time Pin',
+      ' One time pin inputs from online transactions',
+      'calculator'
+    )
+  }}
+{% endblock %}
 
+{% block jca_content %}
   <div class="row">
     <div class="col-md-12">
       <div class="jca-code-reference">
