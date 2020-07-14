@@ -6,7 +6,6 @@ import 'datatables.net';
 import 'prismjs';
 import 'clipboard';
 
-
 (function(){
   const JCA = {};
     

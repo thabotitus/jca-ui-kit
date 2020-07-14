@@ -5,7 +5,7 @@ import webpack from 'webpack';
 export const WEBPACK_CONFIG = {
   mode: 'development',
   entry: {
-    'jca-ui-kit.min': "./src/js/main.js",
+    'jca-ui-kit.min': "./src/js/app.js",
     'custom.min': "./src/js/custom.js"
   },
   output: {

@@ -2,10 +2,13 @@
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import browserSync from 'browser-sync';
-const  browser = browserSync.create();
 import imageMin from 'gulp-imagemin';
 
 import { DISTRIBUTION_FOLDERS, INPUT_FOLDERS } from './config.js';
+
+const browser = browserSync.has('jca-ui')
+  ? browserSync.get('jca-ui')
+  : browserSync.create('jca-ui');
 
 gulp.task(
 	'build:images',

@@ -1,13 +1,18 @@
+
+import gulp from 'gulp';
+import clean from 'gulp-clean';
+import browserSync from 'browser-sync';
+
+const browser = browserSync.has('jca-ui')
+  ? browserSync.get('jca-ui')
+  : browserSync.create('jca-ui');
+
 import './build/scripts.js';
 import './build/styles.js';
 import './build/images.js';
 import './build/html.js';
 import './build/data.js';
 import './build/bump.js';
-
-import gulp from 'gulp';
-import clean from 'gulp-clean';
-import browserSync from 'browser-sync';
 
 import { DISTRIBUTION_FOLDERS, INPUT_FOLDERS, TASKS } from './build/config.js';
 
@@ -35,7 +40,7 @@ gulp.task(
 gulp.task(
 	TASKS.SERVE,
 	function(){
-		browserSync.init({
+		browser.init({
 			server: `./${DISTRIBUTION_FOLDERS.ROOT}`,
 			port: 4000,
 			open: true,

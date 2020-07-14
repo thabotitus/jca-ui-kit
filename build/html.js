@@ -2,10 +2,13 @@
 import gulp from 'gulp';
 import browserSync from 'browser-sync';
 import nunjucksRender from 'gulp-nunjucks-render';
-const  browser = browserSync.create();
 import { DISTRIBUTION_FOLDERS } from './config.js';
 
 const TEMPLATES_PATH = 'src/templates';
+
+const browser = browserSync.has('jca-ui')
+  ? browserSync.get('jca-ui')
+  : browserSync.create('jca-ui');
 
 gulp.task('build:html_pages', function() {
   return gulp.src(['src/pages/**/*.njk'])

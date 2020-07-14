@@ -9,7 +9,10 @@ import autoprefixer from 'gulp-autoprefixer';
 import notify from 'gulp-notify';
 import browserSync from 'browser-sync';
 import concat from 'gulp-concat';
-const  browser = browserSync.create();
+
+const browser = browserSync.has('jca-ui')
+  ? browserSync.get('jca-ui')
+  : browserSync.create('jca-ui');
 
 const OUTPUT_FILE_NAME = 'jca-ui-kit.min.css';
 

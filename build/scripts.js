@@ -5,8 +5,11 @@ import notify from 'gulp-notify';
 import webpack from 'webpack-stream';
 import { WEBPACK_CONFIG } from '../webpack.config.js';
 import browserSync from 'browser-sync';
-const browser = browserSync.create();
 import { DISTRIBUTION_FOLDERS } from './config.js';
+
+const browser = browserSync.has('jca-ui')
+  ? browserSync.get('jca-ui')
+  : browserSync.create('jca-ui');
 
 gulp.task(
 	'build:javascript',
