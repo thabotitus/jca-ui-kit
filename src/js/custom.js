@@ -8,7 +8,7 @@ import "gemini-scrollbar";
   const JCA = {};
 
   JCA.getWeather = function() {
-    if (document.getElementById('weather')) {
+    if (document.getElementById("weather")) {
       new Vue({
         el: "#weather",
         delimiters: ["${', '}"],

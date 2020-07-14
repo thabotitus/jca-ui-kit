@@ -1,6 +1,6 @@
 
-import * as $ from 'jquery';
-import * as GeminiScrollbar from 'gemini-scrollbar';
+import * as $ from "jquery";
+import * as GeminiScrollbar from "gemini-scrollbar";
 import "imask";
 import "./vendor/jquery.datatables.net.min.js";
 import "prismjs";
