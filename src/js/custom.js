@@ -1,9 +1,8 @@
 import { version } from '../../version.json';
 import * as $ from 'jquery';
-import 'datatables.net';
+import './vendor/jquery.datatables.net.min.js';
 import  Vue from '../../node_modules/vue/dist/vue.esm.js';
 import 'gemini-scrollbar';
-import * as Popper  from './vendor/popper.min.js';
 
 (function(){
   const JCA = {};
@@ -38,9 +37,24 @@ import * as Popper  from './vendor/popper.min.js';
   };
   
   JCA.intializeDatatable = function() {
+    const columns = [
+      { data: 'name' },
+      { data: 'position' },
+      { data: 'office' },
+      { data: 'extn' },
+      { data: 'start_date' },
+      { data: 'salary' }
+    ];
+
     $('[data-datatable="myDataTable"]').DataTable({
-      "ajax": '../data/datatable.json',
-      "columns": require('../data/datatable.json').columns
+      ajax: '../data/datatable.json',
+      columns,
+      language: {
+        lengthMenu: '_MENU_ records per page',
+        info: 'Showing _START_ to _END_ of _TOTAL_ records',
+        searchPlaceholder: 'Search',
+        search: ''
+      }
     });
   };
 

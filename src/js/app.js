@@ -2,7 +2,7 @@
 import * as $ from 'jquery';
 import * as GeminiScrollbar from 'gemini-scrollbar';
 import 'imask';
-import 'datatables.net';
+import './vendor/jquery.datatables.net.min.js';
 import 'prismjs';
 import 'clipboard';
 

@@ -264,21 +264,28 @@
       "start_date": "2011/07/25",
       "salary": "$170,750"
     }
-  ],
-  "columns": [
-    { "data": "name" },
-    { "data": "position" },
-    { "data": "office" },
-    { "data": "extn" },
-    { "data": "start_date" },
-    { "data": "salary" }
   ]
 }
 
 // Javascript
+const columns = [
+  { data: 'name' },
+  { data: 'position' },
+  { data: 'office' },
+  { data: 'extn' },
+  { data: 'start_date' },
+  { data: 'salary' }
+];
+
 $('[data-datatable="myDataTable"]').DataTable({
-  "ajax": '../data/datatable.json',
-  "columns": require('../data/datatable.json').columns
+  ajax: '../data/datatable.json',
+  columns,
+  language: {
+    lengthMenu: '_MENU_ records per page',
+    info: 'Showing _START_ to _END_ of _TOTAL_ records',
+    searchPlaceholder: 'Search',
+    search: ''
+  }
 });
             </code>
           </pre>
