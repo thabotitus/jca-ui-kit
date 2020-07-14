@@ -1,29 +1,34 @@
-import { version } from '../../package.json';
+
+import * as $ from 'jquery';
+import * as GeminiScrollbar from 'gemini-scrollbar';
+import 'imask';
+import 'datatables.net';
+import 'prismjs';
+import 'clipboard';
+
 
 (function(){
-  window.JCA = window.JCA || {};
-   
-  window.JCA.loader = () => {
-    document.addEventListener("DOMContentLoaded", function() {
-      var loader =  document.querySelectorAll("[data-body='loader']")[0];
-      var content = document.querySelectorAll("[data-body='content']")[0];
-      var footer = document.querySelectorAll("[data-body='footer']")[0];
+  const JCA = {};
+    
+  JCA.loader = () => {
+    var loader =  document.querySelectorAll("[data-body='loader']")[0];
+    var content = document.querySelectorAll("[data-body='content']")[0];
+    var footer = document.querySelectorAll("[data-body='footer']")[0];
 
-      if (loader) {
-        loader.classList.add("d-none");
-      }
+    if (loader) {
+      loader.classList.add("d-none");
+    }
 
-      if (content) {
-        content.classList.remove("d-none");
-      }
+    if (content) {
+      content.classList.remove("d-none");
+    }
 
-      if (footer) {
-        footer.classList.remove("d-none");
-      }
-    });
+    if (footer) {
+      footer.classList.remove("d-none");
+    }
   };
 
-  window.JCA.inputMasks = () => {
+  JCA.inputMasks = () => {
     const visaInputs = document.querySelectorAll("[data-mask='visa'");
     const masterCardInputs = document.querySelectorAll("[data-mask='mastercard'");
     const cvvInputs = document.querySelectorAll("[data-mask='cvv'");
@@ -47,33 +52,34 @@ import { version } from '../../package.json';
     });
   };
 
-  window.JCA.setVersion = () =>  {
-    
-
-    const elements = document.querySelectorAll("[data-version]");
-    elements.forEach((el) => {
-      el.innerHTML = `v${version}`;
-    });
-    
-  };
-
-  window.JCA.initializeScrollbar = () => {
+  JCA.initializeScrollbar = () => {
     const mainContentArea = document.querySelectorAll("[data-scrollbar]")[0];
     new GeminiScrollbar({
       element: mainContentArea
     }).create();
   };
 
-  window.JCA.intializeDatatable = () => {
-    $('[data-datatable="myDataTable"]').DataTable({
-      "ajax": '../data/datatable.json',
-      "columns": require('../data/datatable.json').columns
-    });
+  JCA.initializeConversations = () => {
+    $('.jca-conversation__input textarea')
+      .focus((context) => {
+        $(context.currentTarget)
+          .closest('.jca-conversation__viewport')
+          .addClass('jca-conversation--reply-mode');
+      });
+
+    $('[data-reply-mode="cancel"')
+      .click((context) => {
+        $(context.currentTarget)
+          .closest('.jca-conversation__viewport')
+          .removeClass('jca-conversation--reply-mode');
+      });
+
   };
 
-  window.JCA.loader();
-  window.JCA.inputMasks();
-  window.JCA.setVersion();
-  // window.JCA.initializeScrollbar();
-  window.JCA.intializeDatatable();
+  document.addEventListener("DOMContentLoaded", function() {
+    JCA.loader();
+    JCA.inputMasks();
+    JCA.initializeScrollbar();
+    JCA.initializeConversations();
+  });
 }());

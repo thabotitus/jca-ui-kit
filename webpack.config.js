@@ -1,17 +1,18 @@
-const UglifyJsPlugin    = require('uglifyjs-webpack-plugin');
-const path              = require('path');
-const version  					= require('./package.json').version;
+import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
+import * as path from 'path';
+import webpack from 'webpack';
 
-module.exports = {
+export const WEBPACK_CONFIG = {
   mode: 'development',
   entry: {
-    'jca-ui-kit.min': "./src/js/app.js",
+    'jca-ui-kit.min': "./src/js/main.js",
+    'custom.min': "./src/js/custom.js"
   },
   output: {
     filename: '[name].js',
   },
   optimization: {
-    minimize: true,
+    minimize: false,
     minimizer: [new UglifyJsPlugin({
       include: /\.min\.js$/,
       uglifyOptions: {
@@ -24,7 +25,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js|jsx|esm)$/,
         exclude: /(node_modules)/,
         loader: 'babel-loader',
         query: {
@@ -35,9 +36,18 @@ module.exports = {
       },
     ],
   },
-  // resolve: {
-  //   alias: {
-  //     jquery: path.resolve(__dirname, './src/js/jquery.js')
-  //   }
-  // }
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      Popper: "@popperjs/core/dist/umd/popper.js"
+    })
+  ],
+  resolve: {
+    alias: {
+      "popper.js": path.resolve('', 'node_modules/@popperjs/core'),
+      "datatables.net": path.resolve('', 'node_modules/datatables.net/js/jquery.dataTables.js'),
+      "./clipboard": path.resolve('', 'node_modules/clipboard/dist/clipboard.min.js')
+    }
+  }
 };

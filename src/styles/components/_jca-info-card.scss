@@ -57,7 +57,7 @@
     background: $grey;
     display: flex;
     align-items: center;
-    border-top: 1px solid transparentize($black, 0.9);
+    border-top: 0.5px solid transparentize($black, 0.9);
     font-size: 0.85em;
 
     &-icon {
@@ -69,7 +69,7 @@
       max-width: 50%;
       font-size: 0.9em;
       text-align: center;
-      border-right: 1px solid transparentize($black, 0.9);
+      border-right: 0.5px solid transparentize($black, 0.9);
       padding: $light_padding;
 
       &:last-of-type {
