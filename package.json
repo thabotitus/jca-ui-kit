@@ -8,7 +8,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp serve",
-    "build": "gulp"
+    "build": "gulp",
+    "bump:patch": "gulp bump:patch",
+    "bump:minor": "gulp bump:minor",
+    "bump:major": "gulp bump:major"
   },
   "keywords": [
     "SASS",

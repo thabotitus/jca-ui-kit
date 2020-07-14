@@ -3,26 +3,24 @@ import gulp from 'gulp';
 import browserSync from 'browser-sync';
 import nunjucksRender from 'gulp-nunjucks-render';
 const  browser = browserSync.create();
+import { DISTRIBUTION_FOLDERS } from './config.js';
 
-const DIST_FOLDERS = {
-	ROOT: 'docs',
-};
-
+const TEMPLATES_PATH = 'src/templates';
 
 gulp.task('build:html_pages', function() {
   return gulp.src(['src/pages/**/*.njk'])
   .pipe(nunjucksRender({
-      path: ['src/templates']
+      path: [TEMPLATES_PATH]
     }))
-	.pipe(gulp.dest(`${DIST_FOLDERS.ROOT}/pages`))
+	.pipe(gulp.dest(`${DISTRIBUTION_FOLDERS.ROOT}/${DISTRIBUTION_FOLDERS.PAGES}`))
 	.pipe(browserSync.stream());
 });
 
 gulp.task('build:html_index', function() {
   return gulp.src(['src/index.njk'])
   .pipe(nunjucksRender({
-      path: ['src/templates']
+      path: [TEMPLATES_PATH]
     }))
-	.pipe(gulp.dest(`${DIST_FOLDERS.ROOT}`))
+	.pipe(gulp.dest(`${DISTRIBUTION_FOLDERS.ROOT}`))
 	.pipe(browser.stream());
 });

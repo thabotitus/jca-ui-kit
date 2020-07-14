@@ -3,6 +3,8 @@ const DISTRIBUTION_FOLDERS = {
 	IMAGES: 'img',
 	ROOT: 'docs',
 	JS: 'js',
+	DATA: 'data',
+	PAGES: 'pages'
 }
 
 const INPUT_FOLDERS = {

@@ -1,12 +1,9 @@
 'use strict'
 import gulp from 'gulp';
-
-const DIST_FOLDERS = {
-	ROOT: 'docs',
-};
+import { DISTRIBUTION_FOLDERS } from './config.js';
 
 gulp.task('build:copy_data', () => {
 	return gulp.src('./src/data/**/*')
-		.pipe(gulp.dest(`./${DIST_FOLDERS.ROOT}/data`));
+		.pipe(gulp.dest(`./${DISTRIBUTION_FOLDERS.ROOT}/${DISTRIBUTION_FOLDERS.DATA}`));
 });
 	

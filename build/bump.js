@@ -20,5 +20,5 @@ gulp.task(
 gulp.task(
 	'bump:patch',
 	function() {
-		return gulp.src(source).pipe(bump({type:'patch'})).pipe(gulp.dest(ROOT));
+		return gulp.src(source).pipe(bump({ type:'patch' })).pipe(gulp.dest(ROOT));
   });

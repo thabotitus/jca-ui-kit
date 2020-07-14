@@ -5,15 +5,7 @@ import browserSync from 'browser-sync';
 const  browser = browserSync.create();
 import imageMin from 'gulp-imagemin';
 
-const DIST_FOLDERS = {
-	IMAGES: 'img',
-	ROOT: 'docs',
-};
-
-const INPUT_FOLDERS = {
-	IMAGES: './src/img',
-	ROOT: './src',
-};
+import { DISTRIBUTION_FOLDERS, INPUT_FOLDERS } from './config.js';
 
 gulp.task(
 	'build:images',
@@ -22,10 +14,10 @@ gulp.task(
 			.pipe(plumber())
 			.pipe(imageMin({
 				progressive: true,
-							interlaced: true,
-							pngquant: true,
+				interlaced: true,
+				pngquant: true,
 				verbose: true,
 			}))
-			.pipe(gulp.dest(`./${DIST_FOLDERS.ROOT}/${DIST_FOLDERS.IMAGES}`))
+			.pipe(gulp.dest(`./${DISTRIBUTION_FOLDERS.ROOT}/${DISTRIBUTION_FOLDERS.IMAGES}`))
 			.pipe(browser.stream())
 });

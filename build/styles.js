@@ -13,17 +13,9 @@ const  browser = browserSync.create();
 
 const OUTPUT_FILE_NAME = 'jca-ui-kit.min.css';
 
-const DIST_FOLDERS = {
-	CSS: 'css',
-	ROOT: 'docs',
-};
+import { DISTRIBUTION_FOLDERS, INPUT_FOLDERS } from './config.js';
 
-const INPUT_FOLDERS = {
-	CSS: './src/styles',
-	ROOT: './src',
-};
-
-const BUILD_STYLES = gulp.task(
+gulp.task(
 	'build:styles',
 	function(){
 		return gulp.src([`${INPUT_FOLDERS.CSS}/**/*.scss`])
@@ -50,10 +42,6 @@ const BUILD_STYLES = gulp.task(
 			}))
 			.pipe(sourcemaps.write())
 			.pipe(concat(OUTPUT_FILE_NAME))
-			.pipe(gulp.dest(`./${DIST_FOLDERS.ROOT}/${DIST_FOLDERS.CSS}`))
+			.pipe(gulp.dest(`./${DISTRIBUTION_FOLDERS.ROOT}/${DISTRIBUTION_FOLDERS.CSS}`))
 			.pipe(browser.stream())
 });
-
-export {
-	BUILD_STYLES
-};
