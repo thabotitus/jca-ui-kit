@@ -17,12 +17,11 @@
   }
 
   &__toolbar {
-    display: flex;
+    display: none;
     background-color: $grey;
     width: 100%;
     height: 60px;
-    // border-bottom: 0.5px solid darken($grey, 10%);
-    display: none;
+
     &-icon {
       font-size: 1.5em;
       margin-right: 8px;

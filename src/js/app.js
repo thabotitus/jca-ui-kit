@@ -1,10 +1,10 @@
 
 import * as $ from 'jquery';
 import * as GeminiScrollbar from 'gemini-scrollbar';
-import 'imask';
-import './vendor/jquery.datatables.net.min.js';
-import 'prismjs';
-import 'clipboard';
+import "imask";
+import "./vendor/jquery.datatables.net.min.js";
+import "prismjs";
+import "clipboard";
 
 (function(){
   const JCA = {};
@@ -59,18 +59,18 @@ import 'clipboard';
   };
 
   JCA.initializeConversations = () => {
-    $('.jca-conversation__input textarea')
+    $(".jca-conversation__input textarea")
       .focus((context) => {
         $(context.currentTarget)
-          .closest('.jca-conversation__viewport')
-          .addClass('jca-conversation--reply-mode');
+          .closest(".jca-conversation__viewport")
+          .addClass("jca-conversation--reply-mode");
       });
 
-    $('[data-reply-mode="cancel"')
+    $("[data-reply-mode='cancel'")
       .click((context) => {
         $(context.currentTarget)
-          .closest('.jca-conversation__viewport')
-          .removeClass('jca-conversation--reply-mode');
+          .closest(".jca-conversation__viewport")
+          .removeClass("jca-conversation--reply-mode");
       });
 
   };
