@@ -1,6 +1,5 @@
 
 import * as $ from "jquery";
-import * as GeminiScrollbar from "gemini-scrollbar";
 import "imask";
 import "./vendor/jquery.datatables.net.min.js";
 import "prismjs";
@@ -51,13 +50,6 @@ import "clipboard";
     });
   };
 
-  JCA.initializeScrollbar = () => {
-    const mainContentArea = document.querySelectorAll("[data-scrollbar]")[0];
-    new GeminiScrollbar({
-      element: mainContentArea
-    }).create();
-  };
-
   JCA.initializeConversations = () => {
     $(".jca-conversation__input textarea")
       .focus((context) => {
@@ -78,7 +70,6 @@ import "clipboard";
   document.addEventListener("DOMContentLoaded", function() {
     JCA.loader();
     JCA.inputMasks();
-    JCA.initializeScrollbar();
     JCA.initializeConversations();
   });
 }());

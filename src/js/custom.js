@@ -2,7 +2,6 @@ import { version } from "../../version.json";
 import * as $ from "jquery";
 import "./vendor/jquery.datatables.net.min.js";
 import  Vue from "../../node_modules/vue/dist/vue.esm.js";
-import "gemini-scrollbar";
 
 (function(){
   const JCA = {};
