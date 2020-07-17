@@ -11,7 +11,8 @@
     "build": "gulp",
     "bump:patch": "gulp bump:patch",
     "bump:minor": "gulp bump:minor",
-    "bump:major": "gulp bump:major"
+    "bump:major": "gulp bump:major",
+    "package": "gulp build:package"
   },
   "keywords": [
     "SASS",
@@ -60,10 +61,12 @@
     "gulp-sass-glob": "1.1.0",
     "gulp-sourcemaps": "2.6.5",
     "gulp-uglify": "3.0.2",
+    "gulp-zip": "^5.0.2",
     "i": "0.3.6",
     "imask": "6.0.5",
     "ionicons": "5.1.2",
     "jquery": "3.5.1",
+    "load-json-file": "^6.2.0",
     "normalize.css": "8.0.1",
     "prismjs": "1.20.0",
     "uglifyjs-webpack-plugin": "2.2.0",
