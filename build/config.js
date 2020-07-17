@@ -24,6 +24,7 @@ const TASKS = {
 	HTML_INDEX: 'build:html_index',
 	HTML_PAGES: 'build:html_pages',
 	COPY_DATA: 'build:copy_data',
+	PACKAGE: 'buil:package'
 };
 
 export {

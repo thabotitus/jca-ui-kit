@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>JCA UI KIT</title>
   <link href="../css/jca-ui-kit.min.css" rel="stylesheet">
+  <link rel='icon' href='../img/favicon.ico' type='image/x-icon'/ >
 </head>
 
 <body>
@@ -38,14 +39,19 @@
             </div>
           </li>
 
-          <li class="jca-topbar__nav-item">
-            <div class="jca-topbar__nav-content">
+          <li class="jca-topbar__nav-item dropdown">
+            <div class="jca-topbar__nav-content dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
               <ion-icon class="jca-topbar__nav-icon" name="code-download-outline"></ion-icon>
               <a href="#">Download</a>
             </div>
+            <div class="dropdown-menu animated fadeInUp" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="https://github.com/thabotitus/jca-ui-kit" target="_blank">Source</a>
+              <a class="dropdown-item" href="https://github.com/thabotitus/jca-ui-kit/archive/master.zip">Zip</a>
+            </div>
           </li>
 
-          <li class="jca-topbar__nav-item dropdown">
+          <li class="jca-topbar__nav-item dropdown d-none">
             <div class="jca-topbar__nav-content dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
               <ion-icon class="jca-topbar__nav-icon" name="bonfire-outline"></ion-icon>
@@ -239,7 +245,7 @@
   &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
     &lt;title&gt;Your Site Name&lt;/title&gt;
-    &lt;link href="../css/jca-ui-kit.min.css" rel="stylesheet"&gt;
+    &lt;link href="./css/jca-ui-kit.min.css" rel="stylesheet"&gt;
   &lt;/head&gt;
   &lt;body&gt;
     ...

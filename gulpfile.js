@@ -13,6 +13,7 @@ import './build/images.js';
 import './build/html.js';
 import './build/data.js';
 import './build/bump.js';
+import './build/package.js';
 
 import { DISTRIBUTION_FOLDERS, INPUT_FOLDERS, TASKS } from './build/config.js';
 
