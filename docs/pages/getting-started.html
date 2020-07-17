@@ -68,10 +68,10 @@
       <div class="jca-page-header">
         <div class="jca-page-header__text">
           <div class="jca-page-header__title">
-            <ion-icon class="jca-page-header__icon" name="grid"></ion-icon>
-            Card Group
+            <ion-icon class="jca-page-header__icon" name="browsers"></ion-icon>
+            Getting Started
           </div>
-          <div class="jca-page-header__subtitle">Cards linked without spaces</div>
+          <div class="jca-page-header__subtitle">Set up your site</div>
         </div>
 
         <div class="jca-page-header__meta">
@@ -117,7 +117,7 @@
         </a>
       </li>
 
-      <li class="jca-nav-card__item  jca-nav-card__item--active ">
+      <li class="jca-nav-card__item ">
         <div class="jca-nav-card__item-icon">
           <ion-icon name="grid-outline"></ion-icon>
         </div>
@@ -222,47 +222,44 @@
           
           <div class="jca-content">
             
+  <div class="row mb-20">
+    <div class="col-md-12">
+      <a class="btn btn-primary" href="../js/jca-ui-kit.min.js" download="jca-ui-kit.min.js">Download JS File</a>
+      <a class="btn btn-success" href="../css/jca-ui-kit.min.css" download="jca-ui-kit.min.css">Download CSS File</a>
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-md-12">
       <div class="jca-code-reference">
-        <div class="jca-code-reference__example">
-          <div class="jca-code-reference__description">
-            A card group can be used to show various bits of information neatly across a page
-          </div>
-          <div class="jca-code-reference__visual">
-            <div class="jca-card-group">
-              <div class="jca-card-group__item">
-                <div class="jca-card-group__title">Title</div>
-                <div class="jca-card-group__content">
-                  Some value
-                </div>
-              </div>
-              <div class="jca-card-group__item">
-                <div class="jca-card-group__title">Title</div>
-                <div class="jca-card-group__content">
-                  Some value
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="jca-code-reference__code">
           <pre>
             <code class="language-html">
-  &lt;div class="jca-card-group"&gt;
-    &lt;div class="jca-card-group__item"&gt;
-      &lt;div class="jca-card-group__title"&gt;title&lt;/div&gt;
-      &lt;div class="jca-card-group__content"&gt;
-        some value
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="jca-card-group__item"&gt;
-      &lt;div class="jca-card-group__title"&gt;title&lt;/div&gt;
-      &lt;div class="jca-card-group__content"&gt;
-        some value
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Your Site Name&lt;/title&gt;
+    &lt;link href="../css/jca-ui-kit.min.css" rel="stylesheet"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    ...
+
+    // Optional - Use any icon pack
+    &lt;script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"&gt;&lt;/script&gt;
+    &lt;script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"&gt;&lt;/script&gt;
+
+    // Dependencies
+    &lt;script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha512-ubuT8Z88WxezgSqf3RLuNi5lmjstiJcyezx34yIU2gAHonIi27Na7atqzUZCOoY4CExaoFumzOsFQ2Ch+I/HCw==" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"&gt;&lt;/script&gt;
+
+    // JCA functions
+    &lt;script type="text/javascript" src="./js/jca-ui-kit.min.js"&gt;&lt;/script&gt;
+
+    // Your custom functions
+    &lt;script type="text/javascript" src="./js/custom.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
             </code>
           </pre>
         </div>
