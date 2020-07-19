@@ -1,0 +1,39 @@
+.jca-accordion {
+  box-shadow: $default_shadow;
+  margin-bottom: 20px;
+  border-radius: $default_radius;
+  background: $white;
+
+  &__item {
+    overflow: hidden;
+    will-change: auto;
+  }
+
+  &__title {
+    padding: $light_padding;
+    cursor: pointer;
+    font-weight: 700;
+    border-top: $default_border;
+
+    &:hover {
+      background: $grey;
+    }
+  }
+
+  &__content {
+    padding: $default_padding;
+    border-top: $default_border;
+  }
+}
+
+
+.jca-accordion--gap {
+  box-shadow: none;
+  background: none;
+
+  .jca-accordion__item {
+    box-shadow: $default_shadow;
+    border-radius: $default_radius;
+    margin-bottom: 10px;
+  }
+}

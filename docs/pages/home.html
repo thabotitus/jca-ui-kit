@@ -221,6 +221,15 @@
           Conversation
         </a>
       </li>
+
+      <li class="jca-nav-card__item ">
+        <div class="jca-nav-card__item-icon">
+          <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <a href="../pages/accordion.html" class="jca-nav-card__item-link">
+          Accordion
+        </a>
+      </li>
     </ul>
   </div>
 
@@ -434,6 +443,45 @@
       RIGHT COLUMN
     ------------------------------------------------->
     <div class="col-md-4">
+      <div class="jca-accordion jca-accordion--gap" id="accordion3">
+        <div class="jca-accordion__item">
+          <div class="jca-accordion__title" data-toggle="collapse" data-target="#collapseExample3">
+            UNBREAKABLE
+          </div>
+          <div class="jca-accordion__content-wrapper collapse show" id="collapseExample3" data-parent="#accordion3">
+            <div class="jca-accordion__content">
+              <p class="text-muted">
+                Your bones don't break, mine do. That's clear. Your cells react 
+                to bacteria and viruses differently than mine. You don't get sick, 
+                I do. That's also clear. But for some reason, you and I react the 
+                exact same way to water. We swallow it too fast, we choke. We get 
+                some in our lungs, we drown. However unreal it may seem, we are 
+                connected, you and I. We're on the same curve, just on opposite ends.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="jca-accordion__item">
+          <div class="jca-accordion__title" data-toggle="collapse" data-target="#collapseExample4">
+           PULP FICTION
+          </div>
+          <div class="jca-accordion__content-wrapper collapse" id="collapseExample4" data-parent="#accordion3">
+            <div class="jca-accordion__content">
+              <p class="text-dark">
+                Well, the way they make shows is, they make one show. 
+                That show's called a pilot. Then they show that show 
+                to the people who make shows, and on the strength of 
+                that one show they decide if they're going to make more 
+                shows. Some pilots get picked and become television 
+                programs. Some don't, become nothing. She starred in 
+                one of the ones that became nothing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="jca-card-notification text-primary">
         <div class="jca-card-notification__icon">
           <ion-icon name="today-outline"></ion-icon>
@@ -542,6 +590,8 @@
         <li class="jca-pagination__item jca-pagination--disabled">5</li>
         <li class="jca-pagination__item"><ion-icon name="arrow-forward-outline"></ion-icon></li>
       </ul>
+
+      
     </div>
   </div>
 

@@ -1,0 +1,110 @@
+{% extends "dashboard.njk" %}
+
+{% block jca_sidebar %}
+  {{nav.active('accordion')}}
+{% endblock %}
+
+{% block jca_page_header %}
+  {{
+    pageHeader.details(
+      'Accordion',
+      'Classic FAQ structure',
+      'menu'
+    )
+  }}
+{% endblock %}
+
+{% block jca_content %}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jca-code-reference">
+        <div class="jca-code-reference__example">
+          <div class="jca-code-reference__visual">
+            <h6 class="text-uppercase mb-20">Without a gap</h6>
+            <div class="jca-accordion" id="accordion1">
+              <div class="jca-accordion__item">
+                <div class="jca-accordion__title" data-toggle="collapse" data-target="#collapseExample1">
+                  SECTION 1
+                </div>
+                <div class="jca-accordion__content-wrapper collapse show" id="collapseExample1" data-parent="#accordion1">
+                  <div class="jca-accordion__content">
+                    Section 1 content
+                  </div>
+                </div>
+              </div>
+
+              <div class="jca-accordion__item">
+                <div class="jca-accordion__title" data-toggle="collapse" data-target="#collapseExample2">
+                  SECTION 2
+                </div>
+                <div class="jca-accordion__content-wrapper collapse" id="collapseExample2" data-parent="#accordion1">
+                  <div class="jca-accordion__content">
+                    Section 2 content
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h6 class="text-uppercase mb-20">With a gap</h6>
+            <div class="jca-accordion jca-accordion--gap" id="accordion2">
+              <div class="jca-accordion__item">
+                <div class="jca-accordion__title" data-toggle="collapse" data-target="#collapseExample3">
+                  SECTION 3
+                </div>
+                <div class="jca-accordion__content-wrapper collapse show" id="collapseExample3" data-parent="#accordion2">
+                  <div class="jca-accordion__content">
+                    Section 3 content
+                  </div>
+                </div>
+              </div>
+
+              <div class="jca-accordion__item">
+                <div class="jca-accordion__title" data-toggle="collapse" data-target="#collapseExample4">
+                  SECTION 4
+                </div>
+                <div class="jca-accordion__content-wrapper collapse" id="collapseExample4" data-parent="#accordion2">
+                  <div class="jca-accordion__content">
+                    Section 4 content
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="jca-code-reference__code">
+          <pre>
+            <code class="language-html">
+&lt;div class="jca-accordion" id="accordion1"&gt;
+  &lt;div class="jca-accordion__item"&gt;
+    &lt;div class="jca-accordion__title" data-toggle="collapse" data-target="#collapseExample1"&gt;
+      SECTION 1
+    &lt;/div&gt;
+    &lt;div class="jca-accordion__content-wrapper collapse show" id="collapseExample1" data-parent="#accordion1"&gt;
+      &lt;div class="jca-accordion__content"&gt;
+        Section 1 content
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="jca-accordion__item"&gt;
+    &lt;div class="jca-accordion__title" data-toggle="collapse" data-target="#collapseExample2"&gt;
+      SECTION 2
+    &lt;/div&gt;
+    &lt;div class="jca-accordion__content-wrapper collapse" id="collapseExample2" data-parent="#accordion1"&gt;
+      &lt;div class="jca-accordion__content"&gt;
+        Section 2 content
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="jca-accordion jca-accordion--gap" id="accordion1"&gt;
+  ......
+&lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -92,6 +92,7 @@
   padding: 0;
   list-style: none;
   border-right: 0.5px solid darken($grey, 10%);
+  overflow-y: scroll;
 
   &-item {
     margin: 0;
@@ -142,8 +143,8 @@
 
   &-date {
     display: block;
-    text-align: right;
     font-size: 0.9em;
+    margin-top: 10px;
   }
 
   &-snippet {
