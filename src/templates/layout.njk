@@ -5,19 +5,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>JCA UI KIT | Landing</title>
     <link href="./css/jca-ui-kit.min.css" rel="stylesheet">
-    <link rel='icon' href='./img/favicon.ico' type='image/x-icon'/ >
+    <link rel='icon' href='./images/favicon.ico' type='image/x-icon'/ >
   </head>
   <body>
     <div class="jca-loader" data-body="loader">
-      <img src="./img/loader.svg" />
+      <img src="./images/loader.svg" />
       <p>... LOADING ...</p>
     </div>
 
     <div class="jca-layout d-none" data-body="content">
       {% block content %} {% endblock %}
     </div>
-
-    {% include "partials/footer.njk" %}
 
     <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>

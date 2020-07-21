@@ -1,7 +1,7 @@
 {
   "name": "@ttsftwr/jca-ui-kit",
   "type": "module",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "JCA UI Kit from components built in Just Connect . Africa app",
   "main": "docs/index.html",
   "homepage": "https://thabotitus.github.io/jca-ui-kit/",
