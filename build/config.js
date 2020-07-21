@@ -1,6 +1,6 @@
 const DISTRIBUTION_FOLDERS = {
   CSS: 'css',
-	IMAGES: 'img',
+	IMAGES: 'images',
 	ROOT: 'docs',
 	JS: 'js',
 	DATA: 'data',
@@ -8,7 +8,7 @@ const DISTRIBUTION_FOLDERS = {
 }
 
 const INPUT_FOLDERS = {
-	IMAGES: './src/img',
+	IMAGES: './src/images',
 	JS: './src/js',
 	CSS: './src/styles',
 	ROOT: './src',
