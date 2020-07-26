@@ -41,7 +41,7 @@
     "animate.css": "4.1.0",
     "babel-loader": "8.1.0",
     "bootstrap": "4.5.0",
-    "browser-sync": "2.26.10",
+    "browser-sync": "2.26.12",
     "clipboard": "2.0.6",
     "datatables.net": "1.10.21",
     "gulp": "4.0.2",
