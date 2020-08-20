@@ -74,10 +74,10 @@
       <div class="jca-page-header">
         <div class="jca-page-header__text">
           <div class="jca-page-header__title">
-            <ion-icon class="jca-page-header__icon" name="card"></ion-icon>
-            Pricing
+            <ion-icon class="jca-page-header__icon" name="stop"></ion-icon>
+            Table
           </div>
-          <div class="jca-page-header__subtitle">Pricing cards</div>
+          <div class="jca-page-header__subtitle">Regular Table</div>
         </div>
 
         <div class="jca-page-header__meta">
@@ -141,7 +141,7 @@
         </a>
       </li>
 
-      <li class="jca-nav-card__item  jca-nav-card__item--active ">
+      <li class="jca-nav-card__item ">
         <div class="jca-nav-card__item-icon">
           <ion-icon name="card-outline"></ion-icon>
         </div>
@@ -231,7 +231,7 @@
         </a>
       </li>
 
-      <li class="jca-nav-card__item ">
+      <li class="jca-nav-card__item  jca-nav-card__item--active ">
         <div class="jca-nav-card__item-icon">
           <ion-icon name="stop-outline"></ion-icon>
         </div>
@@ -248,117 +248,114 @@
             
   <div class="row">
     <div class="col-md-12">
-      <div class="jca-code-reference">
-        <div class="jca-code-reference__example">
-          <div class="jca-code-reference__description">
-            A simple way to present pricing for services offered
+      <div class="jca-table">
+        <div class="jca-table__row jca-table__header">
+          <div class="jca-table__cell  col-4">
+            Full Name
           </div>
-          <div class="jca-code-reference__visual">
-            <div class="jca-card-pricing">
-              <div class="jca-card-pricing__header">
-                <div class="jca-card-pricing__header-main">Small Firm</div>
-                <div class="jca-card-pricing__header-sub">1-20 Members</div>
-              </div>
-
-              <div class="jca-card-pricing__price">
-                <span class="jca-card-pricing__price-value">1000</span>
-                <div class="jca-card-pricing__price-meta">
-                  <div class="jca-card-pricing__price-currency">ZAR</div>
-                  <div class="jca-card-pricing__price-period">monthly</div> 
-                </div>
-              </div>
-
-              <div class="jca-card-pricing__features">
-                <ul>
-                  <li>
-                    <ion-icon class="jca-card-pricing__icon" name="finger-print-outline"></ion-icon>
-                    Secure data
-                  </li>
-                  <li>
-                    <ion-icon class="jca-card-pricing__icon" name="albums-outline"></ion-icon>
-                    Unlimited Consultations
-                  </li>
-                  <li>
-                    <ion-icon class="jca-card-pricing__icon" name="cash-outline"></ion-icon>
-                    Automated Payments
-                  </li>
-                  <li>
-                    <ion-icon class="jca-card-pricing__icon" name="calendar-outline"></ion-icon>
-                    Schedule Management
-                  </li>
-                </ul>
-              </div>
-
-              <div class="jca-card-pricing__actions">
-                <a href="#" class="jca-card-pricing__actions-item">
-                  Sign up
-                </a>
-
-                <a href="#" class="jca-card-pricing__actions-item">
-                  Contact Us
-                </a>
-
-                <a href="#" class="jca-card-pricing__actions-item">
-                  <ion-icon name="logo-whatsapp" size="large"></ion-icon>
-                </a>
-              </div>
-            </div>
+          <div class="jca-table__cell col-2">
+            Email
+          </div>
+          <div class="jca-table__cell col-1 text-center">
+            Consultations
+          </div>
+          <div class="jca-table__cell col-1">
+            
           </div>
         </div>
+
+        <div class="jca-table__row">
+          <div class="jca-table__cell">
+            Vincent Williamson
+          </div>
+          <div class="jca-table__cell">
+            v@noon.com
+          </div>
+          <div class="jca-table__cell text-center">
+            3
+          </div>
+          <div class="jca-table__cell text-center">
+            <div class="btn btn-light">New Appointment</div>
+          </div>
+        </div>
+        <div class="jca-table__row">
+          <div class="jca-table__cell">
+            Donald Glover
+          </div>
+          <div class="jca-table__cell">
+            donald@hollywood.com
+          </div>
+          <div class="jca-table__cell text-center">
+            8
+          </div>
+          <div class="jca-table__cell text-center">
+            <div class="btn btn-light">New Appointment</div>
+          </div>
+        </div>
+      </div>
+      <div class="jca-code-reference d-none">
+        <div class="jca-code-reference__example">
+          <div class="jca-code-reference__visual">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jca-code-reference">
         <div class="jca-code-reference__code">
           <pre>
-              <code class="language-html">
-&lt;div class="jca-card-pricing"&gt;
-  &lt;div class="jca-card-pricing__header"&gt;
-    &lt;div class="jca-card-pricing__header-main"&gt;Small Firm&lt;/div&gt;
-    &lt;div class="jca-card-pricing__header-sub"&gt;1-20 Members&lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class="jca-card-pricing__price"&gt;
-    &lt;span class="jca-card-pricing__price-value"&gt;1000&lt;/span&gt;
-    &lt;div class="jca-card-pricing__price-meta"&gt;
-      &lt;div class="jca-card-pricing__price-currency"&gt;ZAR&lt;/div&gt;
-      &lt;div class="jca-card-pricing__price-period"&gt;monthly&lt;/div&gt; 
+            <code class="language-html">
+&lt;div class="jca-table"&gt;
+  &lt;div class="jca-table__row jca-table__header"&gt;
+    &lt;div class="jca-table__cell  col-4"&gt;
+      Full Name
+    &lt;/div&gt;
+    &lt;div class="jca-table__cell col-2"&gt;
+      Email
+    &lt;/div&gt;
+    &lt;div class="jca-table__cell col-1 text-center"&gt;
+      Consultations
+    &lt;/div&gt;
+    &lt;div class="jca-table__cell col-1"&gt;
+      
     &lt;/div&gt;
   &lt;/div&gt;
 
-  &lt;div class="jca-card-pricing__features"&gt;
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;ion-icon class="jca-card-pricing__icon" name="finger-print-outline"&gt;&lt;/ion-icon&gt;
-        Secure data
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;ion-icon class="jca-card-pricing__icon" name="albums-outline"&gt;&lt;/ion-icon&gt;
-        Unlimited Consultations
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;ion-icon class="jca-card-pricing__icon" name="cash-outline"&gt;&lt;/ion-icon&gt;
-        Automated Payments
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;ion-icon class="jca-card-pricing__icon" name="calendar-outline"&gt;&lt;/ion-icon&gt;
-        Schedule Management
-      &lt;/li&gt;
-    &lt;/ul&gt;
+  &lt;div class="jca-table__row"&gt;
+    &lt;div class="jca-table__cell"&gt;
+      Vincent Williamson
+    &lt;/div&gt;
+    &lt;div class="jca-table__cell"&gt;
+      v@noon.com
+    &lt;/div&gt;
+    &lt;div class="jca-table__cell text-center"&gt;
+      3
+    &lt;/div&gt;
+    &lt;div class="jca-table__cell text-center"&gt;
+      &lt;div class="btn btn-light"&gt;New Appointment&lt;/div&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
-
-  &lt;div class="jca-card-pricing__actions"&gt;
-    &lt;a href="#" class="jca-card-pricing__actions-item"&gt;
-      Sign up
-    &lt;/a&gt;
-
-    &lt;a href="#" class="jca-card-pricing__actions-item"&gt;
-      Contact Us
-    &lt;/a&gt;
-
-    &lt;a href="#" class="jca-card-pricing__actions-item"&gt;
-      &lt;ion-icon name="logo-whatsapp" size="large"&gt;&lt;/ion-icon&gt;
-    &lt;/a&gt;
+  &lt;div class="jca-table__row"&gt;
+    &lt;div class="jca-table__cell"&gt;
+      Donald Glover
+    &lt;/div&gt;
+    &lt;div class="jca-table__cell"&gt;
+      donald@hollywood.com
+    &lt;/div&gt;
+    &lt;div class="jca-table__cell text-center"&gt;
+      8
+    &lt;/div&gt;
+    &lt;div class="jca-table__cell text-center"&gt;
+      &lt;div class="btn btn-light"&gt;New Appointment&lt;/div&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-              </code>
-            </pre>
+            </code>
+          </pre>
         </div>
       </div>
     </div>
