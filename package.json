@@ -1,7 +1,7 @@
 {
   "name": "@ttsftwr/jca-ui-kit",
   "type": "module",
-  "version": "0.4.3",
+  "version": "0.5.0",
   "description": "JCA UI Kit from components built in Just Connect . Africa app",
   "main": "docs/index.html",
   "homepage": "https://thabotitus.github.io/jca-ui-kit/",
@@ -41,7 +41,7 @@
     "animate.css": "4.1.0",
     "babel-loader": "8.1.0",
     "bootstrap": "4.5.2",
-    "browser-sync": "2.26.10",
+    "browser-sync": "2.26.12",
     "clipboard": "2.0.6",
     "datatables.net": "1.10.21",
     "gulp": "4.0.2",

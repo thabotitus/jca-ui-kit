@@ -31,6 +31,26 @@
   box-shadow: none;
 }
 
+.jca-border {
+  border: $default_border;
+
+  &-top {
+    border-top: $default_border;
+  }
+
+  &-right {
+    border-right: $default_border;
+  }
+
+  &-bottom {
+    border-bottom: $default_border;
+  }
+
+  &-left {
+    border-left: $default_border;
+  }
+}
+
 $AppColours: (
   black:             #262626,
   white:             #ffffff,
