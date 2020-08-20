@@ -1,0 +1,61 @@
+.jca-table {
+  width: 100%;
+  display: table;
+  margin: 0;
+  background: $white;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: $default_shadow;
+  margin-bottom: 20px;
+
+  &__row {
+    display: table-row;
+    background: $white;
+  }
+}
+
+.jca-table__header {
+  color: $primary;
+  font-weight: 700;
+  background: $grey;
+  font-size: 0.9em; 
+}
+
+.jca-table__cell {
+  display: table-cell;
+  padding: 15px;
+}
+
+.jca-table__row .jca-table__cell {
+  color: #666666;
+  border-top: $default_border;
+  border-right: $default_border;
+}
+
+.jca-table__header .jca-table__cell {
+  text-transform: uppercase;
+  font-weight: 700;
+  border-right: 1px solid darken($grey, 4%);
+  // border-top: 1px solid darken($grey, 4%);
+}
+
+.jca-table, .jca-table__row {
+  width: 100% !important;
+}
+
+.jca-table__cell .btn {
+  font-size: 10px;
+}
+
+.jca-table__cell.prev-month,
+.jca-table__cell.next-month {
+  background: darken($grey, 4%);
+  border-right: 1px solid darken($grey, 6%);
+  border-bottom: none;
+}
+
+.jca-table__cell.today {
+  background: #ECF6FF;
+  color: #1A55AF;
+  font-weight: 700;
+}
