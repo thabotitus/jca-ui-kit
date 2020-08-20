@@ -18,7 +18,7 @@
   color: $primary;
   font-weight: 700;
   background: $grey;
-  font-size: 0.9em; 
+  font-size: 0.9em;
 }
 
 .jca-table__cell {
@@ -27,7 +27,7 @@
 }
 
 .jca-table__row .jca-table__cell {
-  color: #666666;
+  color: #666;
   border-top: $default_border;
   border-right: $default_border;
 }
@@ -36,10 +36,10 @@
   text-transform: uppercase;
   font-weight: 700;
   border-right: 1px solid darken($grey, 4%);
-  // border-top: 1px solid darken($grey, 4%);
 }
 
-.jca-table, .jca-table__row {
+.jca-table,
+.jca-table__row {
   width: 100% !important;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .jca-table__cell.today {
-  background: #ECF6FF;
-  color: #1A55AF;
+  background: #ecf6ff;
+  color: #1a55aF;
   font-weight: 700;
 }
