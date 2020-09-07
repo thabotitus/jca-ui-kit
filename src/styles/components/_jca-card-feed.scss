@@ -1,9 +1,5 @@
 .jca-card-feed {
-  border-radius: $default_radius;
-  background: $white;
-  overflow: hidden;
-  margin-bottom: 20px;
-  box-shadow: $default_shadow;
+  @include basic-card;
 
   &__author {
     padding: $default_padding;

@@ -1,0 +1,25 @@
+.jca-data-card {
+  @include basic-card;
+}
+
+.jca-data-card__row {
+  display: flex;
+}
+
+.jca-data-card__item {
+  flex: 1;
+  border-right: 1px dashed rgba(0, 0, 0, 0.15);
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 30px;
+}
+
+.jca-data-card__item--last {
+  border-bottom: none;
+}
+
+.jca-data-card__item--last-of-row {
+  border-right: none;
+}

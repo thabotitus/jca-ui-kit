@@ -1,17 +1,13 @@
 .jca-card-group {
-  border-radius: $default_radius;
-  background: $white;
-  overflow: hidden;
+  @include basic-card;
   display: flex;
   width: 100%;
-  box-shadow: $default_shadow;
-  margin-bottom: 20px;
 
   &__item {
     flex: 1;
     height: 100px;
     padding: 0 $default_padding;
-    border-left: 1px solid $grey;
+    border-left: 1px dashed rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
     justify-content: center;
