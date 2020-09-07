@@ -35,6 +35,8 @@
     padding: $default_padding;
     background: $grey;
     flex-direction: column;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.15);
 
     &-meta {
       align-items: flex-end;
@@ -119,10 +121,16 @@
       justify-content: center;
       cursor: pointer;
       font-weight: 700;
+      border-left: 0.5px solid rgba(0, 0, 0, 0.15);
+      border-top: 0.5px solid rgba(0, 0, 0, 0.15);
 
       &:hover {
         font-weight: 700 !important;
         text-decoration: none;
+      }
+
+      &:first-child {
+        border-left: none;
       }
     }
 
