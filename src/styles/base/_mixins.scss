@@ -1,0 +1,7 @@
+@mixin basic-card {
+  border-radius: $default_radius;
+  background: $white;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: $default_shadow;
+}

@@ -1,9 +1,5 @@
 .jca-card-tags {
-  border-radius: $default-radius;
-  background: $white;
-  overflow: hidden;
-  box-shadow: $default_shadow;
-  margin-bottom: 20px;
+  @include basic-card;
 
   &__header {
     height: 60px;
@@ -35,10 +31,10 @@
   }
 
   &__item {
-    padding: $default_padding;
+    padding: $light_padding;
     box-sizing: border-box;
-    border-right: $default_border;
-    border-top: $default_border;
+    border-right: 1px dashed rgba(0, 0, 0, 0.15);
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
     display: flex;
     align-items: center;
     font-size: 0.8em;
@@ -53,24 +49,68 @@
   &--2-col {
     .jca-card-tags__items {
       grid-template-columns: 1fr 1fr;
+
+      .jca-card-tags__item {
+        &:nth-child(2n + 1):nth-last-child(-n + 2),
+        &:nth-child(2n + 1):nth-last-child(-n + 2) ~ .jca-card-tags__item {
+          border-bottom: none;
+        }
+
+        &:nth-child(2n + 2) {
+          border-right: none;
+        }
+      }
     }
   }
 
   &--3-col {
     .jca-card-tags__items {
       grid-template-columns: 1fr 1fr 1fr;
+
+      .jca-card-tags__item {
+        &:nth-child(3n + 1):nth-last-child(-n + 3),
+        &:nth-child(3n + 1):nth-last-child(-n + 3) ~ .jca-card-tags__item {
+          border-bottom: none;
+        }
+
+        &:nth-child(3n + 3) {
+          border-right: none;
+        }
+      }
     }
   }
 
   &--4-col {
     .jca-card-tags__items {
       grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      .jca-card-tags__item {
+        &:nth-child(4n + 1):nth-last-child(-n + 4),
+        &:nth-child(4n + 1):nth-last-child(-n + 4) ~ .jca-card-tags__item {
+          border-bottom: none;
+        }
+
+        &:nth-child(4n + 4) {
+          border-right: none;
+        }
+      }
     }
   }
 
   &--5-col {
     .jca-card-tags__items {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      
+      .jca-card-tags__item {
+        &:nth-child(5n + 1):nth-last-child(-n + 5),
+        &:nth-child(5n + 1):nth-last-child(-n + 5) ~ .jca-card-tags__item {
+          border-bottom: none;
+        }
+
+        &:nth-child(5n + 5) {
+          border-right: none;
+        }
+      }
     }
   }
 }
