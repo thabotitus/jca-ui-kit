@@ -59,14 +59,21 @@
       .dropdown-item {
         font-size: 0.9em;
         padding: 15px 8px;
-        text-align: center;
-      }
-    
-      &:hover {
-        color: #0074e4;
-    
-        a {
-          color: #0074e4;
+        display: flex;
+        border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+        align-items: center;
+        overflow: hidden;
+
+
+        &__icon {
+          flex: 1;
+          max-width: 30px;
+          font-size: 1.2em;
+
+        }
+
+        &:last-child {
+          border-bottom: none;
         }
       }
     }

@@ -7,7 +7,7 @@
   "homepage": "https://thabotitus.github.io/jca-ui-kit/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp serve",
+    "start": "nodenv local 13.8.0; gulp serve",
     "build": "gulp",
     "bump:patch": "gulp bump:patch",
     "bump:minor": "gulp bump:minor",
