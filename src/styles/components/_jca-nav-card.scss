@@ -41,8 +41,8 @@
 
     &--active > &-link,
     &--active > &-icon {
-      background: $primary;
-      color: $white;
+      background: $grey;
+      color: $primary;
       font-weight: bold;
 
       &:hover {
@@ -53,19 +53,19 @@
 }
 
 .jca-nav-card__item:hover {
-  // color:  $black;
+  // color:  $primary;
   display: flex;
   text-transform: uppercase;
   background: $grey;
 
   .jca-nav-card__item-link {
-    // color: $black !important;
+    // color: $primary !important;
     text-decoration: none;
   }
 }
 
 .jca-nav-card__item--active:hover {
   .jca-nav-card__item-link {
-    color: $white !important;
+    // color: $primary !important;
   }
 }
