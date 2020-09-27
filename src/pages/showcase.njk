@@ -1,0 +1,43 @@
+{% extends "dashboard.njk" %}
+
+{% block jca_sidebar %}
+  {{nav.active('showcase')}}
+{% endblock %}
+
+{% block jca_page_header %}
+  {{
+    pageHeader.details(
+      'Showcase',
+      'Apps built with JCA UI Kit',
+      'bonfire'
+    )
+  }}
+{% endblock %}
+
+{% block jca_content %}
+  
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="jca-card-feed">
+        <div class="jca-card-feed__author">
+          <div class="jca-card-feed__author-name">
+            Just Connect
+          </div>
+
+          <div class="jca-card-feed__author-meta">
+            <a style="color: inherit;" href="https://www.justconnect.africa" target="_blank">https://www.justconnect.africa</a>
+          </div>
+        </div>
+
+        <div class="jca-card-feed__content">
+          JustConnect is an online market place that is dedicated to connecting clients to professional service providers
+        </div>
+
+        <div class="jca-card-feed__media">
+          <img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1601201065/JCA%20UI%20Kit%20-%20Showcase/smartmockups_kfkxrfhd_zhacsh.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
