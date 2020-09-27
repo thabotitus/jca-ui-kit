@@ -7,12 +7,13 @@
   "homepage": "https://thabotitus.github.io/jca-ui-kit/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodenv local 13.8.0; gulp serve",
+    "start": "npm run set:env; gulp serve",
     "build": "gulp",
     "bump:patch": "gulp bump:patch",
     "bump:minor": "gulp bump:minor",
     "bump:major": "gulp bump:major",
-    "package": "gulp build:package"
+    "package": "gulp build:package",
+    "set:env": "nodenv local `cat .node-version`"
   },
   "keywords": [
     "SASS",
