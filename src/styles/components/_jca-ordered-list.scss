@@ -1,0 +1,28 @@
+.jca-ordered-list {
+  counter-reset: section;
+  list-style-type: none;
+}
+
+.jca-ordered-list--sublist {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.jca-ordered-list__header {
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: initial;
+}
+
+.jca-ordered-list__item {
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-transform: initial;
+}
+
+.jca-ordered-list li:before {
+  counter-increment: section;
+  content: counters(section, ".") ". ";
+  font-weight: 700;
+}

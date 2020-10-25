@@ -76,10 +76,10 @@
       <div class="jca-page-header">
         <div class="jca-page-header__text">
           <div class="jca-page-header__title">
-            <ion-icon class="jca-page-header__icon" name="calculator"></ion-icon>
-            One Time Pin
+            <ion-icon class="jca-page-header__icon" name="list"></ion-icon>
+            Ordered List
           </div>
-          <div class="jca-page-header__subtitle"> One time pin inputs from online transactions</div>
+          <div class="jca-page-header__subtitle">Numbered lists </div>
         </div>
 
         <div class="jca-page-header__meta">
@@ -170,7 +170,7 @@
         </a>
       </li>
 
-      <li class="jca-nav-card__item  jca-nav-card__item--active ">
+      <li class="jca-nav-card__item ">
         <div class="jca-nav-card__item-icon">
           <ion-icon name="calculator-outline"></ion-icon>
         </div>
@@ -251,7 +251,7 @@
         </a>
       </li>
 
-      <li class="jca-nav-card__item ">
+      <li class="jca-nav-card__item  jca-nav-card__item--active ">
         <div class="jca-nav-card__item-icon">
           <ion-icon name="list-outline"></ion-icon>
         </div>
@@ -271,42 +271,44 @@
       <div class="jca-code-reference">
         <div class="jca-code-reference__example">
           <div class="jca-code-reference__description">
-            A simple way to present one time pin
+            Pagination takes the structure of a normal list
           </div>
           <div class="jca-code-reference__visual">
-            <div class="jca-card-otp">
-              <div class="jca-card-otp__icon">
-                <ion-icon name="finger-print-outline"></ion-icon>
-              </div>
-              <div class="jca-card-otp__text">
-                Please enter the one time pin sent to *******789
-              </div>
-              <div class="jca-card-otp__input">
-                <input type="text" value="12345" />
-              </div>
-              <div class="jca-card-otp__action">
-                <div class="btn btn-success">Submit</div>
-              </div>
-            </div>
+            <ol class="jca-ordered-list">
+              <li class="jca-ordered-list__item">
+                <h4 class="jca-ordered-list__header">Who we are and what we do</h4>
+                <ol class="jca-ordered-list jca-ordered-list--sublist">
+                  <li class="jca-ordered-list__item">
+                    We are a crowdfunding and legal rights advocacy platform aimed at funding the legal services of professional 
+                    lawyers for a community of people who otherwise would not be able to raise funds. 
+                  </li>
+                  <li class="jca-ordered-list__item">
+                    We also aim to educate the public about the law through weekly podcasts on a wide range of interesting topics 
+                    and situations you may one day find yourself in. 
+                  </li>
+                  <li class="jca-ordered-list__item">
+                    We do not provide legal advice or legal services. We don’t endorse any of the cases and or campaigns and we 
+                    don’t exercise editorial control over what the campaigners choose to publish on their Page. We do our best to 
+                    make sure that no one acts fraudulently or improperly on the site, but you must make your own judgment on whether 
+                    to help fund a campaign. 
+                  </li>
+                </ol>
+              </li>
+            </ol>
           </div>
         </div>
         <div class="jca-code-reference__code">
           <pre>
             <code class="language-html">
-&lt;div class="jca-card-otp"&gt;
-  &lt;div class="jca-card-otp__icon"&gt;
-    &lt;ion-icon name="finger-print-outline"&gt;&lt;/ion-icon&gt;
-  &lt;/div&gt;
-  &lt;div class="jca-card-otp__text"&gt;
-    Please enter the one time pin sent to *******789
-  &lt;/div&gt;
-  &lt;div class="jca-card-otp__input"&gt;
-    &lt;input type="text" /&gt;
-  &lt;/div&gt;
-  &lt;div class="jca-card-otp__action"&gt;
-    &lt;div class="btn btn-success"&gt;Submit&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+&lt;ul class="jca-pagination"&gt;
+  &lt;li class="jca-pagination__item"&gt;&lt;ion-icon name="arrow-back-outline"&gt;&lt;/ion-icon&gt;&lt;/li&gt;
+  &lt;li class="jca-pagination__item jca-pagination--current"&gt;1&lt;/li&gt;
+  &lt;li class="jca-pagination__item"&gt;2&lt;/li&gt;
+  &lt;li class="jca-pagination__item"&gt;3&lt;/li&gt;
+  &lt;li class="jca-pagination__item"&gt;4&lt;/li&gt;
+  &lt;li class="jca-pagination__item jca-pagination--disabled"&gt;5&lt;/li&gt;
+  &lt;li class="jca-pagination__item"&gt;&lt;ion-icon name="arrow-forward-outline"&gt;&lt;/ion-icon&gt;&lt;/li&gt;
+&lt;/ul&gt;
             </code>
           </pre>
         </div>
