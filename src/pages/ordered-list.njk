@@ -1,0 +1,67 @@
+{% extends "dashboard.njk" %}
+
+{% block jca_sidebar %}
+  {{nav.active('ordered-list')}}
+{% endblock %}
+
+{% block jca_page_header %}
+  {{
+    pageHeader.details(
+      'Ordered List',
+      'Numbered lists ',
+      'list'
+    )
+  }}
+{% endblock %}
+
+{% block jca_content %}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jca-code-reference">
+        <div class="jca-code-reference__example">
+          <div class="jca-code-reference__description">
+            Pagination takes the structure of a normal list
+          </div>
+          <div class="jca-code-reference__visual">
+            <ol class="jca-ordered-list">
+              <li class="jca-ordered-list__item">
+                <h4 class="jca-ordered-list__header">Who we are and what we do</h4>
+                <ol class="jca-ordered-list jca-ordered-list--sublist">
+                  <li class="jca-ordered-list__item">
+                    We are a crowdfunding and legal rights advocacy platform aimed at funding the legal services of professional 
+                    lawyers for a community of people who otherwise would not be able to raise funds. 
+                  </li>
+                  <li class="jca-ordered-list__item">
+                    We also aim to educate the public about the law through weekly podcasts on a wide range of interesting topics 
+                    and situations you may one day find yourself in. 
+                  </li>
+                  <li class="jca-ordered-list__item">
+                    We do not provide legal advice or legal services. We don’t endorse any of the cases and or campaigns and we 
+                    don’t exercise editorial control over what the campaigners choose to publish on their Page. We do our best to 
+                    make sure that no one acts fraudulently or improperly on the site, but you must make your own judgment on whether 
+                    to help fund a campaign. 
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="jca-code-reference__code">
+          <pre>
+            <code class="language-html">
+&lt;ul class="jca-pagination"&gt;
+  &lt;li class="jca-pagination__item"&gt;&lt;ion-icon name="arrow-back-outline"&gt;&lt;/ion-icon&gt;&lt;/li&gt;
+  &lt;li class="jca-pagination__item jca-pagination--current"&gt;1&lt;/li&gt;
+  &lt;li class="jca-pagination__item"&gt;2&lt;/li&gt;
+  &lt;li class="jca-pagination__item"&gt;3&lt;/li&gt;
+  &lt;li class="jca-pagination__item"&gt;4&lt;/li&gt;
+  &lt;li class="jca-pagination__item jca-pagination--disabled"&gt;5&lt;/li&gt;
+  &lt;li class="jca-pagination__item"&gt;&lt;ion-icon name="arrow-forward-outline"&gt;&lt;/ion-icon&gt;&lt;/li&gt;
+&lt;/ul&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
