@@ -8,7 +8,7 @@
     padding: 30px;
     font-weight: 700;
     text-transform: uppercase;
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+    border-bottom: $default_border;
 
     &-text {
       flex: 3;
@@ -34,8 +34,8 @@
   &__item {
     padding: $light_padding;
     box-sizing: border-box;
-    border-right: 1px dashed rgba(0, 0, 0, 0.15);
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+    border-right: $default_border;
+    border-bottom: $default_border;
     display: flex;
     align-items: center;
     font-size: 0.8em;

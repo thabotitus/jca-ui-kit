@@ -18,6 +18,10 @@
     &:hover {
       background: $grey;
     }
+
+    &:first-of-type {
+      border-top: none;
+    }
   }
 
   &__content {

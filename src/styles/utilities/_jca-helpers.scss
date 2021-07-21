@@ -51,6 +51,26 @@
   }
 }
 
+.jca-border-none {
+  border: none;
+
+  &-top {
+    border-top: none;
+  }
+
+  &-right {
+    border-right: none;
+  }
+
+  &-bottom {
+    border-bottom: none;
+  }
+
+  &-left {
+    border-left: none;
+  }
+}
+
 $AppColours: (
   black:             #262626,
   white:             #ffffff,

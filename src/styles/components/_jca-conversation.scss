@@ -34,7 +34,7 @@
       align-items: center;
       justify-content: center;
       height: inherit;
-      border-right: 0.5px solid darken($grey, 10%);
+      border-right: $default_border;
       padding: 0 15px;
 
       &:last-child {
@@ -47,8 +47,8 @@
     background: $grey;
     color: $black;
     padding: $default_padding;
-    border-top: 0.5px solid darken($grey, 10%);
-    border-bottom: 0.5px solid darken($grey, 10%);
+    border-top: none;
+    border-bottom: $default_border;
   }
 
   &__message {
@@ -91,12 +91,12 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  border-right: 0.5px solid darken($grey, 10%);
+  border-right: $default_border;
   overflow-y: scroll;
 
   &-item {
     margin: 0;
-    border-bottom: 1px solid darken($grey, 5%);
+    border-bottom: $default_border;
     display: flex;
     cursor: pointer;
     position: relative;

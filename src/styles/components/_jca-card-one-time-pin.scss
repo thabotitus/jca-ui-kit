@@ -25,7 +25,7 @@
       display: block;
       border: none;
       width: 100%;
-      border-bottom: 1px dashed lighten($black, 60%);
+      border-bottom: $default_border;
       height: 80px;
       background: none;
       text-align: center;
