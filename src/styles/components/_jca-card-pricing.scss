@@ -35,8 +35,8 @@
     padding: $default_padding;
     background: $grey;
     flex-direction: column;
-    border-top: 0.5px solid rgba(0, 0, 0, 0.15);
-    border-bottom: 0.5px solid rgba(0, 0, 0, 0.15);
+    border-top: $default_border;
+    border-bottom: $default_border;
 
     &-meta {
       align-items: flex-end;
@@ -85,7 +85,7 @@
         padding: 15px 10px;
         display: flex;
         align-items: center;
-        border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+        border-bottom: $default_border;
 
         &:last-child {
           border: none;
@@ -121,8 +121,8 @@
       justify-content: center;
       cursor: pointer;
       font-weight: 700;
-      border-left: 0.5px solid rgba(0, 0, 0, 0.15);
-      border-top: 0.5px solid rgba(0, 0, 0, 0.15);
+      border-left: $default_border;
+      border-top: $default_border;
 
       &:hover {
         font-weight: 700 !important;

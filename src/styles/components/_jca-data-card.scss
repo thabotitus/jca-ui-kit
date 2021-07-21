@@ -8,8 +8,8 @@
 
 .jca-data-card__item {
   flex: 1;
-  border-right: 1px dashed rgba(0, 0, 0, 0.15);
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+  border-right: $default_border;
+  border-bottom: $default_border;
   display: flex;
   flex-direction: column;
   justify-content: center;

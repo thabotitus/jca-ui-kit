@@ -33,6 +33,6 @@ $default_radius:      4px;
 $dark_shadow:         0 0 25px rgba(0, 0, 0, 0.1), 0 15px 12px rgba(0, 0, 0, 0.04);
 $default_shadow:      3px 3px 10px 4px rgba(218, 224, 228, 0.4);
 // $default_shadow:      0 5px 15px rgba(0,0,0,.1),0 15px 35px rgba(0,0,0,.1),0 50px 100px rgba(50,50,93,.1);
-$default_border:      1px solid $grey;
+$default_border:      1px dashed transparentize($black, 0.9);
 
 $topbar_height:       70px;

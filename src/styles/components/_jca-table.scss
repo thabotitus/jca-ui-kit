@@ -31,12 +31,17 @@
   color: #666;
   border-top: $default_border;
   border-right: $default_border;
+
+  &:last-child {
+    border-right: none;
+  }
 }
 
 .jca-table__header .jca-table__cell {
   text-transform: uppercase;
   font-weight: 700;
-  border-right: 1px solid darken($grey, 4%);
+  border-right: $default_border;
+  border-top: none;
 }
 
 .jca-table,
@@ -51,7 +56,7 @@
 .jca-table__cell.prev-month,
 .jca-table__cell.next-month {
   background: darken($grey, 4%);
-  border-right: 1px solid darken($grey, 6%);
+  border-right: $default_border;
   border-bottom: none;
 }
 
