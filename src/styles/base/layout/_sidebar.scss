@@ -1,10 +1,15 @@
 .jca-sidebar {
+  @include breakpoint(lg) {
+    min-width: 320px;
+    max-width: 320px;
+  }
+
   padding-top: $default_padding;
   padding-bottom: $default_padding;
   padding-right: 15px;
   height: calc(100vh - $topbar_height);
   max-height: calc(100vh - $topbar_height);
   flex: 1;
-  min-width: 320px;
-  max-width: 320px;
+  min-width: 60px;
+  max-width: 60px;
 }

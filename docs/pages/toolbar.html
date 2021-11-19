@@ -76,10 +76,10 @@
       <div class="jca-page-header">
         <div class="jca-page-header__text">
           <div class="jca-page-header__title">
-            <ion-icon class="jca-page-header__icon" name="grid"></ion-icon>
-            Card Group
+            <ion-icon class="jca-page-header__icon" name="hammer"></ion-icon>
+            Toolbar
           </div>
-          <div class="jca-page-header__subtitle">Cards linked without spaces</div>
+          <div class="jca-page-header__subtitle">Classic toolbar</div>
         </div>
 
         <div class="jca-page-header__meta">
@@ -125,7 +125,7 @@
         </a>
       </li>
 
-      <li class="jca-nav-card__item  jca-nav-card__item--active ">
+      <li class="jca-nav-card__item ">
         <a href="../pages/card-group.html" class="jca-nav-card__item-icon">
           <ion-icon name="grid-outline"></ion-icon>
         </a>
@@ -233,7 +233,7 @@
         </a>
       </li>
 
-      <li class="jca-nav-card__item ">
+      <li class="jca-nav-card__item  jca-nav-card__item--active ">
         <a href="../pages/table.html" class="jca-nav-card__item-icon">
           <ion-icon name="stop-outline"></ion-icon>
         </a>
@@ -277,45 +277,41 @@
             
   <div class="row">
     <div class="col-md-12">
-      <div class="jca-code-reference">
-        <div class="jca-code-reference__example">
-          <div class="jca-code-reference__description">
-            A card group can be used to show various bits of information neatly across a page
-          </div>
-          <div class="jca-code-reference__visual">
-            <div class="jca-card-group">
-              <div class="jca-card-group__item">
-                <div class="jca-card-group__title">Title</div>
-                <div class="jca-card-group__content">
-                  Some value
-                </div>
-              </div>
-              <div class="jca-card-group__item">
-                <div class="jca-card-group__title">Title</div>
-                <div class="jca-card-group__content">
-                  Some value
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="jca-toolbar">
+        <div class="jca-toolbar-wrapper">
+          <a href="#" class="jca-toolbar__item" data-bs-toggle="tooltip" data-bs-placement="top" title="Add">
+            <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+          </a>
+          <a href="#" class="jca-toolbar__item" data-bs-toggle="tooltip" data-bs-placement="top" title="Upload">
+            <ion-icon name="barcode-outline"></ion-icon>
+          </a>
+          <a href="#" class="jca-toolbar__item" data-bs-toggle="tooltip" data-bs-placement="top" title="Download">
+            <ion-icon name="hammer-outline"></ion-icon>
+          </a>
         </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jca-code-reference">
         <div class="jca-code-reference__code">
           <pre>
             <code class="language-html">
-  &lt;div class="jca-card-group"&gt;
-    &lt;div class="jca-card-group__item"&gt;
-      &lt;div class="jca-card-group__title"&gt;title&lt;/div&gt;
-      &lt;div class="jca-card-group__content"&gt;
-        some value
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="jca-card-group__item"&gt;
-      &lt;div class="jca-card-group__title"&gt;title&lt;/div&gt;
-      &lt;div class="jca-card-group__content"&gt;
-        some value
-      &lt;/div&gt;
-    &lt;/div&gt;
+&lt;div class="jca-toolbar"&gt;
+  &lt;div class="jca-toolbar-wrapper"&gt;
+    &lt;a href="#" class="jca-toolbar__item" data-bs-toggle="tooltip" data-bs-placement="top" title="Add"&gt;
+      &lt;ion-icon name="chatbox-ellipses-outline"&gt;&lt;/ion-icon&gt;
+    &lt;/a&gt;
+    &lt;a href="#" class="jca-toolbar__item" data-bs-toggle="tooltip" data-bs-placement="top" title="Upload"&gt;
+      &lt;ion-icon name="barcode-outline"&gt;&lt;/ion-icon&gt;
+    &lt;/a&gt;
+    &lt;a href="#" class="jca-toolbar__item" data-bs-toggle="tooltip" data-bs-placement="top" title="Download"&gt;
+      &lt;ion-icon name="hammer-outline"&gt;&lt;/ion-icon&gt;
+    &lt;/a&gt;
   &lt;/div&gt;
+&lt;/div&gt;
             </code>
           </pre>
         </div>

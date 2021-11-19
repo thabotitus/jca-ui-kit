@@ -1,0 +1,61 @@
+{% extends "dashboard.njk" %}
+
+{% block jca_sidebar %}
+  {{nav.active('table')}}
+{% endblock %}
+
+{% block jca_page_header %}
+  {{
+    pageHeader.details(
+      'Toolbar',
+      'Classic toolbar',
+      'hammer'
+    )
+  }}
+{% endblock %}
+
+{% block jca_content %}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jca-toolbar">
+        <div class="jca-toolbar-wrapper">
+          <a href="#" class="jca-toolbar__item" data-bs-toggle="tooltip" data-bs-placement="top" title="Add">
+            <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+          </a>
+          <a href="#" class="jca-toolbar__item" data-bs-toggle="tooltip" data-bs-placement="top" title="Upload">
+            <ion-icon name="barcode-outline"></ion-icon>
+          </a>
+          <a href="#" class="jca-toolbar__item" data-bs-toggle="tooltip" data-bs-placement="top" title="Download">
+            <ion-icon name="hammer-outline"></ion-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jca-code-reference">
+        <div class="jca-code-reference__code">
+          <pre>
+            <code class="language-html">
+&lt;div class="jca-toolbar"&gt;
+  &lt;div class="jca-toolbar-wrapper"&gt;
+    &lt;a href="#" class="jca-toolbar__item" data-bs-toggle="tooltip" data-bs-placement="top" title="Add"&gt;
+      &lt;ion-icon name="chatbox-ellipses-outline"&gt;&lt;/ion-icon&gt;
+    &lt;/a&gt;
+    &lt;a href="#" class="jca-toolbar__item" data-bs-toggle="tooltip" data-bs-placement="top" title="Upload"&gt;
+      &lt;ion-icon name="barcode-outline"&gt;&lt;/ion-icon&gt;
+    &lt;/a&gt;
+    &lt;a href="#" class="jca-toolbar__item" data-bs-toggle="tooltip" data-bs-placement="top" title="Download"&gt;
+      &lt;ion-icon name="hammer-outline"&gt;&lt;/ion-icon&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

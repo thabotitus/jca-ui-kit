@@ -53,7 +53,7 @@
 
   &__message {
     padding: 40px;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   &__subject {
@@ -92,7 +92,7 @@
   padding: 0;
   list-style: none;
   border-right: $default_border;
-  overflow-y: scroll;
+  overflow-y: auto;
 
   &-item {
     margin: 0;

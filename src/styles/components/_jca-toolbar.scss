@@ -1,0 +1,80 @@
+.jca-toolbar {
+  display: flex;
+  justify-content: flex-start;
+
+  &--centered {
+    justify-content: center;
+  }
+
+  &--right {
+    justify-content: flex-end;
+  }
+
+  &-wrapper {
+    display: flex;
+    height: 50px;
+    display: inline-flex;
+    box-shadow: $default_shadow;
+    background: $white;
+    border-radius: $default_radius;
+    overflow: hidden;
+  }
+
+  &__item {
+    min-width: 80px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: $default_border;
+    cursor: pointer;
+    text-decoration: none;
+    color: initial;
+    font-size: 1.2rem;
+
+    &:first-child {
+      border-left: none;
+    }
+
+    &:hover {
+      font-weight: bold;
+    }
+
+    &--active {
+      background: $primary;
+      color: $light;
+
+      background: rgb(64, 100, 175);
+      background: linear-gradient(
+        270deg,
+        rgba(64, 100, 175, 1) 0%,
+        rgba(29, 24, 81, 1) 100%
+      );
+      background-image: linear-gradient(
+        to right,
+        #1e3c72 0%,
+        #1e3c72 1%,
+        #2a5298 100%
+      );
+    }
+  }
+
+  &--fluid {
+    width: 100%;
+
+    .jca-toolbar-wrapper {
+      width: 100%;
+    }
+
+    .jca-toolbar__item {
+      flex: 1;
+    }
+  }
+
+  &--slim {
+    .jca-toolbar-wrapper {
+      height: 30px;
+      font-size: 0.9em;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+$breakpoints: (
+  xs: 0,
+  sm: 576,
+  md: 768,
+  lg: 992,
+  xl: 1200,
+  xxl: 1400,
+);
+
+@mixin breakpoint($bp-name) {
+  $min-width: "";
+
+  @if map-has-key($breakpoints, $bp-name) {
+    $min-width: map-get($breakpoints, $bp-name);
+  } @else if (type_of($bp-name) == number) {
+    $min-width: $bp-name;
+  }
+
+  $min-width-ems: ($min-width / 14) * 1em;
+
+  @media screen and (min-width: $min-width-ems) {
+    @content;
+  }
+}
