@@ -64,7 +64,7 @@
     "gulp-sass-glob": "1.1.0",
     "gulp-sourcemaps": "3.0.0",
     "gulp-uglify": "3.0.2",
-    "gulp-zip": "5.0.2",
+    "gulp-zip": "5.1.0",
     "i": "0.3.6",
     "imask": "6.0.5",
     "ionicons": "5.2.3",
