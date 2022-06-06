@@ -7,13 +7,12 @@
   "homepage": "https://thabotitus.github.io/jca-ui-kit/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run set:env; gulp serve",
+    "start": "gulp serve",
     "build": "gulp",
     "bump:patch": "gulp bump:patch",
     "bump:minor": "gulp bump:minor",
     "bump:major": "gulp bump:major",
-    "package": "gulp build:package",
-    "set:env": "nodenv local `cat .node-version`"
+    "package": "gulp build:package"
   },
   "keywords": [
     "SASS",
@@ -45,6 +44,8 @@
     "browser-sync": "2.26.13",
     "clipboard": "2.0.6",
     "datatables.net": "1.10.22",
+    "esbuild": "^0.14.42",
+    "esbuild-sass-plugin": "^2.2.6",
     "gulp": "4.0.2",
     "gulp-autoprefixer": "7.0.1",
     "gulp-babel": "8.0.0",
@@ -53,6 +54,7 @@
     "gulp-clean-css": "4.3.0",
     "gulp-concat": "2.6.1",
     "gulp-copy": "4.0.1",
+    "gulp-esbuild": "^0.10.3",
     "gulp-htmlmin": "5.0.1",
     "gulp-imagemin": "7.1.0",
     "gulp-notify": "3.2.0",
@@ -73,6 +75,5 @@
     "uglifyjs-webpack-plugin": "2.2.0",
     "vue": "2.6.12",
     "webpack-stream": "6.1.1"
-  },
-  "dependencies": {}
+  }
 }

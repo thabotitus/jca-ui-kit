@@ -1,0 +1,78 @@
+.jca-toolbar {
+	display: flex;
+	justify-content: flex-start;
+
+	&--centered {
+		justify-content: center;
+	}
+
+	&--right {
+		justify-content: flex-end;
+	}
+
+	&-wrapper {
+		display: flex;
+		height: 50px;
+		display: inline-flex;
+		box-shadow: 3px 3px 10px 4px rgba(218,224,228,.4);
+		background: #fff;
+		border-radius: 4px;
+		overflow: hidden
+	}
+
+	&__item {
+		min-width: 80px;
+		padding: 0 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-left: 1px dashed rgba(38,38,38,.1);
+		cursor: pointer;
+		text-decoration: none;
+		color: initial;
+		font-size: 1.2rem;
+
+		&:first-child {
+			border-left: none
+		}
+
+
+		&:hover {
+			font-weight: 700
+		}
+
+		&--active {
+			background: #083358;
+			color: #f2f2f0;
+			background: #4064af;
+			background: linear-gradient(270deg,#4064af 0,#1d1851 100%);
+			background-image: linear-gradient(to right,#1e3c72 0,#1e3c72 1%,#2a5298 100%)
+		}
+	}
+
+	&--fluid { 
+		width:100%;
+	
+		.jca-toolbar-wrapper{ 
+			width:100%;
+		}
+	
+		.jca-toolbar__item {
+			flex:1
+		}
+	}
+	
+	&--slim {
+		.jca-toolbar-wrapper {
+			height:30px; font-size: .9em
+		}
+	}
+}
+  
+  
+  
+  
+  
+  
+  
+  

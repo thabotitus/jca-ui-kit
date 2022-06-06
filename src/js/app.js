@@ -1,17 +1,17 @@
 
-import * as $ from "jquery";
-import "imask";
-import "./vendor/jquery.datatables.net.min.js";
-import "prismjs";
-import "clipboard";
+// import * as $ from "jquery";
+// import "imask";
+// import "./vendor/jquery.datatables.net.min.js";
+// import "prismjs";
+// import "clipboard";
 
 (function(){
   const JCA = {};
     
   JCA.loader = () => {
-    var loader =  document.querySelectorAll("[data-body='loader']")[0];
+    var loader  = document.querySelectorAll("[data-body='loader']")[0];
     var content = document.querySelectorAll("[data-body='content']")[0];
-    var footer = document.querySelectorAll("[data-body='footer']")[0];
+    var footer  = document.querySelectorAll("[data-body='footer']")[0];
 
     if (loader) {
       loader.classList.add("d-none");
@@ -27,9 +27,9 @@ import "clipboard";
   };
 
   JCA.inputMasks = () => {
-    const visaInputs = document.querySelectorAll("[data-mask='visa'");
-    const masterCardInputs = document.querySelectorAll("[data-mask='mastercard'");
-    const cvvInputs = document.querySelectorAll("[data-mask='cvv'");
+    const visaInputs        = document.querySelectorAll("[data-mask='visa'");
+    const masterCardInputs  = document.querySelectorAll("[data-mask='mastercard'");
+    const cvvInputs         = document.querySelectorAll("[data-mask='cvv'");
 
     visaInputs.forEach((element) => {
       new IMask(element, {
