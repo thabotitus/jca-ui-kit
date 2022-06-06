@@ -1,15 +1,14 @@
+// VENDOR
+@import './vendor/justconnect.bootstrap.theme';
+@import './vendor/prism.css';
+
 // BASE
 @import './base/fonts';
 @import './base/variables';
 @import './base/layout';
 @import './base/mixins';
 
-// VENDOR
-@import '../../node_modules/normalize.css/normalize.css';
-@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-@import './vendor/bootstrap-theme.css';
-@import './vendor/justconnect.bootstrap.theme';
-@import './vendor/prism.css';
+
 
 // CARDS
 @import './components/jca-card-timeline';
