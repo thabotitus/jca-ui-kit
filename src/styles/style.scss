@@ -3,12 +3,9 @@
 @import './vendor/prism.css';
 
 // BASE
-@import './base/fonts';
 @import './base/variables';
 @import './base/layout';
 @import './base/mixins';
-
-
 
 // CARDS
 @import './components/jca-card-timeline';
