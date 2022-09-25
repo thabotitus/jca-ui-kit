@@ -73,7 +73,7 @@
     "normalize.css": "8.0.1",
     "prismjs": "1.22.0",
     "uglifyjs-webpack-plugin": "2.2.0",
-    "vue": "2.6.12",
+    "vue": "2.7.10",
     "webpack-stream": "6.1.1"
   }
 }
